@@ -1,7 +1,7 @@
 #!/bin/bash
 #autor: Alysson Sousa
 #data: 23/09/2020
-
+sudo su
 #Créditos
 clear
 echo -e "
@@ -18,6 +18,21 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''"
 wget -c https://raw.githubusercontent.com/alyssonwolfpoet/script/master/Alyssonlastversion.sh -O Alyssonlastversion.sh
 sudo chmod +x Alyssonlastversion.sh
+
+echo -e "
+''''''''''''''''''''''''''''''''''''''
+'           Iniciando em 5           '
+''''''''''''''''''''''''''''''''''''''"
+sleep 1
+echo -e "4"
+sleep 1
+echo -e "3"
+sleep 1
+echo -e "2"
+sleep 1
+echo -e "1"
+sleep 1
+
 sudo ./Alyssonlastversion.sh
 sudo rm Alyssonlastversion.sh
 sudo rm AlyssonInstall.sh
