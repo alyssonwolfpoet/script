@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 23/09/2020
+#data: 05/10/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 23/09/2020'''
+'Data de última modificação: 05/10/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -358,7 +358,89 @@ sleep 5
           break
         ;;
         1)
-          echo -e "\nFução não desenvolvida" 
+          echo -e "\n"
+          #01 java
+          d-java
+          #02 eclipse
+          d-eclipse
+          #03º netbeans
+          d-netbeans
+          #04º python&pycharm
+          d-python&pycharm
+          #05º packettracer
+          d-packettracer
+          #06º star_uml
+          d-star_uml
+          #07º evolus_pencil
+          d-evolus_pencil
+          #08º project_libre 
+          d-project_libre
+          #09º vscode
+          d-vscode
+          #10º virtualbox
+          d-virtualbox
+          #11º mysql&workbench
+          d-mysql&workbench
+          #12º postgresql
+          d-postgresql
+          #13º phpmyadmin
+          d-phpmyadmin
+          #14º ocsinventory-agent
+          d-ocsinventory-agent
+          #15º apache2
+          d-apache2
+          #16º php7.0&php_extras
+          d-php7.0&php_extras
+          #17º traceroute
+          d-traceroute
+          #18º pgadmin3
+          d-pgadmin3
+          #19º ruby
+          d-ruby
+          #20º docker&docker.io
+          d-docker&docker.io
+          #21º gnome-panel
+          d-gnome-panel
+          #22º wakeonlan
+          d-wakeonlan
+          #23º etherwake
+          d-etherwake
+          #24º nmap
+          d-nmap
+          #25º ssh
+          d-ssh
+          #26º nbtscan
+          d-nbtscan
+          #27º net-tools
+          d-net-tools
+          #28º flashplugin-installer
+          d-flashplugin-installer
+          #29º postgis
+          d-postgis
+          #30º octave
+          d-octave
+          #31º gtkterm
+          d-gtkterm
+          #32º kmag
+          d-kmag
+          #33º editor_vim
+          d-editor_vim
+          #34º Scilab
+          d-Scilab
+          #35º Gimp
+          d-Gimp
+          #36º wireshark
+          d-wireshark
+          #37º brackets
+          d-brackets
+          #38º Grub_Customizer
+          d-Grub_Customizer
+          #39º systemback
+          d-systemback
+          #40º sublimetext
+          d-sublimetext
+          #41º Logisim
+          d-Logisim
         ;;
       esac
       echo O valor atual do contador é: $contador
@@ -372,7 +454,48 @@ sleep 5
     while true; do
       echo "desistalar individalmente"
       echo "Selecione uma opção:"
-      echo "1 - desistalar"
+      echo "
+        01º java
+        02º eclipse
+        03º netbeans
+        04º python&pycharm
+        05º packettracer
+        06º star_uml 
+        07º evolus_pencil
+        08º project_libre 
+        09º vscode
+        10º virtualbox
+        11º mysql&workbench
+        12º postgresql
+        13º phpmyadmin
+        14º ocsinventory-agent
+        15º apache2
+        16º php7.0&php_extras
+        17º traceroute
+        18º pgadmin3
+        19º ruby
+        20º docker&docker.io
+        21º gnome-panel
+        22º wakeonlan
+        23º etherwake
+        24º nmap
+        25º ssh
+        26º nbtscan
+        27º net-tools
+        28º flashplugin-installer
+        29º postgis
+        30º octave
+        31º gtkterm
+        32º kmag
+        33º editor_vim
+        34º Scilab
+        35º Gimp
+        36º wireshark
+        37º brackets
+        38º Grub_Customizer
+        39º systemback
+        40º sublimetext
+        41º Logisim"
       echo "0 - voltar ao menu principal"
       echo -n "opção:"
       read opcao;
@@ -382,10 +505,211 @@ sleep 5
           clear
           break
         ;;
-        1)
+        01)
           echo -e "\n"
-          echo "Fução não desenvolvida"
+          #01 java
+          d-java
         ;;
+        02)
+          echo -e "\n"
+          #02 eclipse
+          d-eclipse
+        ;;
+        03)
+          echo -e "\n"
+          #03º netbeans
+          d-netbeans
+        ;;
+        04)
+          echo -e "\n"
+          #04º python&pycharm
+          d-python&pycharm
+        ;;
+        05)
+          echo -e "\n"
+          #05º packettracer
+          d-packettracer
+        ;;
+        06)
+          echo -e "\n"
+          #06º star_uml
+          d-star_uml
+        ;;
+        07)
+          echo -e "\n"
+          #07º evolus_pencil
+          d-evolus_pencil
+        ;;
+        08)
+          echo -e "\n"
+          #08º project_libre 
+          d-project_libre
+        ;;
+        09)
+          echo -e "\n"
+          #09º vscode
+          d-vscode
+        ;;
+        10)
+          echo -e "\n"
+          #10º virtualbox
+          d-virtualbox
+        ;;
+        11)
+          echo -e "\n"
+          #11º mysql&workbench
+          d-mysql&workbench
+        ;;
+        12)
+          echo -e "\n"
+          #12º postgresql
+          d-postgresql
+        ;;
+        13)
+          echo -e "\n"
+          #13º phpmyadmin
+          d-phpmyadmin
+        ;;
+        14)
+          echo -e "\n"
+          #14º ocsinventory-agent
+          d-ocsinventory-agent
+        ;;
+        15)
+          echo -e "\n"
+          #15º apache2
+          d-apache2
+        ;;
+        16)
+          echo -e "\n"
+          #16º php7.0&php_extras
+          d-php7.0&php_extras
+        ;;
+        17)
+          echo -e "\n"
+          #17º traceroute
+          d-traceroute
+        ;;
+        18)
+          echo -e "\n"
+          #18º pgadmin3
+          d-pgadmin3
+        ;;
+        19)
+          echo -e "\n"
+          #19º ruby
+          d-ruby
+        ;;
+        20)
+          echo -e "\n"
+          #20º docker&docker.io
+          d-docker&docker.io
+        ;;
+        21)
+          echo -e "\n"
+          #21º gnome-panel
+          d-gnome-panel
+        ;;
+        22)
+          echo -e "\n"
+          #22º wakeonlan
+          d-wakeonlan
+        ;;
+        23)
+          echo -e "\n"
+          #23º etherwake
+          d-etherwake
+        ;;
+        24)
+          echo -e "\n"
+          #24º nmap
+          d-nmap
+        ;;
+        25)
+          echo -e "\n"
+          #25º ssh
+          d-ssh
+        ;;
+        26)
+          echo -e "\n"
+          #26º nbtscan
+          d-nbtscan
+        ;;
+        27)
+          echo -e "\n"
+          #27º net-tools
+          d-net-tools
+        ;;
+        28)
+          echo -e "\n"
+          #28º flashplugin-installer
+          d-flashplugin-installer
+        ;;
+        29)
+          echo -e "\n"
+          #29º postgis
+          d-postgis
+        ;;
+        30)
+          echo -e "\n"
+          #30º octave
+          d-octave
+        ;;
+        31)
+          echo -e "\n"
+          #31º gtkterm
+          d-gtkterm
+        ;;
+        32)
+          echo -e "\n"
+          #32º kmag
+          d-kmag
+        ;;
+        33)
+          echo -e "\n"
+          #33º editor_vim
+          d-editor_vim
+        ;;
+        34)
+          echo -e "\n"
+          #34º Scilab
+          d-Scilab
+        ;;
+        35)
+          echo -e "\n"
+          #35º Gimp
+          d-Gimp
+        ;;
+        36)
+          echo -e "\n"
+          #36º wireshark
+          d-wireshark
+        ;;
+        37)
+          echo -e "\n"
+          #37º brackets
+          d-brackets
+        ;;
+        38)
+          echo -e "\n"
+          #38º Grub_Customizer
+          d-Grub_Customizer
+        ;;
+        39)
+          echo -e "\n"
+          #39º systemback
+          d-systemback
+        ;;
+        40)
+          echo -e "\n"
+          #40º sublimetext
+          d-sublimetext
+        ;;
+        41)
+          echo -e "\n"
+          #41º Logisim
+          d-Logisim
+        ;;    
       esac
       echo O valor atual do contador é: $contador
       let contador=contador+1
@@ -885,6 +1209,352 @@ sleep 5
 #fim da função de Instalação
 
 #funções de Desistalação
+  #01 java
+  d-java(){
+    echo -e "\n"
+    echo "================================="
+    echo "*--------Desistalar Java--------*"
+    echo "================================="
+    echo -e "\n"
+    sudo apt remove default-jre -y && sudo apt remove default-jdk -y
+  }
+  #02 eclipse
+  d-eclipse(){
+    echo -e "\n"
+    echo "================================="
+    echo "*------Desistalar Eclipse-------*"
+    echo "================================="
+    echo -e "\n"
+    sudo rm -rf /opt/eclipse
+    sudo rm /usr/share/applications/eclipse.desktop
+  }
+  #03º netbeans
+  d-netbeans(){
+    echo "==========================="
+    echo "*---Desistalar netbeans---*"
+    echo "==========================="
+    echo -e "\n"
+    sudo apt remove netbeans
+  }
+  #04º python&pycharm
+  d-python&pycharm(){
+    echo "==================================="
+    echo "*---Desistalar python & pycharm---*"
+    echo "==================================="
+    echo -e "\n"
+    sudo apt-get remove python -y
+    sudo apt-get remove python3 -y
+    sudo apt-get remove python-tk -y
+    sudo apt-get remove python3-tk -y
+    sudo rm -rf /opt/pycharm
+    sudo rm /usr/share/applications/pycharm.desktop
+  }
+  #05º packettracer
+  d-packettracer(){
+    echo "==============================="
+    echo "*---Desistalar PacketTracer---*"
+    echo "==============================="
+    echo -e "\n"
+    sudo apt remove PacketTracer
+  }
+  #06º star_uml
+  d-star_uml(){
+    echo "=========================="
+    echo "*---Desistalar StarUML---*"
+    echo "=========================="
+    echo -e "\n"
+    #Fonte para instalação do appimage
+    #https://www.edivaldobrito.com.br/integrador-appimagelauncher-no-linux/
+    sudo rm -rf /opt/staruml
+    sudo rm /usr/share/applications/staruml.desktop
+  }
+  #07º evolus_pencil
+  d-evolus_pencil(){
+    echo "================================"
+    echo "*---Desistalar evolus pencil---*"
+    echo "================================"
+    echo -e "\n"
+    sudo apt-get remove pencil --purge -y
+  }
+  #08º project_libre 
+  d-project_libre(){
+    echo "================================"
+    echo "*---Desistalar project libre---*"
+    echo "================================"
+    echo -e "\n"
+    sudo apt remove projectlibre -y --purge
+  }
+  #09º vscode
+  d-vscode(){
+    echo "========================="
+    echo "*---Desistalar vscode---*"
+    echo "========================="
+    echo -e "\n"
+    sudo apt remove code -y --purge
+  }
+  #10º virtualbox
+  d-virtualbox(){
+    echo "============================="
+    echo "*---Desistalar virtualbox---*"
+    echo "============================="
+    echo -e "\n"
+    sudo apt remove virtualbox -y --purge
+  }
+  #11º mysql&workbench
+  d-mysql&workbench(){
+    echo "========================"
+    echo "*---Desistalar mysql---*"
+    echo "========================"
+    sudo apt-get remove –purge mysql-server
+    sudo /etc/init.d/mysql stop
+    sudo apt-get remove –purge mysql-common
+    sudo rm -rf /var/lib/mysql
+    sudo apt-get autoremove –purge
+    sudo apt-get autoclean
+    sudo apt-get clean
+  }
+  #12º postgresql
+  d-postgresql(){
+    echo "============================="
+    echo "*---Desistalar postgresql---*"
+    echo "============================="
+    sudo apt-get --purge remove postgresql postgresql-client postgresql-client-common
+    sudo apt-get autoremove
+  }
+  #13º phpmyadmin
+  d-phpmyadmin(){
+    echo "=================================="
+    echo "====== Desistalar phpmyadmin ====="
+    echo "=================================="
+    sudo apt-get remove phpmyadmin -y --purge
+  }
+  #14º ocsinventory-agent
+  d-ocsinventory-agent(){
+    echo "======================================"
+    echo "*--- Desistalar ocsinventory-agent---*"
+    echo "======================================"
+    sudo apt remove ocsinventory-agent -y --purge
+  }
+  #15º apache2
+  d-apache2(){
+    echo "=========================="
+    echo "*---Desistalar apache2---*"
+    echo "=========================="
+    echo -e "\n"
+    sudo apt remove apache2 -y --purge
+  }
+  #16º php7.0&php_extras
+  d-php7.0&php_extras(){
+    echo "=========================="
+    echo "*---Desistalar php 7.0---*"
+    echo "=========================="
+    echo -e "\n"
+    sudo apt remove build-essential -y
+    sudo apt remove php libapache2-mod-php php-mysql -y
+    sudo apt remove php7.0 libapache2-mod-php7.0 -y
+    sudo apt remove php7.0-cli -y
+  }
+  #17º traceroute
+  d-traceroute(){
+    echo "============================="
+    echo "*---Desistalar traceroute---*"
+    echo "============================="
+    echo -e "\n"
+    sudo apt remove traceroute -y --purge
+  }
+  #18º pgadmin3
+  d-pgadmin3(){
+    echo "==========================="
+    echo "*---Desistalar pgadmin3---*"
+    echo "==========================="
+    echo -e "\n"
+    sudo apt remove pgadmin3 -y --purge
+  }
+  #19º ruby
+  d-ruby(){
+    echo "======================="
+    echo "*---Desistalar ruby---*"
+    echo "======================="
+    echo -e "\n"
+    sudo apt remove ruby -y --purge
+  }
+  #20º docker&docker.io
+  d-docker&docker.io(){
+    echo "==================================="
+    echo "*---Desistalar docker&docker.io---*"
+    echo "==================================="
+    echo -e "\n"
+    sudo apt remove docker -y && apt remove docker.io -y
+  }
+  #21º gnome-panel
+  d-gnome-panel(){
+    echo "=============================="
+    echo "*---Desistalar gnome-panel---*"
+    echo "=============================="
+    echo -e "\n"
+    sudo apt remove gnome-panel -y
+  }
+  #22º wakeonlan
+  d-wakeonlan(){
+    echo "============================"
+    echo "*---Desistalar wakeonlan---*"
+    echo "============================"
+    echo -e "\n"
+    sudo apt remove wakeonlan -y
+  }
+  #23º etherwake
+  d-etherwake(){
+    echo "============================"
+    echo "*---Desistalar etherwake---*"
+    echo "============================"
+    echo -e "\n"
+    sudo apt remove etherwake -y
+  }
+  #24º nmap
+  d-nmap(){
+    echo "======================="
+    echo "*---Desistalar nmap---*"
+    echo "======================="
+    echo -e "\n"
+    sudo apt remove nmap -y
+  }
+  #25º ssh
+  d-ssh(){
+    echo "======================"
+    echo "*---Desistalar ssh---*"
+    echo "======================"
+    echo -e "\n"
+    sudo apt install openssh-server -y
+  }
+  #26º nbtscan
+  d-nbtscan(){
+    echo "=========================="
+    echo "*---Desistalar nbtscan---*"
+    echo "=========================="
+    echo -e "\n"
+    sudo apt remove nbtscan -y
+  }
+  #27º net-tools
+  d-net-tools(){
+    echo "============================"
+    echo "*---Desistalar net-tools---*"
+    echo "============================"
+    echo -e "\n"
+    sudo apt remove net-tools -y
+  }
+  #28º flashplugin-installer
+  d-flashplugin-installer(){
+    echo "========================================"
+    echo "*---Desistalar flashplugin-installer---*"
+    echo "========================================"
+    echo -e "\n"
+    sudo apt-get remove flashplugin-installer -y
+  }
+  #29º postgis
+  d-postgis(){
+    echo "=========================="
+    echo "*---Desistalar postgis---*"
+    echo "=========================="
+    echo -e "\n"
+    sudo apt remove postgis* -y
+  }
+  #30º octave
+  d-octave(){
+    echo "========================="
+    echo "*---Desistalar octave---*"
+    echo "========================="
+    echo -e "\n"
+    sudo apt remove octave -y
+  }
+  #31º gtkterm
+  d-gtkterm(){
+    echo "=========================="
+    echo "*---Desistalar gtkterm---*"
+    echo "=========================="
+    echo -e "\n"
+    sudo apt remove gtkterm -y
+  }
+  #32º kmag
+  d-kmag(){
+    echo "======================="
+    echo "*---Desistalar kmag---*"
+    echo "======================="
+    echo -e "\n"
+    sudo apt remove kmag -y
+  }
+  #33º editor_vim
+  d-editor_vim(){
+    echo "============================="
+    echo "*---Desistalar editor vim---*"
+    echo "============================="
+    echo -e "\n"
+    sudo apt-get remove vim -y
+  }
+  #34º Scilab
+  d-Scilab(){
+    echo "============================="
+    echo "*-----Desistalar Scilab-----*"
+    echo "============================="
+    echo -e "\n"
+    sudo apt-get update
+    sudo apt-get remove scilab -y
+  }
+  #35º Gimp
+  d-Gimp(){
+    echo "============================="
+    echo "*------Desistalar Gimp------*"
+    echo "============================="
+    echo -e "\n"
+    sudo apt-get remove gimp -y
+  }
+  #36º wireshark
+  d-wireshark(){
+    echo "============================"
+    echo "*---Desistalar wireshark---*"
+    echo "============================"
+    echo -e "\n"
+    sudo apt remove wireshark -y
+  }
+  #37º brackets
+  d-brackets(){
+    echo "==========================="
+    echo "*---Desistalar brackets---*"
+    echo "==========================="
+    echo -e "\n"
+    sudo apt remove brackets -y
+  }
+  #38º Grub_Customizer
+  d-Grub_Customizer(){
+    echo "=================================="
+    echo "*---Desistalar Grub Customizer---*"
+    echo "=================================="
+    echo -e "\n"
+    sudo apt-get remove grub-customizer -y --purge
+  }
+  #39º systemback
+  d-systemback(){
+    echo "============================="
+    echo "*---Desistalar systemback---*"
+    echo "============================="
+    echo -e "\n"
+    sudo apt-get remove systemback -y --purge
+  }
+  #40º sublimetext
+  d-sublimetext(){
+    echo "==============================="
+    echo "*--- Desistalar sublimetext---*"
+    echo "==============================="
+    echo -e "\n"
+    sudo apt-get remove sublime-text -y --purge
+  }
+  #41º Logisim
+  d-Logisim(){
+    echo "=========================="
+    echo "*---Desistalar Logisim---*"
+    echo "=========================="
+    echo -e "\n"
+    sudo apt-get remove logisim -y --purge
+  }
 #fim da funções de Desistalação
 
 #Laço principal

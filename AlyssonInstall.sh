@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 23/09/2020
+#data: 05/10/2020
 sudo su
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 23/09/2020'''
+'Data de última modificação: 05/10/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
