@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 05/10/2020
+#data: 06/10/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 05/10/2020'''
+'Data de última modificação: 06/10/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -845,7 +845,7 @@ sleep 5
     echo "*---Instalação PacketTracer---*"
     echo "==============================="
     echo -e "\n"
-    wget -c https://archive.org/download/packet-tracer-731-amd-64/PacketTracer_731_amd64.deb -O PacketTracer.deb
+    wget -c https://github.com/alyssonwolfpoet/script/raw/master/PacketTracer_731_amd64.deb -O PacketTracer.deb
     sudo dpkg -i PacketTracer.deb
     rm PacketTracer.deb
     sudo apt-get install -f -y
@@ -1255,7 +1255,7 @@ sleep 5
     echo "*---Desistalar PacketTracer---*"
     echo "==============================="
     echo -e "\n"
-    sudo apt remove PacketTracer
+    sudo apt remove packettracer --purge -y
   }
   #06º star_uml
   d-star_uml(){
