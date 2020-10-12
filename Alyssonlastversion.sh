@@ -1309,7 +1309,7 @@ sleep 5
     sudo /etc/init.d/mysql stop
     sudo apt-get remove –purge mysql-common
     sudo rm -rf /var/lib/mysql
-    sudo apt-get autoremove –purge
+    sudo apt-get autoremove -y --purge
     sudo apt-get autoclean
     sudo apt-get clean
   }
