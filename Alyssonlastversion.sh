@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 06/10/2020'''
+'Data de última modificação: 12/10/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -67,23 +67,23 @@ sleep 5
           java
           eclipse
           netbeans
-          python&pycharm
+          python_pycharm
           packettracer
           star_uml 
           evolus_pencil
           project_libre 
           vscode
           virtualbox
-          mysql&workbench
+          mysql-workbench
           postgresql
           phpmyadmin
           ocsinventory-agent
           apache2
-          php7.0&php_extras
+          php7.0_php_extras
           traceroute
           pgadmin3
           ruby
-          docker&docker.io
+          docker_docker.io
           gnome-panel
           wakeonlan
           etherwake
@@ -183,7 +183,7 @@ sleep 5
         ;;
         04)
           echo -e "\n"
-          python&pycharm
+          python_pycharm
         ;;
         05)
           echo -e "\n"
@@ -211,7 +211,7 @@ sleep 5
         ;;
         11)
           echo -e "\n"
-          mysql&workbench
+          mysql_workbench
         ;;
         12)
           echo -e "\n"
@@ -231,7 +231,7 @@ sleep 5
         ;;
         16)
           echo -e "\n"
-          php7.0&php_extras
+          php7.0_php_extras
         ;;
         17)
           echo -e "\n"
@@ -247,7 +247,7 @@ sleep 5
         ;;
         20)
           echo -e "\n"
-          docker&docker.io
+          docker_docker.io
         ;;
         21)
           echo -e "\n"
@@ -366,7 +366,7 @@ sleep 5
           #03º netbeans
           d-netbeans
           #04º python&pycharm
-          d-python&pycharm
+          d-python_pycharm
           #05º packettracer
           d-packettracer
           #06º star_uml
@@ -380,7 +380,7 @@ sleep 5
           #10º virtualbox
           d-virtualbox
           #11º mysql&workbench
-          d-mysql&workbench
+          d-mysql_workbench
           #12º postgresql
           d-postgresql
           #13º phpmyadmin
@@ -390,7 +390,7 @@ sleep 5
           #15º apache2
           d-apache2
           #16º php7.0&php_extras
-          d-php7.0&php_extras
+          d-php7.0_php_extras
           #17º traceroute
           d-traceroute
           #18º pgadmin3
@@ -398,7 +398,7 @@ sleep 5
           #19º ruby
           d-ruby
           #20º docker&docker.io
-          d-docker&docker.io
+          d-docker_docker.io
           #21º gnome-panel
           d-gnome-panel
           #22º wakeonlan
@@ -523,7 +523,7 @@ sleep 5
         04)
           echo -e "\n"
           #04º python&pycharm
-          d-python&pycharm
+          d-python_pycharm
         ;;
         05)
           echo -e "\n"
@@ -558,7 +558,7 @@ sleep 5
         11)
           echo -e "\n"
           #11º mysql&workbench
-          d-mysql&workbench
+          d-mysql_workbench
         ;;
         12)
           echo -e "\n"
@@ -583,7 +583,7 @@ sleep 5
         16)
           echo -e "\n"
           #16º php7.0&php_extras
-          d-php7.0&php_extras
+          d-php7.0_php_extras
         ;;
         17)
           echo -e "\n"
@@ -1237,7 +1237,7 @@ sleep 5
     sudo apt remove netbeans
   }
   #04º python&pycharm
-  d-python&pycharm(){
+  d-python_pycharm(){
     echo "==================================="
     echo "*---Desistalar python & pycharm---*"
     echo "==================================="
@@ -1301,7 +1301,7 @@ sleep 5
     sudo apt remove virtualbox -y --purge
   }
   #11º mysql&workbench
-  d-mysql&workbench(){
+  d-mysql_workbench(){
     echo "========================"
     echo "*---Desistalar mysql---*"
     echo "========================"
@@ -1344,7 +1344,7 @@ sleep 5
     sudo apt remove apache2 -y --purge
   }
   #16º php7.0&php_extras
-  d-php7.0&php_extras(){
+  d-php7.0_php_extras(){
     echo "=========================="
     echo "*---Desistalar php 7.0---*"
     echo "=========================="
@@ -1379,7 +1379,7 @@ sleep 5
     sudo apt remove ruby -y --purge
   }
   #20º docker&docker.io
-  d-docker&docker.io(){
+  d-docker_docker.io(){
     echo "==================================="
     echo "*---Desistalar docker&docker.io---*"
     echo "==================================="
