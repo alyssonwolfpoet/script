@@ -74,7 +74,7 @@ sleep 5
           project_libre 
           vscode
           virtualbox
-          mysql-workbench
+          mysql_workbench
           postgresql
           phpmyadmin
           ocsinventory-agent
@@ -823,7 +823,7 @@ sleep 5
     sudo rm netbeans.sh
   }
   #04º python&pycharm
-  python&pycharm(){
+  python_pycharm(){
     echo "==================================="
     echo "*---Instalação python & pycharm---*"
     echo "==================================="
@@ -914,7 +914,7 @@ sleep 5
     sudo rm virtualbox.run
   }
   #11º mysql&workbench
-  mysql&workbench(){
+  mysql_workbench(){
     echo "========================"
     echo "*---Instalação mysql---*"
     echo "========================"
@@ -981,7 +981,7 @@ sleep 5
     sudo apt install apache2 -y
   }
   #16º php7.0&php_extras
-  php7.0&php_extras(){
+  php7.0_php_extras(){
     echo "==============="
     echo "*---php 7.0---*"
     echo "==============="
@@ -1016,7 +1016,7 @@ sleep 5
     sudo apt install ruby -y
   }
   #20º docker&docker.io
-  docker&docker.io(){
+  docker_docker.io(){
     echo "========================"
     echo "*---docker&docker.io---*"
     echo "========================"
