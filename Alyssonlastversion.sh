@@ -936,6 +936,7 @@ sleep 5
     sudo apt-get autoremove --purge -y
     wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
     sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+    rm mysql-apt-config_0.8.15-1_all.deb
     sudo apt-get update
     sudo apt-get install mysql-server mysql-workbench-community -y
   }
@@ -1173,10 +1174,7 @@ sleep 5
     echo "*---brackets---*"
     echo "================"
     echo -e "\n"
-    wget -c https://github.com/adobe/brackets/releases/download/release-1.14.1/Brackets.Release.1.14.1.64-bit.deb -O brackets.deb
-    sudo dpkg -i brackets.deb
-    sudo apt-get -f install -y
-    sudo rm brackets.deb
+    sudo snap install brackets --classic
   }
   #38º Grub_Customizer
   Grub_Customizer(){
@@ -1204,11 +1202,7 @@ sleep 5
     echo "*---sublimetext---*"
     echo "==================="
     echo -e "\n"
-    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-    sudo apt-get install apt-transport-https
-    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-    sudo apt-get update
-    sudo apt-get install sublime-text -y
+    sudo snap install sublime-text --classic
   }
   #41º Logisim
   Logisim(){
@@ -1536,7 +1530,7 @@ sleep 5
     echo "*---Desistalar brackets---*"
     echo "==========================="
     echo -e "\n"
-    sudo apt remove brackets -y
+    sudo snap remove brackets --classic
   }
   #38º Grub_Customizer
   d-Grub_Customizer(){
@@ -1560,7 +1554,7 @@ sleep 5
     echo "*--- Desistalar sublimetext---*"
     echo "==============================="
     echo -e "\n"
-    sudo apt-get remove sublime-text -y --purge
+    sudo snap remove sublime-text --classic
   }
   #41º Logisim
   d-Logisim(){
