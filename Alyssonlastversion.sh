@@ -932,7 +932,7 @@ sleep 5
     #sudo apt install mysql-server mysql-client mysql-workbench -y
     #sudo apt-get install minisat2 -y && sudo apt-get install python-tk -y
     sudo apt-get remove *mysql* --purge -y
-    
+
     sudo apt-get remove –purge mysql-server
     sudo /etc/init.d/mysql stop
     sudo apt-get remove –purge mysql-common
@@ -1011,7 +1011,7 @@ sleep 5
     sudo apt install php libapache2-mod-php php-mysql -y
     sudo apt install php7.0 libapache2-mod-php7.0 -y
     sudo apt install php7.0-cli -y
-    #sudo apt install php7.4-cli
+    sudo apt install php7.4-cli
   }
   #17º traceroute
   traceroute(){
