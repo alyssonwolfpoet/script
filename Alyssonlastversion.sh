@@ -933,7 +933,7 @@ sleep 5
     sudo apt-get remove *mysql* --purge -y
     wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
     sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
-    sudo apt-get install mysql-server mysql-workbench-community -y
+    sudo apt-get update install mysql-server mysql-workbench-community -y
   }
   #12º postgresql
   postgresql(){
@@ -1274,7 +1274,7 @@ sleep 5
     #https://www.edivaldobrito.com.br/integrador-appimagelauncher-no-linux/
     #sudo rm -rf /opt/staruml
     #sudo rm /usr/share/applications/staruml.desktop
-    sudo apt-get remove StarUML --purge
+    sudo apt-get remove staruml --purge -y
   }
   #07º evolus_pencil
   d-evolus_pencil(){
@@ -1306,7 +1306,7 @@ sleep 5
     echo "*---Desistalar virtualbox---*"
     echo "============================="
     echo -e "\n"
-    sudo apt remove virtualbox -y --purge
+    sudo apt remove virtualbox-6.1 -y --purge
   }
   #11º mysql&workbench
   d-mysql_workbench(){
@@ -1327,7 +1327,7 @@ sleep 5
     echo "*---Desistalar postgresql---*"
     echo "============================="
     sudo apt-get --purge remove postgresql postgresql-client postgresql-client-common
-    sudo apt-get autoremove
+    sudo apt-get autoremove -y
   }
   #13º phpmyadmin
   d-phpmyadmin(){
