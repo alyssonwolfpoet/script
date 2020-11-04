@@ -1272,8 +1272,9 @@ sleep 5
     echo -e "\n"
     #Fonte para instalação do appimage
     #https://www.edivaldobrito.com.br/integrador-appimagelauncher-no-linux/
-    sudo rm -rf /opt/staruml
-    sudo rm /usr/share/applications/staruml.desktop
+    #sudo rm -rf /opt/staruml
+    #sudo rm /usr/share/applications/staruml.desktop
+    sudo apt-get remove StarUML --purge
   }
   #07º evolus_pencil
   d-evolus_pencil(){
