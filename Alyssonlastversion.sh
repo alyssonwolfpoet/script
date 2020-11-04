@@ -18,6 +18,7 @@ sleep 5
     echo "*---Atualização do Sistema Operacional---*"
     echo "=========================================="
     sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y
+    sudo snap refresh
   }
   atualizar(){
     echo -e "\n"
@@ -998,6 +999,7 @@ sleep 5
     sudo apt install php libapache2-mod-php php-mysql -y
     sudo apt install php7.0 libapache2-mod-php7.0 -y
     sudo apt install php7.0-cli -y
+    #sudo apt install php7.4-cli
   }
   #17º traceroute
   traceroute(){
@@ -1152,8 +1154,7 @@ sleep 5
     echo "*------Gimp------*"
     echo "=================="
     echo -e "\n"
-    sudo add-apt-repository ppa:otto-kesselgulasch/gimp -y
-    sudo apt-get install gimp -y
+    sudo snap install gimp
   }
   #36º wireshark
   wireshark(){
@@ -1170,7 +1171,10 @@ sleep 5
     echo "*---brackets---*"
     echo "================"
     echo -e "\n"
-    sudo add-apt-repository ppa:webupd8team/brackets -y && apt update && apt install brackets -y
+    wget -c https://github.com/adobe/brackets/releases/download/release-1.14.1/Brackets.Release.1.14.1.64-bit.deb -O brackets.deb
+    sudo dpkg -i brackets.deb
+    sudo apt-get -f install -y
+    sudo rm brackets.deb
   }
   #38º Grub_Customizer
   Grub_Customizer(){
@@ -1514,7 +1518,7 @@ sleep 5
     echo "*------Desistalar Gimp------*"
     echo "============================="
     echo -e "\n"
-    sudo apt-get remove gimp -y
+    sudo snap remove gimp -y
   }
   #36º wireshark
   d-wireshark(){
