@@ -1248,7 +1248,7 @@ sleep 5
     echo "*---Desistalar netbeans---*"
     echo "==========================="
     echo -e "\n"
-    sudo apt remove netbeans
+    sudo sh /usr/local/netbeans-12.1/uninstall.sh
   }
   #04º python&pycharm
   d-python_pycharm(){
@@ -1520,7 +1520,7 @@ sleep 5
     echo "*------Desistalar Gimp------*"
     echo "============================="
     echo -e "\n"
-    sudo snap remove gimp -y
+    sudo snap remove gimp
   }
   #36º wireshark
   d-wireshark(){
