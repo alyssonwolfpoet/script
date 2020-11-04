@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 06/10/2020
+#data: 04/11/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 12/10/2020'''
+'Data de última modificação: 04/11/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -803,7 +803,7 @@ sleep 5
     echo "*------Instalação Eclipse-------*"
     echo "================================="
     echo -e "\n"
-    wget -c http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+    wget -c https://mirror.nbtelecom.com.br/eclipse/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
     sudo tar -zxvf eclipse.tar.gz -C /opt/
     sudo rm eclipse.tar.gz
     echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -817,7 +817,7 @@ sleep 5
     echo "*---Instalação netbeans---*"
     echo "==========================="
     echo -e "\n"
-    wget -c http://ftp.unicamp.br/pub/apache/netbeans/netbeans/12.1/Apache-NetBeans-12.1-bin-linux-x64.sh -O netbeans.sh
+    wget -c https://downloads.apache.org/netbeans/netbeans/12.1/Apache-NetBeans-12.1-bin-linux-x64.sh -O netbeans.sh
     sudo chmod +x netbeans.sh
     ./netbeans.sh
     sudo rm netbeans.sh
@@ -832,9 +832,9 @@ sleep 5
     sudo apt-get install python3 -y
     sudo apt-get install python-tk -y
     sudo apt-get install python3-tk -y
-    wget -c https://download-cf.jetbrains.com/python/pycharm-community-2020.2.2.tar.gz -O pycharm.tar.gz
+    wget -c https://download-cf.jetbrains.com/python/pycharm-community-2020.2.3.tar.gz -O pycharm.tar.gz
     sudo tar -xzvf pycharm.tar.gz
-    sudo mv pycharm-community-2020.2.2 /opt/pycharm
+    sudo mv pycharm-community-2020.2.3 /opt/pycharm
     sudo rm pycharm.tar.gz
     echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
     sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -858,14 +858,18 @@ sleep 5
     echo -e "\n"
     #Fonte para instalação do appimage
     #https://www.edivaldobrito.com.br/integrador-appimagelauncher-no-linux/
-    wget -c http://staruml.io/download/releases/StarUML-3.2.2.AppImage -O staruml.AppImage
-    wget -c http://staruml.io/image/staruml_logo.png -O staruml.png
-    sudo mkdir /opt/staruml
-    sudo mv staruml.AppImage /opt/staruml
-    sudo mv staruml.png /opt/staruml
-    echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
-    sudo chmod 777 /usr/share/applications/staruml.desktop
-    sudo chmod 777 /opt/staruml/staruml.AppImage
+    #wget -c http://staruml.io/download/releases/StarUML-3.2.2.AppImage -O staruml.AppImage
+    #wget -c http://staruml.io/image/staruml_logo.png -O staruml.png
+    #sudo mkdir /opt/staruml
+    #sudo mv staruml.AppImage /opt/staruml
+    #sudo mv staruml.png /opt/staruml
+    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
+    #sudo chmod 777 /usr/share/applications/staruml.desktop
+    #sudo chmod 777 /opt/staruml/staruml.AppImage
+    wget -c https://staruml-7a0.kxcdn.com/releases-v4/StarUML_4.0.0_amd64.deb
+    sudo dpkg -i StarUML_4.0.0_amd64.deb
+    rm StarUML_4.0.0_amd64.deb
+    sudo apt-get install -f -y
   }
   #07º evolus_pencil
   evolus_pencil(){
@@ -885,7 +889,7 @@ sleep 5
     echo "*---project libre---*"
     echo "====================="
     echo -e "\n"
-    wget -c https://ufpr.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.9.2/projectlibre_1.9.2-1.deb -O projectlibre.deb
+    wget -c https://megalink.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.9.2/projectlibre_1.9.2-1.deb -O projectlibre.deb
     sudo dpkg -i projectlibre.deb
     sudo rm projectlibre.deb
     sudo apt-get install -f -y
@@ -896,7 +900,7 @@ sleep 5
     echo "*---Instalação vscode---*"
     echo "========================="
     echo -e "\n"
-    wget -c https://az764295.vo.msecnd.net/stable/58bb7b2331731bf72587010e943852e13e6fd3cf/code_1.49.1-1600299189_amd64.deb -O vscode.deb
+    wget -c https://az764295.vo.msecnd.net/stable/d2e414d9e4239a252d1ab117bd7067f125afd80a/code_1.50.1-1602600906_amd64.deb -O vscode.deb
     sudo dpkg -i vscode.deb
     sudo apt-get -f install -y
     sudo rm vscode.deb
@@ -907,11 +911,10 @@ sleep 5
     echo "*---Instalação virtualbox---*"
     echo "============================="
     echo -e "\n"
-    wget -c https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Linux_amd64.run -O virtualbox.run
-    sudo chmod 777 virtualbox.run
-    sudo ./virtualbox.run
+    wget -c https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb -O virtualbox.deb
+    sudo dpkg -i virtualbox.deb
     sudo apt-get -f install -y
-    sudo rm virtualbox.run
+    sudo rm virtualbox.deb
   }
   #11º mysql&workbench
   mysql_workbench(){
@@ -924,9 +927,13 @@ sleep 5
     echo "*********************"
     echo -e "\n"
     sleep 5
-    sudo apt-get update && apt-get upgrade -y
-    sudo apt install mysql-server mysql-client mysql-workbench -y
-    sudo apt-get install minisat2 -y && sudo apt-get install python-tk -y
+    #sudo apt-get update && apt-get upgrade -y
+    #sudo apt install mysql-server mysql-client mysql-workbench -y
+    #sudo apt-get install minisat2 -y && sudo apt-get install python-tk -y
+    sudo apt-get remove *mysql* --purge -y
+    wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
+    sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+    sudo apt-get install mysql-server mysql-workbench-community -y
   }
   #12º postgresql
   postgresql(){
