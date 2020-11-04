@@ -932,6 +932,8 @@ sleep 5
     #sudo apt install mysql-server mysql-client mysql-workbench -y
     #sudo apt-get install minisat2 -y && sudo apt-get install python-tk -y
     sudo apt-get remove *mysql* --purge -y
+    sudo apt-get update 
+    sudo apt-get autoremove --purge -y
     wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
     sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
     sudo apt-get update
