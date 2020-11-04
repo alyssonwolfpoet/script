@@ -933,7 +933,8 @@ sleep 5
     sudo apt-get remove *mysql* --purge -y
     wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
     sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
-    sudo apt-get update install mysql-server mysql-workbench-community -y
+    sudo apt-get update
+    sudo apt-get install mysql-server mysql-workbench-community -y
   }
   #12º postgresql
   postgresql(){
