@@ -804,7 +804,7 @@ sleep 5
     echo "*------Instalação Eclipse-------*"
     echo "================================="
     echo -e "\n"
-    wget -c https://mirror.nbtelecom.com.br/eclipse/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+    wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
     sudo tar -zxvf eclipse.tar.gz -C /opt/
     sudo rm eclipse.tar.gz
     echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -931,23 +931,11 @@ sleep 5
     #sudo apt-get update && apt-get upgrade -y
     #sudo apt install mysql-server mysql-client mysql-workbench -y
     #sudo apt-get install minisat2 -y && sudo apt-get install python-tk -y
-    sudo apt-get remove *mysql* --purge -y
-
-    sudo apt-get remove –purge mysql-server
-    sudo /etc/init.d/mysql stop
-    sudo apt-get remove –purge mysql-common
-    sudo rm -rf /var/lib/mysql
-    sudo apt-get autoremove -y --purge
-    sudo apt-get autoclean
-    sudo apt-get clean
-
-    sudo apt-get update 
-    sudo apt-get autoremove --purge -y
     wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
     sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
     rm mysql-apt-config_0.8.15-1_all.deb
     sudo apt-get update
-    sudo apt-get install mysql-server mysql-workbench-community -y
+    sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
   }
   #12º postgresql
   postgresql(){
@@ -1008,9 +996,9 @@ sleep 5
     echo "==============="
     echo -e "\n"
     sudo apt install build-essential -y
-    sudo apt install php libapache2-mod-php php-mysql -y
-    sudo apt install php7.0 libapache2-mod-php7.0 -y
-    sudo apt install php7.0-cli -y
+    #sudo apt install php libapache2-mod-php php-mysql -y
+    #sudo apt install php7.0 libapache2-mod-php7.0 -y
+    #sudo apt install php7.0-cli -y
     sudo apt install php7.4-cli
   }
   #17º traceroute
@@ -1174,7 +1162,7 @@ sleep 5
     echo "*---wireshark---*"
     echo "================="
     echo -e "\n"
-    sudo add-apt-repository ppa:wireshark-dev/stable -y && apt update && apt install wireshark -y
+    sudo apt install wireshark -y
     sudo dpkg-reconfigure wireshark-common && sudo usermod -a -G wireshark aluno && sudo chmod 777 /usr/bin/dumpcap
   }
   #37º brackets
@@ -1336,7 +1324,7 @@ sleep 5
     echo "============================="
     echo "*---Desistalar postgresql---*"
     echo "============================="
-    sudo apt-get --purge remove postgresql postgresql-client postgresql-client-common
+    sudo apt-get --purge remove postgresql postgresql-client postgresql-client-common -y
     sudo apt-get autoremove -y
   }
   #13º phpmyadmin
