@@ -833,12 +833,13 @@ sleep 5
     sudo apt-get install python3 -y
     sudo apt-get install python-tk -y
     sudo apt-get install python3-tk -y
-    wget -c https://download-cf.jetbrains.com/python/pycharm-community-2020.2.3.tar.gz -O pycharm.tar.gz
-    sudo tar -xzvf pycharm.tar.gz
-    sudo mv pycharm-community-2020.2.3 /opt/pycharm
-    sudo rm pycharm.tar.gz
-    echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
-    sudo chmod +x /usr/share/applications/pycharm.desktop
+    #wget -c https://download-cf.jetbrains.com/python/pycharm-community-2020.2.3.tar.gz -O pycharm.tar.gz
+    #sudo tar -xzvf pycharm.tar.gz
+    #sudo mv pycharm-community-2020.2.3 /opt/pycharm
+    #sudo rm pycharm.tar.gz
+    #echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
+    #sudo chmod +x /usr/share/applications/pycharm.desktop
+    sudo snap install pycharm-community --classic
   }
   #05º packettracer
   packettracer(){
@@ -1249,12 +1250,13 @@ sleep 5
     echo "*---Desistalar python & pycharm---*"
     echo "==================================="
     echo -e "\n"
-    sudo apt-get remove python -y
-    sudo apt-get remove python3 -y
-    sudo apt-get remove python-tk -y
-    sudo apt-get remove python3-tk -y
-    sudo rm -rf /opt/pycharm
-    sudo rm /usr/share/applications/pycharm.desktop
+    #sudo apt-get remove python -y
+    #sudo apt-get remove python3 -y
+    #sudo apt-get remove python-tk -y
+    #sudo apt-get remove python3-tk -y
+    #sudo rm -rf /opt/pycharm
+    #sudo rm /usr/share/applications/pycharm.desktop
+    sudo snap install pycharm-community --classic
   }
   #05º packettracer
   d-packettracer(){
