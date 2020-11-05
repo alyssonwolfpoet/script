@@ -80,7 +80,7 @@ sleep 5
           phpmyadmin
           ocsinventory-agent
           apache2
-          php7.0_php_extras
+          php7.4
           traceroute
           pgadmin3
           ruby
@@ -135,7 +135,7 @@ sleep 5
         13º phpmyadmin
         14º ocsinventory-agent
         15º apache2
-        16º php7.0&php_extras
+        16º php7.4
         17º traceroute
         18º pgadmin3
         19º ruby
@@ -232,7 +232,7 @@ sleep 5
         ;;
         16)
           echo -e "\n"
-          php7.0_php_extras
+          php7.4
         ;;
         17)
           echo -e "\n"
@@ -391,7 +391,7 @@ sleep 5
           #15º apache2
           d-apache2
           #16º php7.0&php_extras
-          d-php7.0_php_extras
+          d-php7.4
           #17º traceroute
           d-traceroute
           #18º pgadmin3
@@ -471,7 +471,7 @@ sleep 5
         13º phpmyadmin
         14º ocsinventory-agent
         15º apache2
-        16º php7.0&php_extras
+        16º php7.4
         17º traceroute
         18º pgadmin3
         19º ruby
@@ -584,7 +584,7 @@ sleep 5
         16)
           echo -e "\n"
           #16º php7.0&php_extras
-          d-php7.0_php_extras
+          d-php7.4
         ;;
         17)
           echo -e "\n"
@@ -752,7 +752,7 @@ sleep 5
           13º phpmyadmin
           14º ocsinventory-agent
           15º apache2
-          16º php7.0&php_extras
+          16º php7.4
           17º traceroute
           18º pgadmin3
           19º ruby
@@ -991,9 +991,9 @@ sleep 5
     sudo apt install apache2 -y
   }
   #16º php7.0&php_extras
-  php7.0_php_extras(){
+  php7.4(){
     echo "==============="
-    echo "*---php 7.0---*"
+    echo "*---php 7.4---*"
     echo "==============="
     echo -e "\n"
     sudo apt install build-essential -y
@@ -1354,15 +1354,16 @@ sleep 5
     sudo apt remove apache2 -y --purge
   }
   #16º php7.0&php_extras
-  d-php7.0_php_extras(){
+  d-php7.4(){
     echo "=========================="
     echo "*---Desistalar php 7.0---*"
     echo "=========================="
     echo -e "\n"
-    sudo apt remove build-essential -y
-    sudo apt remove php libapache2-mod-php php-mysql -y
-    sudo apt remove php7.0 libapache2-mod-php7.0 -y
-    sudo apt remove php7.0-cli -y
+    #sudo apt remove build-essential -y
+    #sudo apt remove php libapache2-mod-php php-mysql -y
+    #sudo apt remove php7.0 libapache2-mod-php7.0 -y
+    #sudo apt remove php7.0-cli -y
+    sudo apt remove php7.4-cli -y
   }
   #17º traceroute
   d-traceroute(){
