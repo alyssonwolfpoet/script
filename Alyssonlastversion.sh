@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 04/11/2020
+#data: 05/11/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 04/11/2020'''
+'Data de última modificação: 05/11/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -804,13 +804,12 @@ sleep 5
     echo "*------Instalação Eclipse-------*"
     echo "================================="
     echo -e "\n"
-    wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
-    sudo tar -zxvf eclipse.tar.gz -C /opt/
-    sudo rm eclipse.tar.gz
-    echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
-    sudo chmod +x /usr/share/applications/eclipse.desktop
-    cp /usr/share/applications/eclipse.desktop  ~/Área\ de\ Trabalho/
-    cp /usr/share/applications/eclipse.desktop ~/Desktop
+    #wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+    #sudo tar -zxvf eclipse.tar.gz -C /opt/
+    #sudo rm eclipse.tar.gz
+    #echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
+    #sudo chmod +x /usr/share/applications/eclipse.desktop
+    sudo snap install eclipse --edge --classic
   }
   #03º netbeans
   netbeans(){
@@ -1230,8 +1229,9 @@ sleep 5
     echo "*------Desistalar Eclipse-------*"
     echo "================================="
     echo -e "\n"
-    sudo rm -rf /opt/eclipse
-    sudo rm /usr/share/applications/eclipse.desktop
+    #sudo rm -rf /opt/eclipse
+    #sudo rm /usr/share/applications/eclipse.desktop
+    sudo snap remove eclipse --edge --classic
   }
   #03º netbeans
   d-netbeans(){
