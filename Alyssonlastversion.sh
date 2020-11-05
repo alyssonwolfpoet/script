@@ -817,10 +817,11 @@ sleep 5
     echo "*---Instalação netbeans---*"
     echo "==========================="
     echo -e "\n"
-    wget -c https://downloads.apache.org/netbeans/netbeans/12.1/Apache-NetBeans-12.1-bin-linux-x64.sh -O netbeans.sh
-    sudo chmod +x netbeans.sh
-    ./netbeans.sh
-    sudo rm netbeans.sh
+    #wget -c https://downloads.apache.org/netbeans/netbeans/12.1/Apache-NetBeans-12.1-bin-linux-x64.sh -O netbeans.sh
+    #sudo chmod +x netbeans.sh
+    #./netbeans.sh
+    #sudo rm netbeans.sh
+    sudo snap install netbeans --classic
   }
   #04º python&pycharm
   python_pycharm(){
@@ -1239,7 +1240,8 @@ sleep 5
     echo "*---Desistalar netbeans---*"
     echo "==========================="
     echo -e "\n"
-    sudo sh /usr/local/netbeans-12.1/uninstall.sh
+    #sudo sh /usr/local/netbeans-12.1/uninstall.sh
+    sudo snap remove netbeans --classic
   }
   #04º python&pycharm
   d-python_pycharm(){
