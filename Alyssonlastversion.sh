@@ -848,7 +848,7 @@ sleep 5
     echo "==============================="
     echo -e "\n"
     #https://drive.google.com/file/d/1IfqZZKxttJQnP2YZx7JEc9-YQquXeH91
-    wget -c https://uc82742f7197d31cb307f67662ee.dl.dropboxusercontent.com/cd/0/get/BCp4hA3EeNRvzLHfIdekkuxbYlqbatxfqNrkC9LHg733a9z6OGSXY48gsF1kA9ugmSyPAkS6ZJb7O29rofRohOLVfhNJbuLUV2MKNJnPesJgXLkJCVCCUQDxs6XLzZ_5zlE/file?_download_id=9880833763753586741113229192150164152335094732892586241506018865 -O PacketTracer.deb
+    wget -c https://www.dropbox.com/s/86ub8ecs9b8frt5/PacketTracer_731_amd64.deb -O PacketTracer.deb
     sudo dpkg -i PacketTracer.deb
     rm PacketTracer.deb
     sudo apt-get install -f -y
