@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 05/11/2020
+#data: 09/11/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 05/11/2020'''
+'Data de última modificação: 09/11/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -903,7 +903,7 @@ sleep 5
     echo "*---Instalação vscode---*"
     echo "========================="
     echo -e "\n"
-    wget -c https://az764295.vo.msecnd.net/stable/d2e414d9e4239a252d1ab117bd7067f125afd80a/code_1.50.1-1602600906_amd64.deb -O vscode.deb
+    wget -c https://az764295.vo.msecnd.net/stable/fcac248b077b55bae4ba5bab613fd6e9156c2f0c/code_1.51.0-1604600753_amd64.deb -O vscode.deb
     sudo dpkg -i vscode.deb
     sudo apt-get -f install -y
     sudo rm vscode.deb
@@ -933,9 +933,9 @@ sleep 5
     #sudo apt-get update && apt-get upgrade -y
     #sudo apt install mysql-server mysql-client mysql-workbench -y
     #sudo apt-get install minisat2 -y && sudo apt-get install python-tk -y
-    wget -c https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb
-    sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
-    rm mysql-apt-config_0.8.15-1_all.deb
+    wget -c https://repo.mysql.com//mysql-apt-config_0.8.16-1_all.deb
+    sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
+    rm mysql-apt-config_0.8.16-1_all.deb
     sudo apt-get update
     sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
   }
@@ -945,6 +945,9 @@ sleep 5
     echo "*---postgresql---*"
     echo "=================="
     echo -e "\n"
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    sudo apt-get update
     sudo apt install postgresql postgresql-contrib -y
     echo -e "\n"
     echo "*********************************************"
@@ -1018,6 +1021,14 @@ sleep 5
     echo "================"
     echo -e "\n"
     sudo apt install pgadmin3 -y
+    echo "================"
+    echo "*---pgadmin4---*"
+    echo "================"
+    wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+    sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+    sudo apt install pgadmin4
+    sudo apt install pgadmin4-desktop
+    sudo apt install pgadmin4-web 
   }
   #19º ruby
   ruby(){
