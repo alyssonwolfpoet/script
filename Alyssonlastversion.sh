@@ -1203,7 +1203,8 @@ sleep 5
     echo "*---systemback---*"
     echo "=================="
     echo -e "\n"
-    sudo apt-add-repository ppa:nemh/systemback -y
+    #sudo apt-add-repository ppa:nemh/systemback -y
+    sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main"
     sudo apt-get update
     sudo apt-get install systemback -y
   }
