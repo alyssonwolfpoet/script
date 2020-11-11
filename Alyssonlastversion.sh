@@ -939,7 +939,7 @@ sleep 5
     sudo apt-get update
     sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
     sudo apt update
-    sudo apt upgrade
+    sudo apt upgrade -y
   }
   #12º postgresql
   postgresql(){
