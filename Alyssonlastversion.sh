@@ -938,6 +938,8 @@ sleep 5
     rm mysql-apt-config_0.8.16-1_all.deb
     sudo apt-get update
     sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
+    sudo apt update
+    sudo apt upgrade
   }
   #12º postgresql
   postgresql(){
@@ -1223,8 +1225,6 @@ sleep 5
     echo "*---Logisim---*"
     echo "==============="
     echo -e "\n"
-    sudo add-apt-repository ppa:piernov/logisim-evolution -y
-    sudo apt-get update
     sudo apt-get install logisim -y
   }
 #fim da função de Instalação
