@@ -68,8 +68,18 @@ sleep 5
 #40 vscode
 #41 wakeonlan
 #42 wireshark"
-	}
+}
+
+	atualizacao(){
+    echo "=========================================="
+    echo "*---Atualização do Sistema Operacional---*"
+    echo "=========================================="
+    sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y
+    sudo snap refresh
+  	}
 	instalar_tudo(){
+		atualizacao
+
 		echo -e "\n01/42%\n"
 		#01 apache2
 		apache2
@@ -392,6 +402,10 @@ sleep 5
 	#17 minisat
 	minisat(){
 		sudo apt-get install minisat2
+		#wget -c http://mirrors.kernel.org/ubuntu/pool/universe/m/minisat2/minisat_2.2.1-5build2_amd64.deb -O minisat.deb
+		#sudo dpkg -i minisat.deb
+		#rm minisat.deb
+	    #sudo apt-get install -f -y
 	}
 	#18 mysql
 		#-mysql-server
