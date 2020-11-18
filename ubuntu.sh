@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 12/11/2020
+#data: 18/11/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 12/11/2020'''
+'Data de última modificação: 18/11/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -694,7 +694,7 @@ sleep 5
     echo "*---Instalação vscode---*"
     echo "========================="
     echo -e "\n"
-    wget -c https://az764295.vo.msecnd.net/stable/fcac248b077b55bae4ba5bab613fd6e9156c2f0c/code_1.51.0-1604600753_amd64.deb -O vscode.deb
+    wget -c https://az764295.vo.msecnd.net/stable/e5a624b788d92b8d34d1392e4c4d9789406efe8f/code_1.51.1-1605051630_amd64.deb -O vscode.deb
     sudo dpkg -i vscode.deb
     sudo apt-get -f install -y
     sudo rm vscode.deb
