@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 18/11/2020
+#data: 22/12/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 18/11/2020'''
+'Data de última modificação: 22/12/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -50,8 +50,7 @@ sleep 5
 	#-postgis
 	#-pgadmin
 		#-pgadmin3
-		#-pgadmin4
-	
+		#-pgadmin4	
 #29 project_libre
 #30 python
 	#-tkinter3
@@ -500,7 +499,17 @@ sleep 5
 		echo "==========="
 	    echo "*---php---*"
 	    echo "==========="
-		sudo apt install php7.4-cli
+		#sudo apt install php7.4-cli
+		wget -c https://www.php.net/distributions/php-8.0.0.tar.gz -O php-8.0.0.tar.gz
+		sudo tar -zxvf php-8.0.0.tar.gz
+		cd php-8.0.0
+		sudo apt install -y pkg-config build-essential autoconf bison re2c libxml2-dev libsqlite3-dev
+		sudo ./buildconf
+		sudo ./configure
+		sudo make
+		sudo make install
+		cd ..
+		sudo rm -rf php-8.0.0
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
@@ -581,13 +590,21 @@ sleep 5
     echo "==================================="
     echo "*---         python            ---*"
     echo "==================================="
+    wget -c https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz -O Python-3.9.1.tgz
+	sudo tar -zxvf Python-3.9.1.tgz
+	cd Python-3.9.1
+	sudo ./configure
+	sudo make
+	sudo make install
+	cd ..
+	sudo rm -rf Python-3.9.1
     echo -e "\n"
     echo "==================================="
     echo "*---         tkinter3            ---*"
     echo "==================================="
     echo -e "\n"
     #sudo apt-get install python -y
-    sudo apt-get install python3 -y
+    #sudo apt-get install python3 -y
     #sudo apt-get install python-tk -y
     sudo apt-get install python3-tk -y
     echo "==================================="
@@ -693,7 +710,7 @@ sleep 5
     echo "*---Instalação vscode---*"
     echo "========================="
     echo -e "\n"
-    wget -c https://az764295.vo.msecnd.net/stable/e5a624b788d92b8d34d1392e4c4d9789406efe8f/code_1.51.1-1605051630_amd64.deb -O vscode.deb
+    wget -c https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/code_1.52.1-1608136922_amd64.deb -O vscode.deb
     sudo dpkg -i vscode.deb
     sudo apt-get -f install -y
     sudo rm vscode.deb
