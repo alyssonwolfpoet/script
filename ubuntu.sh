@@ -507,7 +507,7 @@ sleep 5
 		sudo apt install php8.0 libapache2-mod-php8.0 -y
 		systemctl restart apache2
 		sudo apt install php8.0-mysql php8.0-gd -y
-		sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y
+		sudo apt-get upgrade -y
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
@@ -593,6 +593,7 @@ sleep 5
 	sudo apt install software-properties-common -y
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
 	sudo apt install python3.9 -y
+	sudo apt install python3-pip -y
     echo -e "\n"
     echo "==================================="
     echo "*---         tkinter3            ---*"
