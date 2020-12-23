@@ -500,6 +500,7 @@ sleep 5
 	    echo "*---php---*"
 	    echo "==========="
 		#sudo apt install php7.4-cli
+		#https://linuxize.com/post/how-to-install-php-8-on-ubuntu-20-04/
 		sudo apt install software-properties-common -y
 		sudo add-apt-repository ppa:ondrej/php -y
 		sudo apt update
@@ -585,6 +586,7 @@ sleep 5
     echo "==================================="
     echo "*---         python            ---*"
     echo "==================================="
+    #https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/
     sudo apt update
 	sudo apt install software-properties-common -y
 	sudo add-apt-repository ppa:deadsnakes/ppa -y
