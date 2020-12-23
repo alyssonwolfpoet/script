@@ -332,7 +332,7 @@ sleep 5
 	    sudo apt-get install flashplugin-installer -y
 	}
 	#09 gimp
-	Gimp(){
+	gimp(){
 	    echo "=================="
 	    echo "*------Gimp------*"
 	    echo "=================="
@@ -347,7 +347,7 @@ sleep 5
 	sudo apt-get update
   }
 	#11 gnome_panel
-	 gnome-panel(){
+	 gnome_panel(){
 	    echo "==================="
 	    echo "*---gnome-panel---*"
 	    echo "==================="
@@ -463,7 +463,7 @@ sleep 5
 	    sudo apt install nmap -y
 	}
 	#23 ocsinventory
-	ocsinventory-agent(){
+	ocsinventory(){
 	    echo "=========================="
 	    echo "*---ocsinventory-agent---*"
 	    echo "=========================="
@@ -507,6 +507,7 @@ sleep 5
 		sudo apt install php8.0 libapache2-mod-php8.0 -y
 		systemctl restart apache2
 		sudo apt install php8.0-mysql php8.0-gd -y
+		sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
@@ -667,7 +668,7 @@ sleep 5
 	    echo "=================="
 	    echo -e "\n"
 	    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
-	    sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main"
+	    sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main" -y
 	    sudo apt-get update
 	    sudo apt-get install systemback -y
 	}
