@@ -505,6 +505,7 @@ sleep 5
 		sudo add-apt-repository ppa:ondrej/php -y
 		sudo apt update
 		sudo apt install php8.0 libapache2-mod-php8.0 -y
+		systemctl restart apache2
 		sudo apt install php8.0-mysql php8.0-gd -y
 	}
 	#27 phpmyadmin
