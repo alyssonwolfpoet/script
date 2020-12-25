@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 22/12/2020
+#data: 25/12/2020
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 22/12/2020'''
+'Data de última modificação: 25/12/2020'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -67,7 +67,7 @@ sleep 5
 #40 vscode
 #41 wakeonlan
 #42 wireshark"
-}
+	}
 
 	atualizacao(){
     echo "=========================================="
@@ -256,6 +256,201 @@ sleep 5
 		#42 wireshark
 		wireshark
 	}
+	instalar_individualmente(){
+		clear
+		while true; do
+		  lista
+		  echo -e "*---instalar_individualmente---*\n"
+		  echo "Selecione uma opção:"
+		  echo "0 - Sair"
+		  echo -n "opção:"
+		  read opcao;
+
+			case $opcao in
+			    0)
+			     	clear
+			     	break
+			    ;;
+				01)
+					#01 apache2
+					apache2
+				;;
+				02)	
+					#02 brackets
+					brackets
+				;;
+				03)	
+					#03 build_essential
+						#-gcc
+					build_essential
+				;;
+				04)
+					#04 docker
+					docker
+				;;
+				05)
+					#05 eclipse
+					eclipse
+				;;
+				06)
+					#06 etherwake
+					etherwake
+				;;
+				07)
+					#07 evolus_pencil
+					evolus_pencil
+				;;
+				08)
+					#08 flashplugin
+					flashplugin
+				;;
+				09)
+					#09 gimp
+					gimp
+				;;
+				10)
+					#10 github_desktop
+					github_desktop
+				;;
+				11)
+					#11 gnome_panel
+					gnome_panel
+				;;
+				12)
+					#12 grub_customizer
+					grub_customizer
+				;;
+				13)
+					#13 gtkterm
+					gtkterm
+				;;
+				14)
+					#14 java
+					java
+				;;
+				15)
+					#15 kmag
+					kmag
+				;;
+				16)
+					#16 logisim
+					logisim
+				;;
+				17)
+					#17 minisat
+					minisat
+				;;
+				18)
+					#18 mysql
+						#-mysql-server
+						#-mysql-workbench
+					mysql
+				;;
+				19)
+					#19 nbtscan
+					nbtscan
+				;;
+				20)	
+					#20 netbeans
+					netbeans
+				;;
+				21)
+					#21 net_tools
+					net_tools
+				;;
+				22)
+					#22 nmap
+					nmap
+				;;
+				23)
+					#23 ocsinventory
+					ocsinventory
+				;;
+				24)
+					#24 octave
+					octave
+				;;
+				25)
+					#25 packettracer
+					packettracer
+				;;
+				26)
+					#26 php
+					php
+				;;
+				27)
+					#27 phpmyadmin
+					phpmyadmin
+				;;
+				28)
+					#28 postgresql
+						#-postgis
+						#-pgadmin
+							#-pgadmin3
+							#-pgadmin4
+					postgresql
+				;;
+				29)
+					#29 project_libre
+					project_libre
+				;;
+				30)
+					#30 python
+						#-tkinter3
+						#-pycharm
+					python
+				;;
+				31)
+					#31 ruby
+					ruby
+				;;
+				32)
+					#32 scilab
+					scilab
+				;;
+				33)
+					#33 ssh
+					ssh
+				;;
+				34)
+					#34 star_uml
+					star_uml
+				;;
+				35)
+					#35 sublimetext
+					sublimetext
+				;;
+				36)
+					#36 systemback
+					systemback
+				;;
+				37)
+					#37 traceroute
+					traceroute
+				;;
+				38)
+					#38 vim
+					vim
+				;;
+				39)
+					#39 virtualbox
+					virtualbox
+				;;
+				40)
+					#40 vscode
+					vscode
+				;;
+				41)
+					#41 wakeonlan
+					wakeonlan
+				;;
+				42)
+					#42 wireshark
+					wireshark
+	  			;;
+  			esac
+  		done
+	}
 #fim funções principal
 
 #funções de Instalação
@@ -281,14 +476,14 @@ sleep 5
 		sudo apt install build-essential -y
 	}
 	#04 docker
-	 docker(){
+	docker(){
 	    echo "========================"
 	    echo "*---docker&docker.io---*"
 	    echo "========================"
 	    echo -e "\n"
 	    sudo apt install docker -y && apt install docker.io -y
 	    sudo usermod -a -G docker aluno && service docker restart #[para testar basta digitar docker ps]
-	  }
+	}
 	#05 eclipse
 	eclipse(){
 	    echo -e "\n"
@@ -304,7 +499,7 @@ sleep 5
 	    sudo snap install eclipse --edge --classic
 	}
 	#06 etherwake
-	 etherwake(){
+	etherwake(){
 	    echo "================="
 	    echo "*---etherwake---*"
 	    echo "================="
@@ -341,13 +536,13 @@ sleep 5
 	}
 	#10 github_desktop
 	github_desktop(){
-  	#https://github.com/shiftkey/desktop
-  	wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
-	sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
-	sudo apt-get update
-  }
+	  	#https://github.com/shiftkey/desktop
+	  	wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
+		sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
+		sudo apt-get update
+	}
 	#11 gnome_panel
-	 gnome_panel(){
+	gnome_panel(){
 	    echo "==================="
 	    echo "*---gnome-panel---*"
 	    echo "==================="
@@ -585,31 +780,31 @@ sleep 5
 		#-tkinter3
 		#-pycharm
 	python(){
-    echo "==================================="
-    echo "*---         python            ---*"
-    echo "==================================="
-    #https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/
-    sudo apt update
-	sudo apt install software-properties-common -y
-	sudo add-apt-repository ppa:deadsnakes/ppa -y
-	sudo apt install python3.9 -y
-	sudo apt install python3-pip -y
-    echo -e "\n"
-    echo "==================================="
-    echo "*---         tkinter3            ---*"
-    echo "==================================="
-    echo -e "\n"
-    #sudo apt-get install python -y
-    #sudo apt-get install python3 -y
-    #sudo apt-get install python-tk -y
-    sudo apt-get install python3-tk -y
-    echo "==================================="
-    echo "*---         pycharm           ---*"
-    echo "==================================="
-    sudo snap install pycharm-community --classic
-  }
+	    echo "==================================="
+	    echo "*---         python            ---*"
+	    echo "==================================="
+	    #https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/
+	    sudo apt update
+		sudo apt install software-properties-common -y
+		sudo add-apt-repository ppa:deadsnakes/ppa -y
+		sudo apt install python3.9 -y
+		sudo apt install python3-pip -y
+	    echo -e "\n"
+	    echo "==================================="
+	    echo "*---         tkinter3            ---*"
+	    echo "==================================="
+	    echo -e "\n"
+	    #sudo apt-get install python -y
+	    #sudo apt-get install python3 -y
+	    #sudo apt-get install python-tk -y
+	    sudo apt-get install python3-tk -y
+	    echo "==================================="
+	    echo "*---         pycharm           ---*"
+	    echo "==================================="
+	    sudo snap install pycharm-community --classic
+	}
 	#31 ruby
-	 ruby(){
+	ruby(){
 	    echo "============"
 	    echo "*---ruby---*"
 	    echo "============"
@@ -626,7 +821,7 @@ sleep 5
 	    sudo apt-get install scilab -y
 	}
 	#33 ssh
-	  ssh(){
+	ssh(){
 	    echo "==========="
 	    echo "*---ssh---*"
 	    echo "==========="
@@ -656,12 +851,12 @@ sleep 5
 	}
 	#35 sublimetext
 	sublimetext(){
-    echo "==================="
-    echo "*---sublimetext---*"
-    echo "==================="
-    echo -e "\n"
-    sudo snap install sublime-text --classic
-  }
+	    echo "==================="
+	    echo "*---sublimetext---*"
+	    echo "==================="
+	    echo -e "\n"
+	    sudo snap install sublime-text --classic
+ 	}
 	#36 systemback
 	systemback(){
 	    echo "=================="
@@ -683,11 +878,11 @@ sleep 5
 	}
 	#38 vim
 	vim(){
-    echo "=================="
-    echo "*---editor vim---*"
-    echo "=================="
-    echo -e "\n"
-    sudo apt-get install vim -y
+	    echo "=================="
+	    echo "*---editor vim---*"
+	    echo "=================="
+	    echo -e "\n"
+	    sudo apt-get install vim -y
  	}
 	#39 virtualbox
 	virtualbox(){
@@ -702,15 +897,15 @@ sleep 5
 	}
 	#40 vscode
 	vscode(){
-    echo "========================="
-    echo "*---Instalação vscode---*"
-    echo "========================="
-    echo -e "\n"
-    wget -c https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/code_1.52.1-1608136922_amd64.deb -O vscode.deb
-    sudo dpkg -i vscode.deb
-    sudo apt-get -f install -y
-    sudo rm vscode.deb
-  }
+	    echo "========================="
+	    echo "*---Instalação vscode---*"
+	    echo "========================="
+	    echo -e "\n"
+	    wget -c https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/code_1.52.1-1608136922_amd64.deb -O vscode.deb
+	    sudo dpkg -i vscode.deb
+	    sudo apt-get -f install -y
+	    sudo rm vscode.deb
+	}
 	#41 wakeonlan
 	wakeonlan(){
 	    echo "================="
@@ -736,11 +931,16 @@ while true; do
   echo "Selecione uma opção:"
   echo "1 - lista"
   echo "2 - instalar_tudo"
+  echo "3 - instalar_individualmente"
+  echo "@ - atualizacao"
   echo "0 - Sair"
   echo -n "opção:"
   read opcao;
 
   case $opcao in
+    @)
+		atualizacao
+	;;
     0)
      	break
     ;;
@@ -749,6 +949,9 @@ while true; do
     ;;
     2)
 		instalar_tudo
+	;;
+	3)
+		instalar_individualmente
 	;;
   esac
   echo -e "\n"
