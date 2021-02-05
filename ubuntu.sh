@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 25/12/2020
+#data: 04/02/2021
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 25/12/2020'''
+'Data de última modificação: 04/02/2021'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -692,18 +692,22 @@ sleep 5
 	}
 	#26 php
 	php(){
-		echo "==========="
+	    echo "==========="
 	    echo "*---php---*"
 	    echo "==========="
-		#sudo apt install php7.4-cli
-		#https://linuxize.com/post/how-to-install-php-8-on-ubuntu-20-04/
-		sudo apt install software-properties-common -y
-		sudo add-apt-repository ppa:ondrej/php -y
-		sudo apt update
-		sudo apt install php8.0 libapache2-mod-php8.0 -y
-		systemctl restart apache2
-		sudo apt install php8.0-mysql php8.0-gd -y
-		sudo apt-get upgrade -y
+	    sudo apt install php7.4-cli
+	    wget -c https://www.php.net/distributions/php-8.0.1.tar.gz
+	    sudo tar -zxvf php-8.0.1.tar.gz
+	    sudo apt install -y pkg-config build-essential autoconf bison re2c \ libxml2-dev libsqlite3-dev
+	    cd php-8.0.1
+	    ./buildconf
+	    ./configure
+	    make
+	    sudo make install
+	    cd ..
+	    sudo rm -rf php-8.0.1
+	    sudo rm -rf php-8.0.1.tar.gz	
+
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
@@ -772,7 +776,7 @@ sleep 5
 	    echo "*---project libre---*"
 	    echo "====================="
 	    echo -e "\n"
-	    wget -c https://megalink.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.9.2/projectlibre_1.9.2-1.deb -O projectlibre.deb
+	    wget -c https://megalink.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.9.3/projectlibre_1.9.3-1.deb -O projectlibre.deb
 	    sudo dpkg -i projectlibre.deb
 	    sudo rm projectlibre.deb
 	    sudo apt-get install -f -y
@@ -784,12 +788,19 @@ sleep 5
 	    echo "==================================="
 	    echo "*---         python            ---*"
 	    echo "==================================="
-	    #https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/
-	    sudo apt update
-		sudo apt install software-properties-common -y
-		sudo add-apt-repository ppa:deadsnakes/ppa -y
-		sudo apt install python3.9 -y
-		sudo apt install python3-pip -y
+	   
+	    wget -c https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
+            sudo tar -zxvf Python-3.9.1.tgz
+            cd Python-3.9.1
+            ./configure
+            make
+            sudo make install
+            cd ..
+            sudo rm -rf Python-3.9.1
+            sudo rm -rf Python-3.9.1.tgz
+	    
+	    sudo apt install python3.9 -y
+	    sudo apt install python3-pip -y
 	    echo -e "\n"
 	    echo "==================================="
 	    echo "*---         tkinter3            ---*"
@@ -845,9 +856,9 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /opt/staruml/staruml.AppImage
-	    wget -c https://staruml-7a0.kxcdn.com/releases-v4/StarUML_4.0.0_amd64.deb
-	    sudo dpkg -i StarUML_4.0.0_amd64.deb
-	    rm StarUML_4.0.0_amd64.deb
+	    wget -c https://staruml-7a0.kxcdn.com/releases-v4/StarUML_4.0.1_amd64.deb
+	    sudo dpkg -i StarUML_4.0.1_amd64.deb
+	    rm StarUML_4.0.1_amd64.deb
 	    sudo apt-get install -f -y
 	}
 	#35 sublimetext
@@ -891,7 +902,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.18/virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -902,7 +913,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/code_1.52.1-1608136922_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/8490d3dde47c57ba65ec40dd192d014fd2113496/code_1.53.0-1612368357_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
