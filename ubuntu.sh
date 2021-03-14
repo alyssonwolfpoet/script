@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 04/02/2021
+#data: 14/03/2021
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 04/02/2021'''
+'Data de última modificação: 14/03/2021'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -576,7 +576,8 @@ sleep 5
 	    echo "*--------Instalação Java--------*"
 	    echo "================================="
 	    echo -e "\n"
-	    sudo apt install default-jre -y && sudo apt install default-jdk -y
+	    #sudo apt install default-jre -y && sudo apt install default-jdk -y
+	    wget -c https://download.oracle.com/otn-pub/java/jdk/15.0.2+7/0d1cfde4252546c6931946de8db48ee2/jdk-15.0.2_linux-x64_bin.deb?AuthParam=1615758029_0fbe6788d90216850fe3a87f77dae78e -O jdk15.deb
 	}
 	#15 kmag
 	kmag(){
@@ -697,17 +698,6 @@ sleep 5
 	    echo "==========="
 	    sudo apt install php7.4-cli
 	    wget -c https://www.php.net/distributions/php-8.0.1.tar.gz
-	    sudo tar -zxvf php-8.0.1.tar.gz
-	    sudo apt install -y pkg-config build-essential autoconf bison re2c \ libxml2-dev libsqlite3-dev
-	    cd php-8.0.1
-	    ./buildconf
-	    ./configure
-	    make
-	    sudo make install
-	    cd ..
-	    sudo rm -rf php-8.0.1
-	    sudo rm -rf php-8.0.1.tar.gz	
-
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
@@ -788,17 +778,6 @@ sleep 5
 	    echo "==================================="
 	    echo "*---         python            ---*"
 	    echo "==================================="
-	   
-	    wget -c https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
-            sudo tar -zxvf Python-3.9.1.tgz
-            cd Python-3.9.1
-            ./configure
-            make
-            sudo make install
-            cd ..
-            sudo rm -rf Python-3.9.1
-            sudo rm -rf Python-3.9.1.tgz
-	    
 	    sudo apt install python3.9 -y
 	    sudo apt install python3-pip -y
 	    echo -e "\n"
@@ -913,7 +892,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/8490d3dde47c57ba65ec40dd192d014fd2113496/code_1.53.0-1612368357_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/fd6f3bce6709b121a895d042d343d71f317d74e7/code_1.54.2-1615424848_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
