@@ -576,8 +576,7 @@ sleep 5
 	    echo "*--------Instalação Java--------*"
 	    echo "================================="
 	    echo -e "\n"
-	    #sudo apt install default-jre -y && sudo apt install default-jdk -y
-	    wget -c https://download.oracle.com/otn-pub/java/jdk/15.0.2+7/0d1cfde4252546c6931946de8db48ee2/jdk-15.0.2_linux-x64_bin.deb?AuthParam=1615758029_0fbe6788d90216850fe3a87f77dae78e -O jdk15.deb
+	    sudo apt install default-jre -y && sudo apt install default-jdk -y
 	}
 	#15 kmag
 	kmag(){
