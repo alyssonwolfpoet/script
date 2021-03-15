@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 14/03/2021
+#data: 15/03/2021
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 14/03/2021'''
+'Data de última modificação: 15/03/2021'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -597,10 +597,11 @@ sleep 5
   	}
 	#17 minisat
 	minisat(){
-		wget -c http://mirrors.kernel.org/ubuntu/pool/universe/m/minisat2/minisat_2.2.1-5build2_amd64.deb -O minisat.deb
-		sudo dpkg -i minisat.deb
-		sudo rm minisat.deb
-	    sudo apt-get install -f -y
+		#wget -c http://mirrors.kernel.org/ubuntu/pool/universe/m/minisat2/minisat_2.2.1-5build2_amd64.deb -O minisat.deb
+		#sudo dpkg -i minisat.deb
+		#sudo rm minisat.deb
+	    #sudo apt-get install -f -y
+	    sudo apt-get install minisat2 -y
 	}
 	#18 mysql
 		#-mysql-server
@@ -696,8 +697,7 @@ sleep 5
 	    echo "==========="
 	    echo "*---php---*"
 	    echo "==========="
-	    sudo apt install php7.4-cli
-	    wget -c https://www.php.net/distributions/php-8.0.1.tar.gz
+	    sudo apt install php7.4-cli -y
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
