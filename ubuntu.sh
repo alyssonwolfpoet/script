@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 15/03/2021
+#data: 22/04/2021
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 15/03/2021'''
+'Data de última modificação: 22/04/2021'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -491,12 +491,12 @@ sleep 5
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
 	    echo -e "\n"
-	    #wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2020-09/R/eclipse-java-2020-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
-	    #sudo tar -zxvf eclipse.tar.gz -C /opt/
-	    #sudo rm eclipse.tar.gz
-	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
-	    #sudo chmod +x /usr/share/applications/eclipse.desktop
-	    sudo snap install eclipse --edge --classic
+	    wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2021-03/R/eclipse-java-2021-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	    sudo tar -zxvf eclipse.tar.gz -C /opt/
+	    sudo rm eclipse.tar.gz
+	    echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
+	    sudo chmod +x /usr/share/applications/eclipse.desktop
+	    #sudo snap install eclipse --edge --classic
 	}
 	#06 etherwake
 	etherwake(){
@@ -685,8 +685,8 @@ sleep 5
 	    echo "*---Instalação PacketTracer---*"
 	    echo "==============================="
 	    echo -e "\n"
-	    #https://drive.google.com/file/d/1IfqZZKxttJQnP2YZx7JEc9-YQquXeH91
-	    wget -c https://www.dropbox.com/s/86ub8ecs9b8frt5/PacketTracer_731_amd64.deb -O PacketTracer.deb
+	    #wget -c https://www.dropbox.com/s/86ub8ecs9b8frt5/PacketTracer_731_amd64.deb -O PacketTracer.deb
+	    wget -c https://www.dropbox.com/s/6rpauzwxf113d3d/PacketTracer_800_amd64_build212_final.deb?dl=0 -O PacketTracer.deb
 	    sudo dpkg -i PacketTracer.deb
 	    rm PacketTracer.deb
 	    sudo apt-get install -f -y
@@ -880,7 +880,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.18/virtualbox-6.1_6.1.18-142142~Ubuntu~eoan_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.20/virtualbox-6.1_6.1.20-143896~Ubuntu~eoan_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -891,7 +891,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/fd6f3bce6709b121a895d042d343d71f317d74e7/code_1.54.2-1615424848_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/3c4e3df9e89829dce27b7b5c24508306b151f30d/code_1.55.2-1618307277_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
