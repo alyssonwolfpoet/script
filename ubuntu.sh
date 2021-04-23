@@ -473,7 +473,7 @@ sleep 5
 	#03 build_essential
 		#-gcc
 	build_essential(){
-		sudo apt install build-essential -y
+		sudo apt install build-essential gdb -y
 	}
 	#04 docker
 	docker(){
@@ -765,7 +765,7 @@ sleep 5
 	    echo "*---project libre---*"
 	    echo "====================="
 	    echo -e "\n"
-	    wget -c https://megalink.dl.sourceforge.net/project/projectlibre/ProjectLibre/1.9.3/projectlibre_1.9.3-1.deb -O projectlibre.deb
+	    wget -c https://sourceforge.net/projects/projectlibre/files/ProjectLibre/1.9.3/projectlibre_1.9.3-1.deb -O projectlibre.deb
 	    sudo dpkg -i projectlibre.deb
 	    sudo rm projectlibre.deb
 	    sudo apt-get install -f -y
