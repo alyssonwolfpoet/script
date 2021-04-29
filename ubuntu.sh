@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 22/04/2021
+#data: 28/04/2021
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 22/04/2021'''
+'Data de última modificação: 28/04/2021'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -615,9 +615,9 @@ sleep 5
 	    echo "*********************"
 	    echo -e "\n"
 	    sleep 5
-	    wget -c https://repo.mysql.com//mysql-apt-config_0.8.16-1_all.deb
-	    sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
-	    rm mysql-apt-config_0.8.16-1_all.deb
+	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+	    sudo dpkg -i mysql-apt-config_0.8.17-1_all.deb
+	    rm mysql-apt-config_0.8.17-1_all.deb
 	    sudo apt-get update
 	    sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	    sudo apt update
