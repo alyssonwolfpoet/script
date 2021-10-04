@@ -491,7 +491,7 @@ sleep 5
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
 	    echo -e "\n"
-	    wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2021-03/R/eclipse-java-2021-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	    wget -c https://mirror.umd.edu/eclipse/technology/epp/downloads/release/2021-09/R/eclipse-java-2021-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	    sudo tar -zxvf eclipse.tar.gz -C /opt/
 	    sudo rm eclipse.tar.gz
 	    echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -615,9 +615,9 @@ sleep 5
 	    echo "*********************"
 	    echo -e "\n"
 	    sleep 5
-	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
-	    sudo dpkg -i mysql-apt-config_0.8.17-1_all.deb
-	    rm mysql-apt-config_0.8.17-1_all.deb
+	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.19-1_all.deb
+	    sudo dpkg -i mysql-apt-config_0.8.19-1_all.deb
+	    rm mysql-apt-config_0.8.19-1_all.deb
 	    sudo apt-get update
 	    sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	    sudo apt update
@@ -637,7 +637,7 @@ sleep 5
 	    echo "*---Instalação netbeans---*"
 	    echo "==========================="
 	    echo -e "\n"
-	    #wget -c https://downloads.apache.org/netbeans/netbeans/12.1/Apache-NetBeans-12.1-bin-linux-x64.sh -O netbeans.sh
+	    #wget -c https://dlcdn.apache.org/netbeans/netbeans/12.5/Apache-NetBeans-12.5-bin-linux-x64.sh -O netbeans.sh
 	    #sudo chmod +x netbeans.sh
 	    #./netbeans.sh
 	    #sudo rm netbeans.sh
@@ -686,7 +686,7 @@ sleep 5
 	    echo "==============================="
 	    echo -e "\n"
 	    #wget -c https://www.dropbox.com/s/86ub8ecs9b8frt5/PacketTracer_731_amd64.deb -O PacketTracer.deb
-	    wget -c https://www.dropbox.com/s/6rpauzwxf113d3d/PacketTracer_800_amd64_build212_final.deb?dl=0 -O PacketTracer.deb
+	    wget -c https://www.dropbox.com/s/vl3i6pyvho1ro23/CiscoPacketTracer_801_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
 	    sudo dpkg -i PacketTracer.deb
 	    rm PacketTracer.deb
 	    sudo apt-get install -f -y
@@ -834,9 +834,9 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /opt/staruml/staruml.AppImage
-	    wget -c https://staruml-7a0.kxcdn.com/releases-v4/StarUML_4.0.1_amd64.deb
-	    sudo dpkg -i StarUML_4.0.1_amd64.deb
-	    rm StarUML_4.0.1_amd64.deb
+	    wget -c https://staruml-7a0.kxcdn.com/releases-v4/StarUML_4.1.3_amd64.deb
+	    sudo dpkg -i StarUML_4.1.3_amd64.deb
+	    rm StarUML_4.1.3_amd64.deb
 	    sudo apt-get install -f -y
 	}
 	#35 sublimetext
@@ -880,7 +880,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.20/virtualbox-6.1_6.1.20-143896~Ubuntu~eoan_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.26/virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -891,7 +891,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/3c4e3df9e89829dce27b7b5c24508306b151f30d/code_1.55.2-1618307277_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/7f6ab5485bbc008386c4386d08766667e155244e/code_1.60.2-1632313585_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
