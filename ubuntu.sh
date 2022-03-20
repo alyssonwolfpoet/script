@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 14/03/2022
+#data: 20/03/2022
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 14/03/2022'''
+'Data de última modificação: 20/03/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -491,7 +491,7 @@ sleep 5
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
 	    echo -e "\n"
-	    wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2021-12/R/eclipse-java-2021-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	    wget -c https://espejito.fder.edu.uy/eclipse/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	    sudo tar -zxvf eclipse.tar.gz -C /opt/
 	    sudo rm eclipse.tar.gz
 	    echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -576,7 +576,10 @@ sleep 5
 	    echo "*--------Instalação Java--------*"
 	    echo "================================="
 	    echo -e "\n"
-	    sudo apt install default-jre -y && sudo apt install default-jdk -y
+	    #sudo apt install default-jre -y && sudo apt install default-jdk -y
+	    wget -c https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb -O java.deb
+	    sudo dpkg -i java.deb
+	    rm java.deb
 	}
 	#15 kmag
 	kmag(){
