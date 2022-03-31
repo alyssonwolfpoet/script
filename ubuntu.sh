@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 20/03/2022
+#data: 31/03/2022
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 20/03/2022'''
+'Data de última modificação: 31/03/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -577,7 +577,7 @@ sleep 5
 	    echo "================================="
 	    echo -e "\n"
 	    #sudo apt install default-jre -y && sudo apt install default-jdk -y
-	    wget -c https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb -O java.deb
+	    wget -c https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb -O java.deb
 	    sudo dpkg -i java.deb
 	    rm java.deb
 	}
@@ -781,7 +781,7 @@ sleep 5
 	    echo "==================================="
 	    echo "*---         python            ---*"
 	    echo "==================================="
-	    sudo apt install python3.9 -y
+	    #sudo apt install python3.9 -y
 	    sudo apt install python3-pip -y
 	    echo -e "\n"
 	    echo "==================================="
@@ -838,9 +838,9 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /opt/staruml/staruml.AppImage
-	    wget -c https://staruml.io/download/releases-v4/StarUML_4.1.6_amd64.deb
-	    sudo dpkg -i StarUML_4.1.6_amd64.deb
-	    rm SStarUML_4.1.6_amd64.deb
+	    wget -c https://staruml.io/download/releases-v5/StarUML_5.0.1_amd64.deb
+	    sudo dpkg -i StarUML_5.0.1_amd64.deb
+	    rm StarUML_5.0.1_amd64.deb
 	    sudo apt-get install -f -y
 	}
 	#35 sublimetext
@@ -895,7 +895,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/code_1.65.2-1646927742_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/code_1.66.0-1648620611_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
