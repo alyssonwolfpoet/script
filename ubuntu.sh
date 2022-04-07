@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 31/03/2022
+#data: 07/04/2022
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 31/03/2022'''
+'Data de última modificação: 07/04/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -491,7 +491,7 @@ sleep 5
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
 	    echo -e "\n"
-	    wget -c https://espejito.fder.edu.uy/eclipse/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	    wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	    sudo tar -zxvf eclipse.tar.gz -C /opt/
 	    sudo rm eclipse.tar.gz
 	    echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -577,9 +577,10 @@ sleep 5
 	    echo "================================="
 	    echo -e "\n"
 	    #sudo apt install default-jre -y && sudo apt install default-jdk -y
-	    wget -c https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb -O java.deb
-	    sudo dpkg -i java.deb
-	    rm java.deb
+	    #wget -c https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb -O java.deb
+	    #sudo dpkg -i java.deb
+	    #rm java.deb
+	    sudo apt install openjdk-18-jdk-headless -y
 	}
 	#15 kmag
 	kmag(){
@@ -700,7 +701,8 @@ sleep 5
 	    echo "==========="
 	    echo "*---php---*"
 	    echo "==========="
-	    sudo apt install php7.4-cli -y
+	    #sudo apt install php7.4-cli -y
+	    sudo apt install php-cli -y
 	}
 	#27 phpmyadmin
 	phpmyadmin(){
@@ -895,7 +897,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/code_1.66.0-1648620611_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/8dfae7a5cd50421d10cd99cb873990460525a898/code_1.66.1-1649257842_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
