@@ -35,6 +35,7 @@ sleep 1
 echo -e "1"
 sleep 1
 
+sudo ./snap.sh
 sudo ./Alyssonlastversion.sh
 sudo rm Alyssonlastversion.sh
 #sudo rm AlyssonInstall.sh
