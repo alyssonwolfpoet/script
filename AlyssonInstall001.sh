@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 06/10/2020
+#data: 18/04/2022
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 09/11/2020'''
+'Data de última modificação: 18/04/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -16,8 +16,10 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''
 '      Dowload da última versão      '
 ''''''''''''''''''''''''''''''''''''''"
-wget -c https://raw.githubusercontent.com/alyssonwolfpoet/script/master/Alyssonlastversion.sh -O Alyssonlastversion.sh
+wget -c https://raw.githubusercontent.com/alyssonwolfpoet/script/master/snap.sh -O snap.sh
+wget -c https://raw.githubusercontent.com/alyssonwolfpoet/script/master/ubuntu001.sh -O Alyssonlastversion.sh
 sudo chmod +x Alyssonlastversion.sh
+sudo chmod +x snap.sh
 
 echo -e "
 ''''''''''''''''''''''''''''''''''''''
@@ -35,7 +37,7 @@ sleep 1
 
 sudo ./Alyssonlastversion.sh
 sudo rm Alyssonlastversion.sh
-sudo rm AlyssonInstall.sh
+#sudo rm AlyssonInstall.sh
 
 clear
 echo -e "
