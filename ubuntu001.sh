@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 18/04/2022
+#data: 21/04/2022
 
 #Créditos
 clear
@@ -499,7 +499,7 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
 	    #sudo chmod +x /usr/share/applications/eclipse.desktop
 	    #sudo snap install eclipse --edge --classic
-	    flatpak install flathub org.eclipse.Java
+	    flatpak install flathub org.eclipse.Java -y
 	}
 	#06 etherwake
 	etherwake(){
@@ -536,7 +536,7 @@ sleep 5
 	    echo "=================="
 	    echo -e "\n"
 	    #sudo snap install gimp
-	    flatpak install flathub org.gimp.GIMP
+	    flatpak install flathub org.gimp.GIMP -y
 	}
 	#10 github_desktop
 	github_desktop(){
@@ -650,7 +650,7 @@ sleep 5
 	    #./netbeans.sh
 	    #sudo rm netbeans.sh
 	    #sudo snap install netbeans --classic
-	    flatpak install flathub org.apache.netbeans
+	    flatpak install flathub org.apache.netbeans -y
 	}
 	#21 net_tools
 	net_tools(){
@@ -803,7 +803,7 @@ sleep 5
 	    echo "*---         pycharm           ---*"
 	    echo "==================================="
 	    #sudo snap install pycharm-community --classic
-	    flatpak install flathub com.jetbrains.PyCharm-Community
+	    flatpak install flathub com.jetbrains.PyCharm-Community -y
 	}
 	#31 ruby
 	ruby(){
@@ -858,7 +858,7 @@ sleep 5
 	    echo "==================="
 	    echo -e "\n"
 	    #sudo snap install sublime-text --classic
-	    flatpak install flathub com.sublimetext.three
+	    flatpak install flathub com.sublimetext.three -y
  	}
 	#36 systemback
 	systemback(){
