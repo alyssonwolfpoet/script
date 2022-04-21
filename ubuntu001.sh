@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 18/04/2022'''
+'Data de última modificação: 21/04/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
