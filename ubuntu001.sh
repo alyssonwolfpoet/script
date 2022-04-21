@@ -893,7 +893,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.32/virtualbox-6.1_6.1.32-149290~Ubuntu~eoan_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Ubuntu~eoan_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
