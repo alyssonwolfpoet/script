@@ -74,7 +74,7 @@ sleep 5
     echo "*---Atualização do Sistema Operacional---*"
     echo "=========================================="
     sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y
-    #sudo snap refresh
+    sudo snap refresh
     sudo flatpak update
   	}
 	instalar_tudo(){
@@ -846,9 +846,9 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /opt/staruml/staruml.AppImage
-	    wget -c https://staruml.io/download/releases-v5/StarUML_5.0.1_amd64.deb
-	    sudo dpkg -i StarUML_5.0.1_amd64.deb
-	    rm StarUML_5.0.1_amd64.deb
+	    wget -c https://staruml.io/download/releases-v5/StarUML_5.0.2_amd64.deb
+	    sudo dpkg -i StarUML_5.0.2_amd64.deb
+	    rm StarUML_5.0.2_amd64.deb
 	    sudo apt-get install -f -y
 	}
 	#35 sublimetext
@@ -893,7 +893,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Ubuntu~eoan_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -904,7 +904,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/dfd34e8260c270da74b5c2d86d61aee4b6d56977/code_1.66.2-1649664567_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code_1.68.1-1655263094_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
