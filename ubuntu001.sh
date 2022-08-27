@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 15/07/2022
+#data: 27/08/2022
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 15/07/2022'''
+'Data de última modificação: 27/08/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -623,9 +623,9 @@ sleep 5
 	    echo "*********************"
 	    echo -e "\n"
 	    sleep 5
-	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
-	    sudo dpkg -i mysql-apt-config_0.8.22-1_all.deb
-	    rm mysql-apt-config_0.8.22-1_all.deb
+	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.23-1_all.deb
+	    sudo dpkg -i mysql-apt-config_0.8.23-1_all.deb
+	    rm mysql-apt-config_0.8.23-1_all.deb
 	    sudo apt-get update
 	    sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	    sudo apt update
@@ -696,7 +696,8 @@ sleep 5
 	    echo -e "\n"
 	    #wget -c https://www.dropbox.com/s/86ub8ecs9b8frt5/PacketTracer_731_amd64.deb -O PacketTracer.deb
 	    #wget -c https://www.dropbox.com/s/vl3i6pyvho1ro23/CiscoPacketTracer_801_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
-	    wget -c https://www.dropbox.com/s/yky2rqk7k2kdmpd/CiscoPacketTracer_811_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
+	    #wget -c https://www.dropbox.com/s/yky2rqk7k2kdmpd/CiscoPacketTracer_811_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
+	    wget -c https://www.dropbox.com/s/ngrwh4u54aios67/CiscoPacketTracer_820_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
 	    sudo dpkg -i PacketTracer.deb
 	    rm PacketTracer.deb
 	    sudo apt-get install -f -y
@@ -893,7 +894,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.36/virtualbox-6.1_6.1.36-152435~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -904,7 +905,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code_1.68.1-1655263094_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/e4503b30fc78200f846c62cf8091b76ff5547662/code_1.70.2-1660629410_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
