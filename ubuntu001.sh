@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 27/08/2022
+#data: 05/09/2022
 
 #Créditos
 clear
@@ -26,6 +26,7 @@ sleep 5
 #07 evolus_pencil
 #08 flashplugin
 #09 gimp
+#?? git
 #10 github_desktop
 #11 gnome_panel
 #12 grub_customizer
@@ -537,6 +538,14 @@ sleep 5
 	    echo -e "\n"
 	    #sudo snap install gimp
 	    flatpak install flathub org.gimp.GIMP -y
+	}
+	#?? git
+	git(){
+		echo "=================="
+	    echo "*------Git------*"
+	    echo "=================="
+	    echo -e "\n"
+		apt-get install git -y
 	}
 	#10 github_desktop
 	github_desktop(){
