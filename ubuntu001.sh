@@ -456,6 +456,16 @@ sleep 5
 #fim funções principal
 
 #funções de Instalação
+  androidStudio(){
+    sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
+
+    wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.2.1.16/android-studio-2021.2.1.16-linux.tar.gz -O android-studio.tar.gz
+    sudo tar -zxvf android-studio.tar.gz -C /opt/
+    rm android-studio.tar.gz
+
+    echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=Android Studio\nComment=android studio\nExec=/opt/android-studio/bin/studio.sh\nIcon=/opt/android-studio/bin/studio.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/android-studio.desktop
+    sudo chmod +x /usr/share/applications/android-studio.desktop
+  }
 	#01 apache2
 	apache2(){
 		echo "==============="
@@ -493,14 +503,14 @@ sleep 5
 	    echo "================================="
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
-	    echo -e "\n"
-	    #wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	    #echo -e "\n"
+	    #wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-06/R/eclipse-java-2022-06-R-linux-gtk-x86_64.tar.gz&mirror_id=1135 -O eclipse.tar.gz
 	    #sudo tar -zxvf eclipse.tar.gz -C /opt/
 	    #sudo rm eclipse.tar.gz
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
 	    #sudo chmod +x /usr/share/applications/eclipse.desktop
-	    #sudo snap install eclipse --edge --classic
-	    flatpak install flathub org.eclipse.Java -y
+	    sudo snap install eclipse --edge --classic
+	    #flatpak install flathub org.eclipse.Java -y
 	}
 	#06 etherwake
 	etherwake(){
@@ -582,6 +592,16 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install gtkterm -y
 	}
+	intelliJIDEA(){
+	  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
+
+    wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2022.2.1.tar.gz -O ideaIC.tar.gz
+    sudo tar -zxvf ideaIC.tar.gz -C /opt/
+    rm ideaIC.tar.gz
+
+    echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-222.3739.54/bin/idea.sh\nIcon=/opt/idea-IC-222.3739.54/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+    sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
+	}
 	#14 java
 	java(){
 	    echo -e "\n"
@@ -647,6 +667,7 @@ sleep 5
 	    echo "==============="
 	    echo -e "\n"
 	    sudo apt install nbtscan -y
+
 	}
 	#20 netbeans
 	netbeans(){
@@ -658,7 +679,7 @@ sleep 5
 	    #sudo chmod +x netbeans.sh
 	    #./netbeans.sh
 	    #sudo rm netbeans.sh
-	    #sudo snap install netbeans --classic
+	    sudo snap install netbeans --classic
 	    flatpak install flathub org.apache.netbeans -y
 	}
 	#21 net_tools
@@ -812,8 +833,8 @@ sleep 5
 	    echo "==================================="
 	    echo "*---         pycharm           ---*"
 	    echo "==================================="
-	    #sudo snap install pycharm-community --classic
-	    flatpak install flathub com.jetbrains.PyCharm-Community -y
+	    sudo snap install pycharm-community --classic
+	    #flatpak install flathub com.jetbrains.PyCharm-Community -y
 	}
 	#31 ruby
 	ruby(){
@@ -867,8 +888,8 @@ sleep 5
 	    echo "*---sublimetext---*"
 	    echo "==================="
 	    echo -e "\n"
-	    #sudo snap install sublime-text --classic
-	    flatpak install flathub com.sublimetext.three -y
+	    sudo snap install sublime-text --classic
+	    #flatpak install flathub com.sublimetext.three -y
  	}
 	#36 systemback
 	systemback(){
@@ -876,10 +897,19 @@ sleep 5
 	    echo "*---systemback---*"
 	    echo "=================="
 	    echo -e "\n"
-	    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
-	    sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main" -y
-	    sudo apt-get update
-	    sudo apt-get install systemback -y
+	    #https://sourceforge.net/projects/systemback-2021/files/Systemback_OLD/
+	    #sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
+	    #sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main" -y
+	    #sudo apt-get update
+	    #sudo apt-get install systemback -y
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback_2.0_amd64.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/libsystemback_2.0_amd64.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-efiboot-amd64_2.0_all.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-cli_2.0_amd64.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-scheduler_2.0_amd64.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-locales_2.0_all.deb
+	    sudo dpkg -i *.deb
+	    sudo apt-get install -f -y
 	}
 	#37 traceroute
 	traceroute(){
@@ -903,7 +933,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.36/virtualbox-6.1_6.1.36-152435~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/6.1.38/virtualbox-6.1_6.1.38-153438~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -914,7 +944,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/e4503b30fc78200f846c62cf8091b76ff5547662/code_1.70.2-1660629410_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/784b0177c56c607789f9638da7b6bf3230d47a8c/code_1.71.0-1662018389_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
