@@ -16,58 +16,61 @@ sleep 5
 #funções principal
 	lista(){
 		echo -e "
-#01 apache2
-#02 brackets
-#03 build_essential
+#01Android Studio
+#02 apache2
+#03 brackets
+#04 build_essential
 	#-gcc
-#04 docker
-#05 eclipse
-#06 etherwake
-#07 evolus_pencil
-#08 flashplugin
-#09 gimp
-#?? git
-#10 github_desktop
-#11 gnome_panel
-#12 grub_customizer
-#13 gtkterm
-#14 java
-#15 kmag
-#16 logisim
-#17 minisat
-#18 mysql
+#05 docker
+#06 eclipse
+#07 etherwake
+#08 evolus_pencil
+#09 flashplugin
+#10 gimp
+#11 git
+#12 github_desktop
+#13 gnome_panel
+#14 grub_customizer
+#15 gtkterm
+#16 intelliJIDEA
+#17 java
+#18 kmag
+#19 logisim
+#20 minisat
+#21 mysql
 	#-mysql-server
 	#-mysql-workbench
-#19 nbtscan
-#20 netbeans
-#21 net_tools
-#22 nmap
-#23 ocsinventory
-#24 octave
-#25 packettracer
-#26 php
-#27 phpmyadmin
-#28 postgresql
+#22 nbtscan
+#23 netbeans
+#24 net_tools
+#25 nmap
+#26 node
+#27 ocsinventory
+#28 octave
+#29 packettracer
+#30 php
+#31 phpmyadmin
+#32 postgresql
 	#-postgis
 	#-pgadmin
 		#-pgadmin3
 		#-pgadmin4	
-#29 project_libre
-#30 python
+#33 project_libre
+#34 python
 	#-tkinter3
 	#-pycharm
-#31 ruby
-#32 scilab
-#33 ssh
-#34 star_uml
-#35 sublimetext
-#36 systemback
-#37 traceroute	
-#38 vim	
-#39 virtualbox
-#40 vscode
-#41 wakeonlan
-#42 wireshark"
+#35 ruby
+#36 scilab
+#37 ssh
+#38 star_uml
+#39 sublimetext
+#40 systemback
+#41 traceroute
+#42 vim
+#43 virtualbox
+#44 vscode
+#45 wakeonlan
+#46 wireshark"
 	}
 
 	atualizacao(){
@@ -81,58 +84,67 @@ sleep 5
 	instalar_tudo(){
 		atualizacao
 
+    #01 androidStudio
+    androidStudio
+
 		echo -e "\n01/42%\n"
-		#01 apache2
+		#02 apache2
 		apache2
 
 		echo -e "\n02/42%\n"
-		#02 brackets
+		#03 brackets
 		brackets
 
 		echo -e "\n03/42%\n"
-		#03 build_essential
+		#04 build_essential
 			#-gcc
 		build_essential
 
 		echo -e "\n04/42%\n"
-		#04 docker
+		#05 docker
 		docker
 
 		echo -e "\n05/42%\n"
-		#05 eclipse
+		#06 eclipse
 		eclipse
 
 		echo -e "\n06/42% \n"
-		#06 etherwake
+		#07 etherwake
 		etherwake
 
 		echo -e "\n07/42%\n"
-		#07 evolus_pencil
+		#08 evolus_pencil
 		evolus_pencil
 
 		echo -e "\n08/42%\n"
-		#08 flashplugin
+		#09 flashplugin
 		flashplugin
 
 		echo -e "\n09/42%\n"
-		#09 gimp
+		#10 gimp
 		gimp
 
+    #11 git
+    git
+
 		echo -e "\n10/42%\n"
-		#10 github_desktop
+		#12 github_desktop
 		github_desktop
 
 		echo -e "\n11/42%\n"
-		#11 gnome_panel
+		#13 gnome_panel
 		gnome_panel
 
 		echo -e "\n12/42%\n"
-		#12 grub_customizer
+		#14 grub_customizer
 		grub_customizer
 
 		echo -e "\n13/42%\n"
-		#13 gtkterm
+		#15 gtkterm
 		gtkterm
+
+    #16 intelliJIDEA
+    intelliJIDEA
 
 		echo -e "\n14/42%\n"
 		#14 java
@@ -171,6 +183,9 @@ sleep 5
 		echo -e "\n22/42%\n"
 		#22 nmap
 		nmap
+
+    #??node
+    node
 
 		echo -e "\n23/42%\n"
 		#23 ocsinventory
@@ -456,7 +471,12 @@ sleep 5
 #fim funções principal
 
 #funções de Instalação
+  #01 androidStudio
   androidStudio(){
+    echo "====================="
+    echo "*---androidStudio---*"
+    echo "====================="
+    echo -e "\n"
     sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
     wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.2.1.16/android-studio-2021.2.1.16-linux.tar.gz -O android-studio.tar.gz
@@ -466,7 +486,7 @@ sleep 5
     echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=Android Studio\nComment=android studio\nExec=/opt/android-studio/bin/studio.sh\nIcon=/opt/android-studio/bin/studio.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/android-studio.desktop
     sudo chmod +x /usr/share/applications/android-studio.desktop
   }
-	#01 apache2
+	#02 apache2
 	apache2(){
 		echo "==============="
 		echo "*---apache2---*"
@@ -474,7 +494,7 @@ sleep 5
 		echo -e "\n"
 		sudo apt install apache2 -y
 	}
-	#02 brackets
+	#03 brackets
 	brackets(){
 		echo "================"
 		echo "*---brackets---*"
@@ -483,12 +503,12 @@ sleep 5
 		#sudo snap install brackets --classic
 		flatpak install flathub io.brackets.Brackets -y
 	}
-	#03 build_essential
+	#04 build_essential
 		#-gcc
 	build_essential(){
 		sudo apt install build-essential gdb -y
 	}
-	#04 docker
+	#05 docker
 	docker(){
 	    echo "========================"
 	    echo "*---docker&docker.io---*"
@@ -497,7 +517,7 @@ sleep 5
 	    sudo apt install docker -y && apt install docker.io -y
 	    sudo usermod -a -G docker aluno && service docker restart #[para testar basta digitar docker ps]
 	}
-	#05 eclipse
+	#06 eclipse
 	eclipse(){
 	    echo -e "\n"
 	    echo "================================="
@@ -512,7 +532,7 @@ sleep 5
 	    sudo snap install eclipse --edge --classic
 	    #flatpak install flathub org.eclipse.Java -y
 	}
-	#06 etherwake
+	#07 etherwake
 	etherwake(){
 	    echo "================="
 	    echo "*---etherwake---*"
@@ -520,7 +540,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install etherwake -y
 	}
-	#07 evolus_pencil
+	#08 evolus_pencil
 	evolus_pencil(){
 	    echo "====================="
 	    echo "*---evolus pencil---*"
@@ -532,7 +552,7 @@ sleep 5
 	    sudo rm pencil.deb
 	    sudo apt-get install -f -y
 	}
-	#08 flashplugin
+	#09 flashplugin
 	flashplugin(){
 	    echo "============================="
 	    echo "*---flashplugin-installer---*"
@@ -540,7 +560,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt-get install flashplugin-installer -y
 	}
-	#09 gimp
+	#10 gimp
 	gimp(){
 	    echo "=================="
 	    echo "*------Gimp------*"
@@ -549,15 +569,15 @@ sleep 5
 	    #sudo snap install gimp
 	    flatpak install flathub org.gimp.GIMP -y
 	}
-	#?? git
+	#11 git
 	git(){
 		echo "=================="
-	    echo "*------Git------*"
-	    echo "=================="
-	    echo -e "\n"
+	  echo "*------Git------*"
+	  echo "=================="
+	  echo -e "\n"
 		apt-get install git -y
 	}
-	#10 github_desktop
+	#12 github_desktop
 	github_desktop(){
     #https://github.com/shiftkey/desktop
     wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
@@ -565,7 +585,7 @@ sleep 5
 		sudo apt-get update
 		sudo apt install github-desktop -y
 	}
-	#11 gnome_panel
+	#13 gnome_panel
 	gnome_panel(){
 	    echo "==================="
 	    echo "*---gnome-panel---*"
@@ -574,7 +594,7 @@ sleep 5
 	    sudo apt install gnome-panel -y
 	    gnome-desktop-item-edit /usr/share/applications/ --create-new
 	}
-	#12 grub_customizer
+	#14 grub_customizer
 	grub_customizer(){
 	    echo "======================="
 	    echo "*---Grub Customizer---*"
@@ -584,7 +604,7 @@ sleep 5
 	    sudo apt-get update
 	    sudo apt-get install grub-customizer -y
 	}
-	#13 gtkterm
+	#15 gtkterm
 	gtkterm(){
 	    echo "==============="
 	    echo "*---gtkterm---*"
@@ -592,7 +612,12 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install gtkterm -y
 	}
+	#16 intelliJIDEA
 	intelliJIDEA(){
+	  echo "===================="
+    echo "*---intelliJIDEA---*"
+    echo "===================="
+    echo -e "\n"
 	  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
     wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2022.2.1.tar.gz -O ideaIC.tar.gz
@@ -602,7 +627,7 @@ sleep 5
     echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-222.3739.54/bin/idea.sh\nIcon=/opt/idea-IC-222.3739.54/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
     sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 	}
-	#14 java
+	#17 java
 	java(){
 	    echo -e "\n"
 	    echo "================================="
@@ -615,7 +640,7 @@ sleep 5
 	    #rm java.deb
 	    sudo apt install openjdk-18-jdk-headless -y
 	}
-	#15 kmag
+	#18 kmag
 	kmag(){
 	    echo "============"
 	    echo "*---kmag---*"
@@ -623,7 +648,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install kmag -y
 	}
-	#16 logisim
+	#19 logisim
 	logisim(){
 	    echo "==============="
 	    echo "*---Logisim---*"
@@ -631,7 +656,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt-get install logisim -y
   	}
-	#17 minisat
+	#20 minisat
 	minisat(){
 		#wget -c http://mirrors.kernel.org/ubuntu/pool/universe/m/minisat2/minisat_2.2.1-5build2_amd64.deb -O minisat.deb
 		#sudo dpkg -i minisat.deb
@@ -639,7 +664,7 @@ sleep 5
 	    #sudo apt-get install -f -y
 	    sudo apt-get install minisat2 -y
 	}
-	#18 mysql
+	#21 mysql
 		#-mysql-server
 		#-mysql-workbench
 	mysql(){
@@ -660,7 +685,7 @@ sleep 5
 	    sudo apt update
 	    sudo apt upgrade -y
 	} 
-	#19 nbtscan
+	#22 nbtscan
 	nbtscan(){
 	    echo "==============="
 	    echo "*---nbtscan---*"
@@ -669,7 +694,7 @@ sleep 5
 	    sudo apt install nbtscan -y
 
 	}
-	#20 netbeans
+	#23 netbeans
 	netbeans(){
 	    echo "==========================="
 	    echo "*---Instalação netbeans---*"
@@ -680,9 +705,9 @@ sleep 5
 	    #./netbeans.sh
 	    #sudo rm netbeans.sh
 	    sudo snap install netbeans --classic
-	    flatpak install flathub org.apache.netbeans -y
+	    #flatpak install flathub org.apache.netbeans -y
 	}
-	#21 net_tools
+	#24 net_tools
 	net_tools(){
 	    echo "================="
 	    echo "*---net-tools---*"
@@ -690,7 +715,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install net-tools -y
 	}
-	#22 nmap
+	#25 nmap
 	 nmap(){
 	    echo "============"
 	    echo "*---nmap---*"
@@ -698,7 +723,14 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install nmap -y
 	}
-	#23 ocsinventory
+	#26 node
+	node(){
+	  echo "============"
+    echo "*---node---*"
+    echo "============"
+	  sudo snap install node --channel=latest/edge --classic -y
+	}
+	#27 ocsinventory
 	ocsinventory(){
 	    echo "=========================="
 	    echo "*---ocsinventory-agent---*"
@@ -710,7 +742,7 @@ sleep 5
 	    sleep 5
 	    sudo apt install ocsinventory-agent -y
 	}
-	#24 octave
+	#28 octave
 	octave(){
 	    echo "=============="
 	    echo "*---octave---*"
@@ -718,7 +750,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install octave -y
 	}
-	#25 packettracer
+	#29 packettracer
 	packettracer(){
 	    echo "==============================="
 	    echo "*---Instalação PacketTracer---*"
@@ -732,7 +764,7 @@ sleep 5
 	    rm PacketTracer.deb
 	    sudo apt-get install -f -y
 	}
-	#26 php
+	#30 php
 	php(){
 	    echo "==========="
 	    echo "*---php---*"
@@ -740,7 +772,7 @@ sleep 5
 	    #sudo apt install php7.4-cli -y
 	    sudo apt install php-cli -y
 	}
-	#27 phpmyadmin
+	#31 phpmyadmin
 	phpmyadmin(){
 	    echo "=================================="
 	    echo "====== Instalando phpmyadmin ====="
@@ -753,7 +785,7 @@ sleep 5
 	    echo "testar o phpmyadmin no navegador http://localhost/phpmyadmin"
 	    echo "usuario phpmyadmin senha ifce"
 	}
-	#28 postgresql
+	#32 postgresql
 			#-postgis
 			#-pgadmin
 				#-pgadmin3
@@ -779,6 +811,7 @@ sleep 5
 	    ALTER USER postgres WITH PASSWORD 'ifce';
 	    \q
 
+
 	    echo "==============="
 	    echo "*---postgis---*"
 	    echo "==============="
@@ -801,7 +834,7 @@ sleep 5
 	    sudo apt install pgadmin4-desktop -y
 	    sudo apt install pgadmin4-web -y
 	}
-	#29 project_libre
+	#33 project_libre
 	project_libre(){
 	    echo "====================="
 	    echo "*---project libre---*"
@@ -812,7 +845,7 @@ sleep 5
 	    sudo rm projectlibre.deb
 	    sudo apt-get install -f -y
 	}
-	#30 python
+	#34 python
 		#-tkinter3
 		#-pycharm
 	python(){
@@ -836,7 +869,7 @@ sleep 5
 	    sudo snap install pycharm-community --classic
 	    #flatpak install flathub com.jetbrains.PyCharm-Community -y
 	}
-	#31 ruby
+	#35 ruby
 	ruby(){
 	    echo "============"
 	    echo "*---ruby---*"
@@ -844,7 +877,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install ruby -y
 	}
-	#32 scilab
+	#36 scilab
 	scilab(){
 	    echo "=================="
 	    echo "*-----Scilab-----*"
@@ -853,7 +886,7 @@ sleep 5
 	    sudo apt-get update
 	    sudo apt-get install scilab -y
 	}
-	#33 ssh
+	#37 ssh
 	ssh(){
 	    echo "==========="
 	    echo "*---ssh---*"
@@ -861,7 +894,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install openssh-server -y
 	}
-	#34 star_uml
+	#38 star_uml
 	star_uml(){
 	    echo "==============="
 	    echo "*---StarUML---*"
@@ -882,7 +915,7 @@ sleep 5
 	    rm StarUML_5.0.2_amd64.deb
 	    sudo apt-get install -f -y
 	}
-	#35 sublimetext
+	#39 sublimetext
 	sublimetext(){
 	    echo "==================="
 	    echo "*---sublimetext---*"
@@ -891,7 +924,7 @@ sleep 5
 	    sudo snap install sublime-text --classic
 	    #flatpak install flathub com.sublimetext.three -y
  	}
-	#36 systemback
+	#40 systemback
 	systemback(){
 	    echo "=================="
 	    echo "*---systemback---*"
@@ -911,7 +944,7 @@ sleep 5
 	    sudo dpkg -i *.deb
 	    sudo apt-get install -f -y
 	}
-	#37 traceroute
+	#41 traceroute
 	traceroute(){
 	    echo "=================="
 	    echo "*---traceroute---*"
@@ -919,7 +952,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install traceroute -y
 	}
-	#38 vim
+	#42 vim
 	vim(){
 	    echo "=================="
 	    echo "*---editor vim---*"
@@ -927,7 +960,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt-get install vim -y
  	}
-	#39 virtualbox
+	#43 virtualbox
 	virtualbox(){
 	    echo "============================="
 	    echo "*---Instalação virtualbox---*"
@@ -938,7 +971,7 @@ sleep 5
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
 	}
-	#40 vscode
+	#44 vscode
 	vscode(){
 	    echo "========================="
 	    echo "*---Instalação vscode---*"
@@ -949,7 +982,7 @@ sleep 5
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
 	}
-	#41 wakeonlan
+	#45 wakeonlan
 	wakeonlan(){
 	    echo "================="
 	    echo "*---wakeonlan---*"
@@ -957,7 +990,7 @@ sleep 5
 	    echo -e "\n"
 	    sudo apt install wakeonlan -y
 	}
-	#42 wireshark
+	#46 wireshark
 	wireshark(){
 	    echo "================="
 	    echo "*---wireshark---*"
