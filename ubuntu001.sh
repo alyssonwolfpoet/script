@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 05/09/2022
+#data: 13/09/2022
 
 #Créditos
 clear
