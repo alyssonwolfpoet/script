@@ -288,118 +288,132 @@ sleep 5
 			     	clear
 			     	break
 			    ;;
-				01)
+			  01)
+			    androidStudio
+			    ;;
+				02)
 					#01 apache2
 					apache2
 				;;
-				02)	
+				03)
 					#02 brackets
 					brackets
 				;;
-				03)	
+				04)
 					#03 build_essential
 						#-gcc
 					build_essential
 				;;
-				04)
+				05)
 					#04 docker
 					docker
 				;;
-				05)
+				06)
 					#05 eclipse
 					eclipse
 				;;
-				06)
+				07)
 					#06 etherwake
 					etherwake
 				;;
-				07)
+				08)
 					#07 evolus_pencil
 					evolus_pencil
 				;;
-				08)
+				09)
 					#08 flashplugin
 					flashplugin
 				;;
-				09)
+				10)
 					#09 gimp
 					gimp
 				;;
-				10)
+		    11)
+    		  git
+    		;;
+				12)
 					#10 github_desktop
 					github_desktop
 				;;
-				11)
+				13)
 					#11 gnome_panel
 					gnome_panel
 				;;
-				12)
+				14)
 					#12 grub_customizer
 					grub_customizer
 				;;
-				13)
+				15)
 					#13 gtkterm
 					gtkterm
 				;;
-				14)
+		    16)
+        	intelliJIDEA
+        ;;
+				17)
 					#14 java
 					java
 				;;
-				15)
+				18)
 					#15 kmag
 					kmag
 				;;
-				16)
+
+				19)
 					#16 logisim
 					logisim
 				;;
-				17)
+				20)
 					#17 minisat
 					minisat
 				;;
-				18)
+				21)
 					#18 mysql
 						#-mysql-server
 						#-mysql-workbench
 					mysql
 				;;
-				19)
+				22)
 					#19 nbtscan
 					nbtscan
 				;;
-				20)	
+				23)
 					#20 netbeans
 					netbeans
 				;;
-				21)
+				24)
 					#21 net_tools
 					net_tools
 				;;
-				22)
+				25)
 					#22 nmap
 					nmap
 				;;
-				23)
-					#23 ocsinventory
-					ocsinventory
-				;;
-				24)
+
+		    26)
+    		  node
+    		;;
+        27)
+    		#23 ocsinventory
+    			ocsinventory
+    		;;
+				28)
 					#24 octave
 					octave
 				;;
-				25)
+				29)
 					#25 packettracer
 					packettracer
 				;;
-				26)
+				30)
 					#26 php
 					php
 				;;
-				27)
+				31)
 					#27 phpmyadmin
 					phpmyadmin
 				;;
-				28)
+				32)
 					#28 postgresql
 						#-postgis
 						#-pgadmin
@@ -407,61 +421,61 @@ sleep 5
 							#-pgadmin4
 					postgresql
 				;;
-				29)
+				33)
 					#29 project_libre
 					project_libre
 				;;
-				30)
+				34)
 					#30 python
 						#-tkinter3
 						#-pycharm
 					python
 				;;
-				31)
+				35)
 					#31 ruby
 					ruby
 				;;
-				32)
+				36)
 					#32 scilab
 					scilab
 				;;
-				33)
+				37)
 					#33 ssh
 					ssh
 				;;
-				34)
+				38)
 					#34 star_uml
 					star_uml
 				;;
-				35)
+				39)
 					#35 sublimetext
 					sublimetext
 				;;
-				36)
+				40)
 					#36 systemback
 					systemback
 				;;
-				37)
+				41)
 					#37 traceroute
 					traceroute
 				;;
-				38)
+				42)
 					#38 vim
 					vim
 				;;
-				39)
+				43)
 					#39 virtualbox
 					virtualbox
 				;;
-				40)
+				44)
 					#40 vscode
 					vscode
 				;;
-				41)
+				45)
 					#41 wakeonlan
 					wakeonlan
 				;;
-				42)
+				46)
 					#42 wireshark
 					wireshark
 	  			;;
