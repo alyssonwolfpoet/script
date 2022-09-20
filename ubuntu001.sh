@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 13/09/2022
+#data: 20/09/2022
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 27/08/2022'''
+'Data de última modificação: 20/09/2022'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -83,131 +83,134 @@ sleep 5
   	}
 	instalar_tudo(){
 		atualizacao
-
+    echo -e "\n01/42%\n"
     #01 androidStudio
     androidStudio
 
-		echo -e "\n01/42%\n"
+		echo -e "\n02/42%\n"
 		#02 apache2
 		apache2
 
-		echo -e "\n02/42%\n"
+		echo -e "\n03/42%\n"
 		#03 brackets
 		brackets
 
-		echo -e "\n03/42%\n"
+		echo -e "\n04/42%\n"
 		#04 build_essential
 			#-gcc
 		build_essential
 
-		echo -e "\n04/42%\n"
+		echo -e "\n05/42%\n"
 		#05 docker
 		docker
 
-		echo -e "\n05/42%\n"
+		echo -e "\n06/42%\n"
 		#06 eclipse
 		eclipse
 
-		echo -e "\n06/42% \n"
+		echo -e "\n07/42% \n"
 		#07 etherwake
 		etherwake
 
-		echo -e "\n07/42%\n"
+		echo -e "\n08/42%\n"
 		#08 evolus_pencil
 		evolus_pencil
 
-		echo -e "\n08/42%\n"
+		echo -e "\n09/42%\n"
 		#09 flashplugin
 		flashplugin
 
-		echo -e "\n09/42%\n"
+		echo -e "\n10/42%\n"
 		#10 gimp
 		gimp
 
+    echo -e "\n11/42%\n"
     #11 git
     git
 
-		echo -e "\n10/42%\n"
+		echo -e "\n12/42%\n"
 		#12 github_desktop
 		github_desktop
 
-		echo -e "\n11/42%\n"
+		echo -e "\n13/42%\n"
 		#13 gnome_panel
 		gnome_panel
 
-		echo -e "\n12/42%\n"
+		echo -e "\n14/42%\n"
 		#14 grub_customizer
 		grub_customizer
 
-		echo -e "\n13/42%\n"
+		echo -e "\n15/42%\n"
 		#15 gtkterm
 		gtkterm
 
+    echo -e "\n16/42%\n"
     #16 intelliJIDEA
     intelliJIDEA
 
-		echo -e "\n14/42%\n"
-		#14 java
+		echo -e "\n17/42%\n"
+		#17 java
 		java
 
-		echo -e "\n15/42%\n"
-		#15 kmag
+		echo -e "\n18/42%\n"
+		#18 kmag
 		kmag
 
-		echo -e "\n16/42%\n"
-		#16 logisim
+		echo -e "\n19/42%\n"
+		#19 logisim
 		logisim
 
-		echo -e "\n17/42%\n"
-		#17 minisat
+		echo -e "\n20/42%\n"
+		#20 minisat
 		minisat
 
-		echo -e "\n18/42%\n"
-		#18 mysql
+		echo -e "\n21/42%\n"
+		#21 mysql
 			#-mysql-server
 			#-mysql-workbench
 		mysql
 
-		echo -e "\n19/42%\n"
-		#19 nbtscan
+		echo -e "\n22/42%\n"
+		#22 nbtscan
 		nbtscan
 
-		echo -e "\n20/42%\n"
-		#20 netbeans
+		echo -e "\n22/42%\n"
+		#22 netbeans
 		netbeans
 
-		echo -e "\n21/42%\n"
-		#21 net_tools
+		echo -e "\n23/42%\n"
+		#23 net_tools
 		net_tools
 
-		echo -e "\n22/42%\n"
-		#22 nmap
+		echo -e "\n24/42%\n"
+		#24 nmap
 		nmap
 
-    #??node
+    echo -e "\n25/42%\n"
+    #25 node
     node
 
-		echo -e "\n23/42%\n"
-		#23 ocsinventory
+		echo -e "\n26/42%\n"
+		#26 ocsinventory
 		ocsinventory
 
-		echo -e "\n24/42%\n"
-		#24 octave
+		echo -e "\n27/42%\n"
+		#27 octave
 		octave
 
-		echo -e "\n25/42%\n"
-		#25 packettracer
+		echo -e "\n28/42%\n"
+		#28 packettracer
 		packettracer
 
-		echo -e "\n26/42%\n"
-		#26 php
+		echo -e "\n29/42%\n"
+		#29 php
 		php
 
-		echo -e "\n27/42%\n"
-		#27 phpmyadmin
+		echo -e "\n30/42%\n"
+		#30 phpmyadmin
 		phpmyadmin
 
-		echo -e "\n28/42%\n"
+		echo -e "\n31/42%\n"
 		#28 postgresql
 			#-postgis
 			#-pgadmin
