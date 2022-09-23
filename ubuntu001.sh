@@ -959,6 +959,7 @@ sleep 5
 	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-scheduler_2.0_amd64.deb
 	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-locales_2.0_all.deb
 	    sudo dpkg -i *.deb
+	    rm *.deb
 	    sudo apt-get install -f -y
 	}
 	#41 traceroute
