@@ -597,10 +597,13 @@ sleep 5
 	#12 github_desktop
 	github_desktop(){
     #https://github.com/shiftkey/desktop
-    wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
-		sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
-		sudo apt-get update
-		sudo apt install github-desktop -y
+    #wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
+		#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
+		#sudo apt-get update
+		#sudo apt install github-desktop -y
+		wget -c https://github.com/shiftkey/desktop/releases/download/release-3.0.6-linux1/GitHubDesktop-linux-3.0.6-linux1.deb
+		sudo dpkg -i GitHubDesktop-linux-3.0.6-linux1.deb
+		rm GitHubDesktop-linux-3.0.6-linux1.deb
 	}
 	#13 gnome_panel
 	gnome_panel(){
