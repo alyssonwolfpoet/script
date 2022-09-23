@@ -596,6 +596,9 @@ sleep 5
 	}
 	#12 github_desktop
 	github_desktop(){
+	  echo "============================"
+    echo "*------github_desktop------*"
+    echo "============================"
     #https://github.com/shiftkey/desktop
     #wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
 		#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
