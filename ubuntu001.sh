@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 20/09/2022
+#data: 08/08/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 20/09/2022'''
+'Data de última modificação: 08/08/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -291,8 +291,9 @@ sleep 5
 			     	clear
 			     	break
 			    ;;
-			  01)
-			    androidStudio
+			  	01)
+					#01Android Studio
+					androidStudio
 			    ;;
 				02)
 					#01 apache2
@@ -332,7 +333,8 @@ sleep 5
 					gimp
 				;;
 		    11)
-    		  git
+    		  #11 git
+			  git
     		;;
 				12)
 					#10 github_desktop
@@ -496,7 +498,7 @@ sleep 5
     echo -e "\n"
     sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-    wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.3.1.16/android-studio-2021.3.1.16-linux.tar.gz -O android-studio.tar.gz
+    wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.18/android-studio-2022.3.1.18-linux.tar.gz -O android-studio.tar.gz
     sudo tar -zxvf android-studio.tar.gz -C /opt/
     rm android-studio.tar.gz
 
@@ -563,7 +565,7 @@ sleep 5
 	    echo "*---evolus pencil---*"
 	    echo "====================="
 	    echo -e "\n"
-	    wget -c https://pencil.evolus.vn/dl/V3.1.0.ga/pencil_3.1.0.ga_amd64.deb -O pencil.deb
+	    wget -c https://pencil.evolus.vn/dl/V3.1.1.ga/Pencil_3.1.1.ga_amd64.deb -O pencil.deb
 	    sudo apt-get remove pencil --purge -y
 	    sudo dpkg -i pencil.deb
 	    sudo rm pencil.deb
@@ -604,9 +606,9 @@ sleep 5
 		#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 		#sudo apt-get update
 		#sudo apt install github-desktop -y
-		wget -c https://github.com/shiftkey/desktop/releases/download/release-3.0.6-linux1/GitHubDesktop-linux-3.0.6-linux1.deb
-		sudo dpkg -i GitHubDesktop-linux-3.0.6-linux1.deb
-		rm GitHubDesktop-linux-3.0.6-linux1.deb
+		wget -c https://github.com/shiftkey/desktop/releases/download/release-3.2.7-linux2/GitHubDesktop-linux-amd64-3.2.7-linux2.deb
+		sudo dpkg -i GitHubDesktop-linux-amd64-3.2.7-linux2.deb
+		rm GitHubDesktop-linux-amd64-3.2.7-linux2.deb
 	}
 	#13 gnome_panel
 	gnome_panel(){
@@ -643,7 +645,7 @@ sleep 5
     echo -e "\n"
 	  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-    wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2022.2.1.tar.gz -O ideaIC.tar.gz
+    wget -c https://download.jetbrains.com/idea/ideaIC-2023.2.tar.gz -O ideaIC.tar.gz
     sudo tar -zxvf ideaIC.tar.gz -C /opt/
     rm ideaIC.tar.gz
 
@@ -700,9 +702,9 @@ sleep 5
 	    echo "*********************"
 	    echo -e "\n"
 	    sleep 5
-	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.23-1_all.deb
-	    sudo dpkg -i mysql-apt-config_0.8.23-1_all.deb
-	    rm mysql-apt-config_0.8.23-1_all.deb
+	    wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+	    sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+	    rm mysql-apt-config_0.8.26-1_all.deb
 	    sudo apt-get update
 	    sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	    sudo apt update
@@ -779,10 +781,7 @@ sleep 5
 	    echo "*---Instalação PacketTracer---*"
 	    echo "==============================="
 	    echo -e "\n"
-	    #wget -c https://www.dropbox.com/s/86ub8ecs9b8frt5/PacketTracer_731_amd64.deb -O PacketTracer.deb
-	    #wget -c https://www.dropbox.com/s/vl3i6pyvho1ro23/CiscoPacketTracer_801_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
-	    #wget -c https://www.dropbox.com/s/yky2rqk7k2kdmpd/CiscoPacketTracer_811_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
-	    wget -c https://www.dropbox.com/s/ngrwh4u54aios67/CiscoPacketTracer_820_Ubuntu_64bit.deb?dl=0 -O PacketTracer.deb
+	    wget -c https://www.dropbox.com/scl/fi/n18a3kvbiva9ob4wmo3qd/CiscoPacketTracer_821_Ubuntu_64bit.deb?rlkey=g6k5voe0jtqnazi6olker0eb5&dl=0 -O PacketTracer.deb
 	    sudo dpkg -i PacketTracer.deb
 	    rm PacketTracer.deb
 	    sudo apt-get install -f -y
@@ -933,9 +932,9 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /opt/staruml/staruml.AppImage
-	    wget -c https://staruml.io/download/releases-v5/StarUML_5.0.2_amd64.deb
-	    sudo dpkg -i StarUML_5.0.2_amd64.deb
-	    rm StarUML_5.0.2_amd64.deb
+	    wget -c https://staruml.io/download/releases-v5/StarUML_5.1.0_amd64.deb
+	    sudo dpkg -i StarUML_5.1.0_amd64.deb
+	    rm StarUML_5.1.0_amd64.deb
 	    sudo apt-get install -f -y
 	}
 	#39 sublimetext
@@ -990,7 +989,7 @@ sleep 5
 	    echo "*---Instalação virtualbox---*"
 	    echo "============================="
 	    echo -e "\n"
-	    wget -c https://download.virtualbox.org/virtualbox/6.1.38/virtualbox-6.1_6.1.38-153438~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	    wget -c https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	    sudo dpkg -i virtualbox.deb
 	    sudo apt-get -f install -y
 	    sudo rm virtualbox.deb
@@ -1001,7 +1000,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/784b0177c56c607789f9638da7b6bf3230d47a8c/code_1.71.0-1662018389_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/code_1.81.0-1690980880_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
