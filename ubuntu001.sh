@@ -663,7 +663,8 @@ sleep 5
 	    #wget -c https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb -O java.deb
 	    #sudo dpkg -i java.deb
 	    #rm java.deb
-	    sudo apt install openjdk-18-jdk-headless -y
+	    #sudo apt install openjdk-18-jdk-headless -y
+     	    #sudo apt install openjdk-21-jdk-headless -y
 	}
 	#18 kmag
 	kmag(){
