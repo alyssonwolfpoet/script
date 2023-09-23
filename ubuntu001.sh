@@ -290,11 +290,11 @@ sleep 5
 			    0)
 			     	clear
 			     	break
-			    ;;
+			    	;;
 			  	01)
 					#01Android Studio
 					androidStudio
-			    ;;
+			    	;;
 				02)
 					#01 apache2
 					apache2
