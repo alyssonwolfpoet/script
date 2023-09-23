@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 08/08/2023
+#data: 23/09/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 08/08/2023'''
+'Data de última modificação: 23/09/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -83,9 +83,9 @@ sleep 5
   	}
 	instalar_tudo(){
 		atualizacao
-    echo -e "\n01/42%\n"
-    #01 androidStudio
-    androidStudio
+    		echo -e "\n01/42%\n"
+    		#01 androidStudio
+    		androidStudio
 
 		echo -e "\n02/42%\n"
 		#02 apache2
@@ -124,9 +124,9 @@ sleep 5
 		#10 gimp
 		gimp
 
-    echo -e "\n11/42%\n"
-    #11 git
-    git
+    		echo -e "\n11/42%\n"
+    		#11 git
+    		git
 
 		echo -e "\n12/42%\n"
 		#12 github_desktop
@@ -144,9 +144,9 @@ sleep 5
 		#15 gtkterm
 		gtkterm
 
-    echo -e "\n16/42%\n"
-    #16 intelliJIDEA
-    intelliJIDEA
+    		echo -e "\n16/42%\n"
+    		#16 intelliJIDEA
+    		intelliJIDEA
 
 		echo -e "\n17/42%\n"
 		#17 java
@@ -186,9 +186,9 @@ sleep 5
 		#24 nmap
 		nmap
 
-    echo -e "\n25/42%\n"
-    #25 node
-    node
+    		echo -e "\n25/42%\n"
+    		#25 node
+    		node
 
 		echo -e "\n26/42%\n"
 		#26 ocsinventory
@@ -332,10 +332,10 @@ sleep 5
 					#09 gimp
 					gimp
 				;;
-		    11)
-    		  #11 git
-			  git
-    		;;
+		    		11)
+    		  			#11 git
+			  		git
+    				;;
 				12)
 					#10 github_desktop
 					github_desktop
@@ -352,9 +352,9 @@ sleep 5
 					#13 gtkterm
 					gtkterm
 				;;
-		    16)
-        	intelliJIDEA
-        ;;
+		    		16)
+        				intelliJIDEA
+        			;;
 				17)
 					#14 java
 					java
@@ -395,13 +395,13 @@ sleep 5
 					nmap
 				;;
 
-		    26)
-    		  node
-    		;;
-        27)
-    		#23 ocsinventory
-    			ocsinventory
-    		;;
+		    		26)
+    		  		node
+    				;;
+        			27)
+    					#23 ocsinventory
+    					ocsinventory
+    				;;
 				28)
 					#24 octave
 					octave
