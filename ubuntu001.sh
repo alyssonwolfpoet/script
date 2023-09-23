@@ -498,7 +498,7 @@ sleep 5
     echo -e "\n"
     sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-    wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.18/android-studio-2022.3.1.18-linux.tar.gz -O android-studio.tar.gz
+    wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.19/android-studio-2022.3.1.19-linux.tar.gz -O android-studio.tar.gz
     sudo tar -zxvf android-studio.tar.gz -C /opt/
     rm android-studio.tar.gz
 
