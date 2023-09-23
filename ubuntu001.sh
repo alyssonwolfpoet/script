@@ -543,7 +543,7 @@ sleep 5
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
 	    #echo -e "\n"
-	    #wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-06/R/eclipse-java-2022-06-R-linux-gtk-x86_64.tar.gz&mirror_id=1135 -O eclipse.tar.gz
+	    #wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-09/R/eclipse-java-2023-09-R-linux-gtk-x86_64.tar.gz&mirror_id=1135 -O eclipse.tar.gz
 	    #sudo tar -zxvf eclipse.tar.gz -C /opt/
 	    #sudo rm eclipse.tar.gz
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -590,7 +590,7 @@ sleep 5
 	}
 	#11 git
 	git(){
-		echo "=================="
+	  echo "=================="
 	  echo "*------Git------*"
 	  echo "=================="
 	  echo -e "\n"
@@ -606,9 +606,9 @@ sleep 5
 		#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 		#sudo apt-get update
 		#sudo apt install github-desktop -y
-		wget -c https://github.com/shiftkey/desktop/releases/download/release-3.2.7-linux2/GitHubDesktop-linux-amd64-3.2.7-linux2.deb
-		sudo dpkg -i GitHubDesktop-linux-amd64-3.2.7-linux2.deb
-		rm GitHubDesktop-linux-amd64-3.2.7-linux2.deb
+		wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.1-linux1/GitHubDesktop-linux-amd64-3.3.1-linux1.deb
+		sudo dpkg -i GitHubDesktop-linux-amd64-3.3.1-linux1.deb
+		rm GitHubDesktop-linux-amd64-3.3.1-linux1.deb
 	}
 	#13 gnome_panel
 	gnome_panel(){
@@ -639,18 +639,18 @@ sleep 5
 	}
 	#16 intelliJIDEA
 	intelliJIDEA(){
-	  echo "===================="
-    echo "*---intelliJIDEA---*"
-    echo "===================="
-    echo -e "\n"
-	  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
+	echo "===================="
+    	echo "*---intelliJIDEA---*"
+    	echo "===================="
+    	echo -e "\n"
+	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-    wget -c https://download.jetbrains.com/idea/ideaIC-2023.2.tar.gz -O ideaIC.tar.gz
-    sudo tar -zxvf ideaIC.tar.gz -C /opt/
-    rm ideaIC.tar.gz
+    	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.2.2.tar.gz -O ideaIC.tar.gz
+    	sudo tar -zxvf ideaIC.tar.gz -C /opt/
+    	rm ideaIC.tar.gz
 
-    echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-222.3739.54/bin/idea.sh\nIcon=/opt/idea-IC-222.3739.54/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
-    sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
+    	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-222.3739.54/bin/idea.sh\nIcon=/opt/idea-IC-222.3739.54/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+    	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 	}
 	#17 java
 	java(){
@@ -660,11 +660,11 @@ sleep 5
 	    echo "================================="
 	    echo -e "\n"
 	    #sudo apt install default-jre -y && sudo apt install default-jdk -y
-	    #wget -c https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.deb -O java.deb
-	    #sudo dpkg -i java.deb
-	    #rm java.deb
 	    #sudo apt install openjdk-18-jdk-headless -y
      	    #sudo apt install openjdk-21-jdk-headless -y
+	    wget -c https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb -O java.deb
+	    sudo dpkg -i java.deb
+	    rm java.deb
 	}
 	#18 kmag
 	kmag(){
@@ -687,8 +687,8 @@ sleep 5
 		#wget -c http://mirrors.kernel.org/ubuntu/pool/universe/m/minisat2/minisat_2.2.1-5build2_amd64.deb -O minisat.deb
 		#sudo dpkg -i minisat.deb
 		#sudo rm minisat.deb
-	    #sudo apt-get install -f -y
-	    sudo apt-get install minisat2 -y
+	    	#sudo apt-get install -f -y
+	    	sudo apt-get install minisat2 -y
 	}
 	#21 mysql
 		#-mysql-server
@@ -726,7 +726,7 @@ sleep 5
 	    echo "*---Instalação netbeans---*"
 	    echo "==========================="
 	    echo -e "\n"
-	    #wget -c https://www.apache.org/dyn/closer.cgi/netbeans/netbeans-installers/13/Apache-NetBeans-13-bin-linux-x64.sh -O netbeans.sh
+	    #wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/19/apache-netbeans_19-1_all.deb -O netbeans.deb
 	    #sudo chmod +x netbeans.sh
 	    #./netbeans.sh
 	    #sudo rm netbeans.sh
@@ -933,9 +933,9 @@ sleep 5
 	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /usr/share/applications/staruml.desktop
 	    #sudo chmod 777 /opt/staruml/staruml.AppImage
-	    wget -c https://staruml.io/download/releases-v5/StarUML_5.1.0_amd64.deb
-	    sudo dpkg -i StarUML_5.1.0_amd64.deb
-	    rm StarUML_5.1.0_amd64.deb
+	    wget -c https://staruml.io/api/download/releases-v6/StarUML_6.0.1_amd64.deb
+	    sudo dpkg -i StarUML_6.0.1_amd64.deb
+	    rm StarUML_6.0.1_amd64.deb
 	    sudo apt-get install -f -y
 	}
 	#39 sublimetext
@@ -958,12 +958,12 @@ sleep 5
 	    #sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main" -y
 	    #sudo apt-get update
 	    #sudo apt-get install systemback -y
-	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback_2.0_amd64.deb
-	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/libsystemback_2.0_amd64.deb
-	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-efiboot-amd64_2.0_all.deb
-	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-cli_2.0_amd64.deb
-	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-scheduler_2.0_amd64.deb
-	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback_OLD/systemback-locales_2.0_all.deb
+	    wget -c https://sinalbr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback_2.0_amd64.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/libsystemback_2.0_amd64.deb
+	    wget -c https://sinalbr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-efiboot-amd64_2.0_all.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-cli_2.0_amd64.deb
+	    wget -c https://sinalbr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-scheduler_2.0_amd64.deb
+	    wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-locales_2.0_all.deb
 	    sudo dpkg -i *.deb
 	    rm *.deb
 	    sudo apt-get install -f -y
@@ -1001,7 +1001,7 @@ sleep 5
 	    echo "*---Instalação vscode---*"
 	    echo "========================="
 	    echo -e "\n"
-	    wget -c https://az764295.vo.msecnd.net/stable/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/code_1.81.0-1690980880_amd64.deb -O vscode.deb
+	    wget -c https://az764295.vo.msecnd.net/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/code_1.82.2-1694671812_amd64.deb -O vscode.deb
 	    sudo dpkg -i vscode.deb
 	    sudo apt-get -f install -y
 	    sudo rm vscode.deb
