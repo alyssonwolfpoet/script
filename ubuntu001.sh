@@ -839,7 +839,7 @@ sleep 5
 	    echo "*---postgis---*"
 	    echo "==============="
 	    echo -e "\n"
-	    sudo apt install postgis -y
+	    #sudo apt install postgis -y
 	    sudo apt install postgresql-16-postgis-3 -y
 
 	    echo "================"
