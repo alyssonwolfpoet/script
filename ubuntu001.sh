@@ -818,7 +818,7 @@ sleep 5
 	    echo "*---postgresql---*"
 	    echo "=================="
 	    echo -e "\n"
-	    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+	    sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 	    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 	    sudo apt-get update
 	    sudo apt install postgresql postgresql-contrib -y
@@ -840,7 +840,7 @@ sleep 5
 	    echo "==============="
 	    echo -e "\n"
 	    sudo apt install postgis -y
-	    sudo apt install postgresql-13-postgis-3 -y
+	    sudo apt install postgresql-16-postgis-3 -y
 
 	    echo "================"
 	    echo "*---pgadmin3---*"
@@ -851,11 +851,13 @@ sleep 5
 	    echo "================"
 	    echo "*---pgadmin4---*"
 	    echo "================"
-	    wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
-	    sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+	    #wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+	    curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+	    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 	    sudo apt install pgadmin4 -y
 	    sudo apt install pgadmin4-desktop -y
 	    sudo apt install pgadmin4-web -y
+	    sudo /usr/pgadmin4/bin/setup-web.sh
 	}
 	#33 project_libre
 	project_libre(){
