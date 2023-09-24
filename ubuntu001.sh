@@ -83,197 +83,197 @@ sleep 5
   	}
 	instalar_tudo(){
 		atualizacao
-    		echo -e "\n01/42%\n"
-    		#01 androidStudio
-    		androidStudio
+    	echo -e "\n01/46%\n"
+    	#01 androidStudio
+    	androidStudio
 
-		echo -e "\n02/42%\n"
+		echo -e "\n02/46%\n"
 		#02 apache2
 		apache2
 
-		echo -e "\n03/42%\n"
+		echo -e "\n03/46%\n"
 		#03 brackets
 		brackets
 
-		echo -e "\n04/42%\n"
+		echo -e "\n04/46%\n"
 		#04 build_essential
 			#-gcc
 		build_essential
 
-		echo -e "\n05/42%\n"
+		echo -e "\n05/46%\n"
 		#05 docker
 		docker
 
-		echo -e "\n06/42%\n"
+		echo -e "\n06/46%\n"
 		#06 eclipse
 		eclipse
 
-		echo -e "\n07/42% \n"
+		echo -e "\n07/46% \n"
 		#07 etherwake
 		etherwake
 
-		echo -e "\n08/42%\n"
+		echo -e "\n08/46%\n"
 		#08 evolus_pencil
 		evolus_pencil
 
-		echo -e "\n09/42%\n"
+		echo -e "\n09/46%\n"
 		#09 flashplugin
 		flashplugin
 
-		echo -e "\n10/42%\n"
+		echo -e "\n10/46%\n"
 		#10 gimp
 		gimp
 
-    		echo -e "\n11/42%\n"
-    		#11 git
-    		git
+    	echo -e "\n11/46%\n"
+    	#11 git
+    	git
 
-		echo -e "\n12/42%\n"
+		echo -e "\n12/46%\n"
 		#12 github_desktop
 		github_desktop
 
-		echo -e "\n13/42%\n"
+		echo -e "\n13/46%\n"
 		#13 gnome_panel
 		gnome_panel
 
-		echo -e "\n14/42%\n"
+		echo -e "\n14/46%\n"
 		#14 grub_customizer
 		grub_customizer
 
-		echo -e "\n15/42%\n"
+		echo -e "\n15/46%\n"
 		#15 gtkterm
 		gtkterm
 
-    		echo -e "\n16/42%\n"
-    		#16 intelliJIDEA
-    		intelliJIDEA
+		echo -e "\n16/46%\n"
+    	#16 intelliJIDEA
+    	intelliJIDEA
 
-		echo -e "\n17/42%\n"
+		echo -e "\n17/46%\n"
 		#17 java
 		java
 
-		echo -e "\n18/42%\n"
+		echo -e "\n18/46%\n"
 		#18 kmag
 		kmag
 
-		echo -e "\n19/42%\n"
+		echo -e "\n19/46%\n"
 		#19 logisim
 		logisim
 
-		echo -e "\n20/42%\n"
+		echo -e "\n20/46%\n"
 		#20 minisat
 		minisat
 
-		echo -e "\n21/42%\n"
+		echo -e "\n21/46%\n"
 		#21 mysql
 			#-mysql-server
 			#-mysql-workbench
 		mysql
 
-		echo -e "\n22/42%\n"
+		echo -e "\n22/46%\n"
 		#22 nbtscan
 		nbtscan
 
-		echo -e "\n22/42%\n"
-		#22 netbeans
+		echo -e "\n23/46%\n"
+		#23 netbeans
 		netbeans
 
-		echo -e "\n23/42%\n"
-		#23 net_tools
+		echo -e "\n24/46%\n"
+		#24 net_tools
 		net_tools
 
-		echo -e "\n24/42%\n"
-		#24 nmap
+		echo -e "\n25/46%\n"
+		#25 nmap
 		nmap
 
-    		echo -e "\n25/42%\n"
-    		#25 node
-    		node
+    	echo -e "\n26/46%\n"
+    	#26 node
+    	node
 
-		echo -e "\n26/42%\n"
-		#26 ocsinventory
+		echo -e "\n27/46%\n"
+		#27 ocsinventory
 		ocsinventory
 
-		echo -e "\n27/42%\n"
-		#27 octave
+		echo -e "\n28/46%\n"
+		#28 octave
 		octave
 
-		echo -e "\n28/42%\n"
-		#28 packettracer
+		echo -e "\n29/46%\n"
+		#29 packettracer
 		packettracer
 
-		echo -e "\n29/42%\n"
-		#29 php
+		echo -e "\n30/46%\n"
+		#30 php
 		php
 
-		echo -e "\n30/42%\n"
-		#30 phpmyadmin
+		echo -e "\n31/46%\n"
+		#31 phpmyadmin
 		phpmyadmin
 
-		echo -e "\n31/42%\n"
-		#28 postgresql
+		echo -e "\n32/46%\n"
+		#32 postgresql
 			#-postgis
 			#-pgadmin
 				#-pgadmin3
 				#-pgadmin4
 		postgresql
 
-		echo -e "\n29/42%\n"
-		#29 project_libre
+		echo -e "\n33/46%\n"
+		#33 project_libre
 		project_libre
 
-		echo -e "\n30/42%\n"
-		#30 python
+		echo -e "\n34/46%\n"
+		#34 python
 			#-tkinter3
 			#-pycharm
 		python
 
-		echo -e "\n31/42%\n"
-		#31 ruby
+		echo -e "\n35/46%\n"
+		#35 ruby
 		ruby
 
-		echo -e "\n32/42%\n"
-		#32 scilab
+		echo -e "\n36/46%\n"
+		#36 scilab
 		scilab
 
-		echo -e "\n33/42%\n"
-		#33 ssh
+		echo -e "\n37/46%\n"
+		#37 ssh
 		ssh
 
-		echo -e "\n34/42%\n"
-		#34 star_uml
+		echo -e "\n38/46%\n"
+		#38 star_uml
 		star_uml
 
-		echo -e "\n35/42%\n"
-		#35 sublimetext
+		echo -e "\n39/46%\n"
+		#39 sublimetext
 		sublimetext
 
-		echo -e "\n36/42%\n"
-		#36 systemback
+		echo -e "\n40/46%\n"
+		#40 systemback
 		systemback
 
-		echo -e "\n37/42%\n"
-		#37 traceroute
+		echo -e "\n41/46%\n"
+		#41 traceroute
 		traceroute
 
-		echo -e "\n38/42%\n"
-		#38 vim
+		echo -e "\n42/46%\n"
+		#42 vim
 		vim
 
-		echo -e "\n39/42%\n"
-		#39 virtualbox
+		echo -e "\n43/46%\n"
+		#43 virtualbox
 		virtualbox
 
-		echo -e "\n40/42%\n"
-		#40 vscode
+		echo -e "\n44/46%\n"
+		#44 vscode
 		vscode
 
-		echo -e "\n41/42%\n"
-		#41 wakeonlan
+		echo -e "\n45/46%\n"
+		#45 wakeonlan
 		wakeonlan
 
-		echo -e "\n42/42%\n"
-		#42 wireshark
+		echo -e "\n46/46%\n"
+		#46 wireshark
 		wireshark
 	}
 	instalar_individualmente(){
