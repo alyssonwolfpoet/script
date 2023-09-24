@@ -781,7 +781,7 @@ sleep 5
 	    echo "*---Instalação PacketTracer---*"
 	    echo "==============================="
 	    echo -e "\n"
-	    wget -c https://www.dropbox.com/scl/fi/b8avxpa14ja6pnw8e60l9/CiscoPacketTracer_821_Ubuntu_64bit.deb?rlkey=j23wrtc081u0blo1u7y790l06&dl=0 -O PacketTracer.deb
+	    wget -c https://www.dropbox.com/scl/fi/b8avxpa14ja6pnw8e60l9/CiscoPacketTracer_821_Ubuntu_64bit.deb?rlkey=j23wrtc081u0blo1u7y790l06 -O PacketTracer.deb
 	    sudo dpkg -i PacketTracer.deb
 	    rm PacketTracer.deb
 	    sudo apt-get install -f -y
