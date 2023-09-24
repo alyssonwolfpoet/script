@@ -519,13 +519,13 @@ sleep 5
 		echo "*---brackets---*"
 		echo "================"
 		echo -e "\n"
-		#sudo snap install brackets --classic
-		flatpak install flathub io.brackets.Brackets -y
+		sudo snap install brackets --classic
+		#flatpak install flathub io.brackets.Brackets -y
 	}
 	#04 build_essential
 		#-gcc
 	build_essential(){
-		sudo apt install build-essential gdb -y
+		sudo apt install build-essential gdb make -y
 	}
 	#05 docker
 	docker(){
@@ -543,12 +543,12 @@ sleep 5
 	    echo "*------Instalação Eclipse-------*"
 	    echo "================================="
 	    #echo -e "\n"
-	    #wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-09/R/eclipse-java-2023-09-R-linux-gtk-x86_64.tar.gz&mirror_id=1135 -O eclipse.tar.gz
-	    #sudo tar -zxvf eclipse.tar.gz -C /opt/
-	    #sudo rm eclipse.tar.gz
-	    #echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
-	    #sudo chmod +x /usr/share/applications/eclipse.desktop
-	    sudo snap install eclipse --edge --classic
+	    wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-09/R/eclipse-java-2023-09-R-linux-gtk-x86_64.tar.gz&mirror_id=1135 -O eclipse.tar.gz
+	    sudo tar -zxvf eclipse.tar.gz -C /opt/
+	    sudo rm eclipse.tar.gz
+	    echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
+	    sudo chmod +x /usr/share/applications/eclipse.desktop
+	    #sudo snap install eclipse --edge --classic
 	    #flatpak install flathub org.eclipse.Java -y
 	}
 	#07 etherwake
@@ -649,7 +649,7 @@ sleep 5
     	sudo tar -zxvf ideaIC.tar.gz -C /opt/
     	rm ideaIC.tar.gz
 
-    	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-222.3739.54/bin/idea.sh\nIcon=/opt/idea-IC-222.3739.54/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+    	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-232.9921.47/bin/idea.sh\nIcon=/opt/idea-IC-232.9921.47/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
     	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 	}
 	#17 java
@@ -726,11 +726,10 @@ sleep 5
 	    echo "*---Instalação netbeans---*"
 	    echo "==========================="
 	    echo -e "\n"
-	    #wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/19/apache-netbeans_19-1_all.deb -O netbeans.deb
-	    #sudo chmod +x netbeans.sh
-	    #./netbeans.sh
-	    #sudo rm netbeans.sh
-	    sudo snap install netbeans --classic
+	    wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/19/apache-netbeans_19-1_all.deb -O netbeans.deb
+	    sudo dpkg -i netbeans.deb
+	    rm netbeans.deb
+	    #sudo snap install netbeans --classic
 	    #flatpak install flathub org.apache.netbeans -y
 	}
 	#24 net_tools
@@ -752,7 +751,7 @@ sleep 5
 	#26 node
 	node(){
 	  echo "============"
-    echo "*---node---*"
+    	echo "*---node---*"
     echo "============"
 	  sudo snap install node --channel=latest/edge --classic -y
 	}
@@ -890,8 +889,14 @@ sleep 5
 	    echo "==================================="
 	    echo "*---         pycharm           ---*"
 	    echo "==================================="
-	    sudo snap install pycharm-community --classic
+	    #sudo snap install pycharm-community --classic
 	    #flatpak install flathub com.jetbrains.PyCharm-Community -y
+	    wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.1.tar.gz -O pycharm.tar.gz
+            sudo tar -xzvf pycharm.tar.gz
+            sudo mv pycharm-community-2023.2.1 /opt/pycharm
+            sudo rm pycharm.tar.gz
+            echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
+            sudo chmod +x /usr/share/applications/pycharm.desktop
 	}
 	#35 ruby
 	ruby(){
@@ -945,8 +950,12 @@ sleep 5
 	    echo "*---sublimetext---*"
 	    echo "==================="
 	    echo -e "\n"
-	    sudo snap install sublime-text --classic
+	    #sudo snap install sublime-text --classic
 	    #flatpak install flathub com.sublimetext.three -y
+	    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
+	    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+	    sudo apt-get update
+	    sudo apt-get install sublime-text -y
  	}
 	#40 systemback
 	systemback(){
