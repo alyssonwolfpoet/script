@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 24/09/2023
+#data: 27/09/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 24/09/2023'''
+'Data de última modificação: 27/09/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -565,7 +565,7 @@ sleep 5
 	    echo "*---evolus pencil---*"
 	    echo "====================="
 	    echo -e "\n"
-	    wget -c https://pencil.evolus.vn/dl/V3.1.1.ga/Pencil_3.1.1.ga_amd64.deb -O pencil.deb
+	    wget -c https://www.dropbox.com/scl/fi/58nv34y3hoo6syibb7b9c/Pencil_3.1.1.ga_amd64.deb?rlkey=u2txa47822b0b3el5yp1nksgq -O pencil.deb
 	    sudo apt-get remove pencil --purge -y
 	    sudo dpkg -i pencil.deb
 	    sudo rm pencil.deb
