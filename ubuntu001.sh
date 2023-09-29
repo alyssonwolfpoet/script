@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 27/09/2023
+#data: 29/09/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 27/09/2023'''
+'Data de última modificação: 29/09/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -525,7 +525,7 @@ sleep 5
 	#04 build_essential
 		#-gcc
 	build_essential(){
-		sudo apt install build-essential gdb make -y
+		sudo apt install build-essential gdb make clang -y
 	}
 	#05 docker
 	docker(){
@@ -753,7 +753,7 @@ sleep 5
 	  echo "============"
     	echo "*---node---*"
     echo "============"
-	  sudo snap install node --channel=latest/edge --classic -y
+	  sudo snap install node --channel=latest/edge --classic
 	}
 	#27 ocsinventory
 	ocsinventory(){
