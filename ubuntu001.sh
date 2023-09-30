@@ -525,6 +525,10 @@ brackets() {
 #04 build_essential
 #-gcc
 build_essential() {
+	echo "======================="
+	echo "*---build_essential---*"
+	echo "======================="
+	echo -e "\n"
 	sudo apt install build-essential gdb make clang -y
 }
 #05 docker
@@ -684,6 +688,10 @@ logisim() {
 }
 #20 minisat
 minisat() {
+	echo "==============="
+	echo "*---minisat---*"
+	echo "==============="
+	echo -e "\n"
 	#wget -c http://mirrors.kernel.org/ubuntu/pool/universe/m/minisat2/minisat_2.2.1-5build2_amd64.deb -O minisat.deb
 	#sudo dpkg -i minisat.deb
 	#sudo rm minisat.deb
