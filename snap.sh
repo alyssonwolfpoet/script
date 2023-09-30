@@ -1,11 +1,11 @@
 #!/bin/bash
 sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean && sudo apt-get autoremove -y
 sudo snap refresh
-sudo apt install  ubuntu-restricted-extras -y
-#snap remove --purge firefox 
-#snap remove --purge gnome-3-38-2004 
-#snap remove --purge gtk-common-themes 
-#snap remove --purge snap-store 
+sudo apt install ubuntu-restricted-extras -y
+#snap remove --purge firefox
+#snap remove --purge gnome-3-38-2004
+#snap remove --purge gtk-common-themes
+#snap remove --purge snap-store
 #snap remove --purge snapd-desktop-integration
 #snap remove --purge bare
 #snap remove --purge base
