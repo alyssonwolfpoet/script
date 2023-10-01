@@ -970,19 +970,10 @@ systemback() {
 	echo "*---systemback---*"
 	echo "=================="
 	echo -e "\n"
-	#https://sourceforge.net/projects/systemback-2021/files/Systemback_OLD/
 	#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
 	#sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main" -y
 	#sudo apt-get update
 	#sudo apt-get install systemback -y
-	wget -c https://sinalbr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback_2.0_amd64.deb
-	wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/libsystemback_2.0_amd64.deb
-	wget -c https://sinalbr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-efiboot-amd64_2.0_all.deb
-	wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-cli_2.0_amd64.deb
-	wget -c https://sinalbr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-scheduler_2.0_amd64.deb
-	wget -c https://ufpr.dl.sourceforge.net/project/systemback-2021/Systemback%202%20-%20Debian%2C%20Devuan%2C%20xbuntu%2020.04/systemback-locales_2.0_all.deb
-	sudo dpkg -i *.deb
-	rm *.deb
 	sudo apt-get install -f -y
 }
 #41 traceroute
