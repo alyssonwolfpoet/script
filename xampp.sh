@@ -4,7 +4,7 @@ wget -c https://sonik.dl.sourceforge.net/project/xampp/XAMPP%20Linux/8.0.28/xamp
 chmod +x xampp-installer.run
 sudo ./xampp-installer.run
 
-echo -e '[Desktop Entry]\n Version=1.0\n Name=xampp\n Exec=gksudo /opt/lampp/manager-linux-x64.run\n Icon=/opt/lampp/icons/world1.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/xampp.desktop
+echo -e '[Desktop Entry]\n Version=1.0\n Name=xampp\n Exec=/opt/lampp/manager-linux-x64.run\n Icon=/opt/lampp/htdocs/favicon.ico\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/xampp.desktop
 #sudo apt-get install gksu
 sudo chmod +x /usr/share/applications/xampp.desktop
 cp /usr/share/applications/xampp.desktop  ~/Área\ de\ Trabalho/
