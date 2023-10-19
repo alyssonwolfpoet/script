@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 01/10/2023
+#data: 19/10/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 01/10/2023'''
+'Data de última modificação: 19/10/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -649,11 +649,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.2.2.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.2.3.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-232.9921.47/bin/idea.sh\nIcon=/opt/idea-IC-232.9921.47/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-232.10072.27/bin/idea.sh\nIcon=/opt/idea-IC-232.10072.27/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -898,9 +898,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.1.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.3.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2023.2.1 /opt/pycharm
+	sudo mv pycharm-community-2023.2.3 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -998,7 +998,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
@@ -1009,7 +1009,8 @@ vscode() {
 	echo "*---Instalação vscode---*"
 	echo "========================="
 	echo -e "\n"
-	wget -c https://az764295.vo.msecnd.net/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/code_1.82.2-1694671812_amd64.deb -O vscode.deb
+	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+	wget -c https://az764295.vo.msecnd.net/stable/f1b07bd25dfad64b0167beb15359ae573aecd2cc/code_1.83.1-1696982868_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
