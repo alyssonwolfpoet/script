@@ -610,9 +610,9 @@ github_desktop() {
 	#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 	#sudo apt-get update
 	#sudo apt install github-desktop -y
-	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.1-linux1/GitHubDesktop-linux-amd64-3.3.1-linux1.deb
-	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.1-linux1.deb
-	rm GitHubDesktop-linux-amd64-3.3.1-linux1.deb
+	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.3-linux2/GitHubDesktop-linux-amd64-3.3.3-linux2.deb
+	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.3-linux2.deb
+	rm GitHubDesktop-linux-amd64-3.3.3-linux2.deb
 }
 #13 gnome_panel
 gnome_panel() {
