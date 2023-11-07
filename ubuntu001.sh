@@ -898,9 +898,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.3.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.4.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2023.2.3 /opt/pycharm
+	sudo mv pycharm-community-2023.2.4 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
