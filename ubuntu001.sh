@@ -1010,7 +1010,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://az764295.vo.msecnd.net/stable/f1b07bd25dfad64b0167beb15359ae573aecd2cc/code_1.83.1-1696982868_amd64.deb -O vscode.deb
+	wget -c https://az764295.vo.msecnd.net/stable/2b35e1e6d88f1ce073683991d1eff5284a32690f/code_1.84.1-1699275408_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
