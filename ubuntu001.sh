@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 07/11/2023
+#data: 01/12/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 07/11/2023'''
+'Data de última modificação: 01/12/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.20/android-studio-2022.3.1.20-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.21/android-studio-2022.3.1.21-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
@@ -610,9 +610,9 @@ github_desktop() {
 	#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 	#sudo apt-get update
 	#sudo apt install github-desktop -y
-	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.3-linux2/GitHubDesktop-linux-amd64-3.3.3-linux2.deb
-	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.3-linux2.deb
-	rm GitHubDesktop-linux-amd64-3.3.3-linux2.deb
+	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.5-linux2/GitHubDesktop-linux-amd64-3.3.5-linux2.deb
+	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.5-linux2.deb
+	rm GitHubDesktop-linux-amd64-3.3.5-linux2.deb
 }
 #13 gnome_panel
 gnome_panel() {
@@ -649,11 +649,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.2.4.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.2.5.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-232.10203.10/bin/idea.sh\nIcon=/opt/idea-IC-232.10203.10/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-232.10227.8/bin/idea.sh\nIcon=/opt/idea-IC-232.10227.8/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -734,7 +734,7 @@ netbeans() {
 	echo "*---Instalação netbeans---*"
 	echo "==========================="
 	echo -e "\n"
-	wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/19/apache-netbeans_19-1_all.deb -O netbeans.deb
+	wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/20/apache-netbeans_20-1_all.deb -O netbeans.deb
 	sudo dpkg -i netbeans.deb
 	rm netbeans.deb
 	#sudo snap install netbeans --classic
@@ -898,9 +898,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.4.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.2.5.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2023.2.4 /opt/pycharm
+	sudo mv pycharm-community-2023.2.5 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -970,6 +970,7 @@ systemback() {
 	echo "*---systemback---*"
 	echo "=================="
 	echo -e "\n"
+	echo "DESATUALIZADO"
 	#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
 	#sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main" -y
 	#sudo apt-get update
@@ -1010,7 +1011,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://az764295.vo.msecnd.net/stable/2b35e1e6d88f1ce073683991d1eff5284a32690f/code_1.84.1-1699275408_amd64.deb -O vscode.deb
+	wget -c https://az764295.vo.msecnd.net/stable/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e/code_1.84.2-1699528352_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
