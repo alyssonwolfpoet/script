@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 07/12/2023
+#data: 25/12/2023
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 07/12/2023'''
+'Data de última modificação: 25/12/2023'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -610,9 +610,9 @@ github_desktop() {
 	#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 	#sudo apt-get update
 	#sudo apt install github-desktop -y
-	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.5-linux2/GitHubDesktop-linux-amd64-3.3.5-linux2.deb
-	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.5-linux2.deb
-	rm GitHubDesktop-linux-amd64-3.3.5-linux2.deb
+	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.6-linux3/GitHubDesktop-linux-amd64-3.3.6-linux3.deb
+	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.6-linux3.deb
+	rm GitHubDesktop-linux-amd64-3.3.6-linux3.deb
 }
 #13 gnome_panel
 gnome_panel() {
@@ -649,11 +649,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.3.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.3.2.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-233.11799.241/bin/idea.sh\nIcon=/opt/idea-IC-233.11799.241/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-233.13135.103/bin/idea.sh\nIcon=/opt/idea-IC-233.13135.103/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -711,9 +711,9 @@ mysql() {
 	echo "*********************"
 	echo -e "\n"
 	sleep 5
-	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.28-1_all.deb
-	sudo dpkg -i mysql-apt-config_0.8.28-1_all.deb
-	rm mysql-apt-config_0.8.28-1_all.deb
+	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.29-1_all.deb
+	sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb
+	rm mysql-apt-config_0.8.29-1_all.deb
 	sudo apt-get update
 	sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	sudo apt update
@@ -898,9 +898,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.3.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.3.2.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2023.2.5 /opt/pycharm
+	sudo mv pycharm-community-2023.3.2 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -1011,7 +1011,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://az764295.vo.msecnd.net/stable/af28b32d7e553898b2a91af498b1fb666fdebe0c/code_1.85.0-1701902998_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/code_1.85.1-1702462158_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
