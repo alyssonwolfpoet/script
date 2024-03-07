@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 25/12/2023
+#data: 06/03/2024
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 25/12/2023'''
+'Data de última modificação: 06/03/2024'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.21/android-studio-2022.3.1.21-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.1.1.28/android-studio-2023.1.1.28-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
