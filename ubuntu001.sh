@@ -999,7 +999,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
