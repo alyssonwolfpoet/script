@@ -734,7 +734,7 @@ netbeans() {
 	echo "*---Instalação netbeans---*"
 	echo "==========================="
 	echo -e "\n"
-	wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/20/apache-netbeans_20-1_all.deb -O netbeans.deb
+	wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/21/apache-netbeans_21-1_all.deb -O netbeans.deb
 	sudo dpkg -i netbeans.deb
 	rm netbeans.deb
 	#sudo snap install netbeans --classic
@@ -898,7 +898,7 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.3.2.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.3.4.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
 	sudo mv pycharm-community-2023.3.2 /opt/pycharm
 	sudo rm pycharm.tar.gz
