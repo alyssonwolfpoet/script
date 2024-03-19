@@ -539,6 +539,10 @@ docker() {
 	echo -e "\n"
 	sudo apt install docker -y && apt install docker.io -y
 	sudo usermod -a -G docker aluno && service docker restart #[para testar basta digitar docker ps]
+
+	wget -c https://desktop.docker.com/linux/main/amd64/139021/docker-desktop-4.28.0-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+	sudo dpkg -i docker-desktop-4.28.0-amd64
+	remove docker-desktop-4.28.0-amd64
 }
 #06 eclipse
 eclipse() {
