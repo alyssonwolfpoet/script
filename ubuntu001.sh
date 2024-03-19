@@ -946,9 +946,9 @@ star_uml() {
 	#echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /opt/staruml/staruml.AppImage
-	wget -c https://staruml.io/api/download/releases-v6/StarUML_6.0.1_amd64.deb
-	sudo dpkg -i StarUML_6.0.1_amd64.deb
-	rm StarUML_6.0.1_amd64.deb
+	wget -c https://staruml.io/api/download/releases-v6/StarUML_6.1.0_amd64.deb
+	sudo dpkg -i StarUML_6.1.0_amd64.deb
+	rm StarUML_6.1.0_amd64.deb
 	sudo apt-get install -f -y
 }
 #39 sublimetext
