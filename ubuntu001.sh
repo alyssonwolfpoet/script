@@ -547,7 +547,7 @@ eclipse() {
 	echo "*------Instalação Eclipse-------*"
 	echo "================================="
 	#echo -e "\n"
-	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2023-12/R/eclipse-java-2023-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2024-03/R/eclipse-java-2024-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	sudo tar -zxvf eclipse.tar.gz -C /opt/
 	sudo rm eclipse.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -610,9 +610,9 @@ github_desktop() {
 	#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 	#sudo apt-get update
 	#sudo apt install github-desktop -y
-	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.8-linux2/GitHubDesktop-linux-amd64-3.3.8-linux2.deb
-	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.8-linux2.deb
-	rm GitHubDesktop-linux-amd64-3.3.8-linux2.deb
+	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.10-linux1/GitHubDesktop-linux-amd64-3.3.10-linux1.deb
+	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.10-linux1.deb
+	rm GitHubDesktop-linux-amd64-3.3.10-linux1.deb
 }
 #13 gnome_panel
 gnome_panel() {
@@ -649,11 +649,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.3.4.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2023.3.5.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-233.14475.28/bin/idea.sh\nIcon=/opt/idea-IC-233.14475.28/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-233.14808.21/bin/idea.sh\nIcon=/opt/idea-IC-233.14808.21/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -789,7 +789,7 @@ packettracer() {
 	echo "*---Instalação PacketTracer---*"
 	echo "==============================="
 	echo -e "\n"
-	wget -c https://www.dropbox.com/scl/fi/b8avxpa14ja6pnw8e60l9/CiscoPacketTracer_821_Ubuntu_64bit.deb?rlkey=j23wrtc081u0blo1u7y790l06 -O PacketTracer.deb
+	wget -c https://www.dropbox.com/scl/fi/5fxfmesjio72xa5cnle3x/CiscoPacketTracer822_amd64_signed.deb?rlkey=2hedmwi72vggd3ajagqrhlai2&dl=0 -O PacketTracer.deb
 	sudo dpkg -i PacketTracer.deb
 	rm PacketTracer.deb
 	sudo apt-get install -f -y
