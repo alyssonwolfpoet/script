@@ -903,9 +903,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2023.3.4.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2024.1.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2023.3.2 /opt/pycharm
+	sudo mv pycharm-community-2024.1 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -1016,7 +1016,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/863d2581ecda6849923a2118d93a088b0745d9d6/code_1.87.2-1709912201_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/e170252f762678dec6ca2cc69aba1570769a5d39/code_1.88.1-1712771838_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
