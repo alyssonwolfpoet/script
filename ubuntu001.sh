@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 14/04/2024
+#data: 23/04/2024
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 14/04/2024'''
+'Data de última modificação: 23/04/2024'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -1004,7 +1004,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.0.16/virtualbox-7.0_7.0.16-162802~Ubuntu~jammy_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
