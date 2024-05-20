@@ -7,6 +7,6 @@ wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2024.1.1.tar
 tar -xzvf pycharm.tar.gz
 mv pycharm-community-2024.1.1 pycharm
 rm pycharm.tar.gz
-echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/home/$USER/pycharm/bin/pycharm.sh\n Icon=/home/$USER/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /home/$USER/.local/share/applications/pycharm.desktop
+echo -e "[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/home/$USER/pycharm/bin/pycharm.sh\n Icon=/home/$USER/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application" | sudo tee /home/$USER/.local/share/applications/pycharm.desktop
 
 chmod +x /.local/share/applications/pycharm.desktop
