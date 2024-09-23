@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 16/05/2024
+#data: 23/09/2024
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 16/05/2024'''
+'Data de última modificação: 23/09/2024'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.3.1.18/android-studio-2023.3.1.18-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.2.12/android-studio-2024.1.2.12-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
@@ -540,9 +540,9 @@ docker() {
 	sudo apt install docker -y && apt install docker.io -y
 	sudo usermod -a -G docker aluno && service docker restart #[para testar basta digitar docker ps]
 
-	wget -c https://desktop.docker.com/linux/main/amd64/145265/docker-desktop-4.29.0-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
-	sudo dpkg -i docker-desktop-4.28.0-amd64
-	remove docker-desktop-4.28.0-amd64
+	#wget -c https://desktop.docker.com/linux/main/amd64/145265/docker-desktop-4.29.0-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+	#sudo dpkg -i docker-desktop-4.28.0-amd64
+	#remove docker-desktop-4.28.0-amd64
 }
 #06 eclipse
 eclipse() {
@@ -551,7 +551,7 @@ eclipse() {
 	echo "*------Instalação Eclipse-------*"
 	echo "================================="
 	#echo -e "\n"
-	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2024-03/R/eclipse-java-2024-03-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2024-09/R/eclipse-java-2024-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	sudo tar -zxvf eclipse.tar.gz -C /opt/
 	sudo rm eclipse.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -614,9 +614,9 @@ github_desktop() {
 	#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 	#sudo apt-get update
 	#sudo apt install github-desktop -y
-	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.3.12-linux2/GitHubDesktop-linux-amd64-3.3.12-linux2.deb
-	sudo dpkg -i GitHubDesktop-linux-amd64-3.3.12-linux2.deb
-	rm GitHubDesktop-linux-amd64-3.3.12-linux2.deb
+	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.4.3-linux1/GitHubDesktop-linux-amd64-3.4.3-linux1.deb
+	sudo dpkg -i GitHubDesktop-linux-amd64-3.4.3-linux1.deb
+	rm GitHubDesktop-linux-amd64-3.4.3-linux1.deb
 }
 #13 gnome_panel
 gnome_panel() {
@@ -653,11 +653,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2024.2.1.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2024.2.2.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-242.21829.142/bin/idea.sh\nIcon=/opt/idea-IC-242.21829.142/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-242.22855.74/bin/idea.sh\nIcon=/opt/idea-IC-242.22855.74/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
