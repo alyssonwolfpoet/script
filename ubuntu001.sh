@@ -671,7 +671,7 @@ java() {
 	#sudo apt install openjdk-18-jdk-headless -y
 	#sudo apt install openjdk-21-jdk-headless -y
 	#wget -c https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb -O java.deb
-	wget -c https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb -O java.deb
+	wget -c https://download.oracle.com/java/23/latest/jdk-23_linux-x64_bin.deb -O java.deb
 	sudo dpkg -i java.deb
 	rm java.deb
 }
@@ -716,9 +716,9 @@ mysql() {
 	echo "*********************"
 	echo -e "\n"
 	sleep 5
-	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb
-	sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
-	rm mysql-apt-config_0.8.30-1_all.deb
+	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+	sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
+	rm mysql-apt-config_0.8.32-1_all.deb
 	sudo apt-get update
 	sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	sudo apt update
@@ -739,7 +739,7 @@ netbeans() {
 	echo "*---Instalação netbeans---*"
 	echo "==========================="
 	echo -e "\n"
-	wget -c https://dlcdn.apache.org/netbeans/netbeans-installers/21/apache-netbeans_21-1_all.deb -O netbeans.deb
+	wget -c https://www.apache.org/dyn/closer.lua/netbeans/netbeans-installers/23/apache-netbeans_23-1_all.deb -O netbeans.deb
 	sudo dpkg -i netbeans.deb
 	rm netbeans.deb
 	#sudo snap install netbeans --classic
@@ -826,48 +826,47 @@ phpmyadmin() {
 #-pgadmin3
 #-pgadmin4
 postgresql() {
-	echo "=================="
-	echo "*---postgresql---*"
-	echo "=================="
-	echo -e "\n"
-	sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-	sudo apt-get update
-	sudo apt install postgresql postgresql-contrib -y
-	echo -e "\n"
-	echo "*********************************************"
-	echo "su postgres -c psql
-	    ALTER USER postgres WITH PASSWORD 'ifce';
-	    \q"
-	echo "*********************************************"
-	echo -e "\n"
-	sleep 5
-	su postgres -c psql
-	ALTER USER postgres WITH PASSWORD 'ifce'
-	\q
+    echo "=================="
+    echo "*---postgresql---*"
+    echo "=================="
+    echo -e "\n"
 
-	echo "==============="
-	echo "*---postgis---*"
-	echo "==============="
-	echo -e "\n"
-	#sudo apt install postgis -y
-	sudo apt install postgresql-16-postgis-3 -y
+    sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    sudo apt-get update
+    sudo apt install postgresql postgresql-contrib -y
+    echo -e "\n"
 
-	echo "================"
-	echo "*---pgadmin3---*"
-	echo "================"
-	echo -e "\n"
-	sudo apt install pgadmin3 -y
+    echo "*********************************************"
+    echo "Changing the PostgreSQL password..."
+    echo "*********************************************"
+    echo -e "\n"
 
-	echo "================"
-	echo "*---pgadmin4---*"
-	echo "================"
-	wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
-	sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-	#sudo apt install pgadmin4 -y
-	sudo apt install pgadmin4-desktop -y
-	#sudo apt install pgadmin4-web -y
-	#sudo /usr/pgadmin4/bin/setup-web.sh
+    # Change the password
+    sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'postgres';"
+
+    echo "==============="
+    echo "*---postgis---*"
+    echo "==============="
+    echo -e "\n"
+
+    sudo apt install postgresql-16-postgis-3 -y
+
+    echo "================"
+    echo "*---pgadmin3---*"
+    echo "================"
+    echo -e "\n"
+
+    sudo apt install pgadmin3 -y
+
+    echo "================"
+    echo "*---pgadmin4---*"
+    echo "================"
+    echo -e "\n"
+
+    wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+    sudo apt install pgadmin4-desktop -y
 }
 #33 project_libre
 project_libre() {
@@ -903,9 +902,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2024.1.1.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2024.2.2.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2024.1.1 /opt/pycharm
+	sudo mv pycharm-community-2024.2.2 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -951,9 +950,9 @@ star_uml() {
 	#echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /opt/staruml/staruml.AppImage
-	wget -c https://staruml.io/api/download/releases-v6/StarUML_6.1.0_amd64.deb
-	sudo dpkg -i StarUML_6.1.0_amd64.deb
-	rm StarUML_6.1.0_amd64.deb
+	wget -c https://staruml.io/api/download/releases-v6/StarUML_6.2.2_amd64.deb
+	sudo dpkg -i StarUML_6.2.2_amd64.deb
+	rm StarUML_6.2.2_amd64.deb
 	sudo apt-get install -f -y
 }
 #39 sublimetext
@@ -1004,7 +1003,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.0.18/virtualbox-7.0_7.0.18-162988~Ubuntu~jammy_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.1.0/virtualbox-7.1_7.1.0-164728~Ubuntu~noble_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
@@ -1016,7 +1015,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/b58957e67ee1e712cebf466b995adf4c5307b2bd/code_1.89.0-1714530869_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/code_1.93.1-1726079302_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
