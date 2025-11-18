@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 24/09/2024
+#data: 18/11/2025
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 24/09/2024'''
+'Data de última modificação: 18/11/2025'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.2.12/android-studio-2024.1.2.12-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2025.2.1.7/android-studio-2025.2.1.7-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
@@ -551,7 +551,7 @@ eclipse() {
 	echo "*------Instalação Eclipse-------*"
 	echo "================================="
 	#echo -e "\n"
-	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2024-09/R/eclipse-java-2024-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2025-09/R/eclipse-java-2025-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	sudo tar -zxvf eclipse.tar.gz -C /opt/
 	sudo rm eclipse.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -614,9 +614,9 @@ github_desktop() {
 	#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 	#sudo apt-get update
 	#sudo apt install github-desktop -y
-	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.4.3-linux1/GitHubDesktop-linux-amd64-3.4.3-linux1.deb
-	sudo dpkg -i GitHubDesktop-linux-amd64-3.4.3-linux1.deb
-	rm GitHubDesktop-linux-amd64-3.4.3-linux1.deb
+	wget -c https://github.com/shiftkey/desktop/releases/download/release-3.4.13-linux1/GitHubDesktop-linux-amd64-3.4.13-linux1.deb
+	sudo dpkg -i GitHubDesktop-linux-amd64-3.4.13-linux1.deb
+	rm GitHubDesktop-linux-amd64-3.4.13-linux1.deb
 }
 #13 gnome_panel
 gnome_panel() {
@@ -653,7 +653,7 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2024.2.2.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2025.2.4.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
@@ -671,7 +671,7 @@ java() {
 	#sudo apt install openjdk-18-jdk-headless -y
 	#sudo apt install openjdk-21-jdk-headless -y
 	#wget -c https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb -O java.deb
-	wget -c https://download.oracle.com/java/23/latest/jdk-23_linux-x64_bin.deb -O java.deb
+	wget -c https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb -O java.deb
 	sudo dpkg -i java.deb
 	rm java.deb
 }
@@ -716,9 +716,9 @@ mysql() {
 	echo "*********************"
 	echo -e "\n"
 	sleep 5
-	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
-	sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
-	rm mysql-apt-config_0.8.32-1_all.deb
+	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
+	sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
+	rm mysql-apt-config_0.8.36-1_all.deb
 	sudo apt-get update
 	sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	sudo apt update
@@ -739,7 +739,7 @@ netbeans() {
 	echo "*---Instalação netbeans---*"
 	echo "==========================="
 	echo -e "\n"
-	wget -c https://www.apache.org/dyn/closer.lua/netbeans/netbeans-installers/23/apache-netbeans_23-1_all.deb -O netbeans.deb
+	wget -c https://github.com/codelerity/netbeans-packages/releases/download/v28-build1/apache-netbeans_28-1_amd64.deb -O netbeans.deb
 	sudo dpkg -i netbeans.deb
 	rm netbeans.deb
 	#sudo snap install netbeans --classic
@@ -794,7 +794,8 @@ packettracer() {
 	echo "*---Instalação PacketTracer---*"
 	echo "==============================="
 	echo -e "\n"
-	wget -c https://www.dropbox.com/scl/fi/5fxfmesjio72xa5cnle3x/CiscoPacketTracer822_amd64_signed.deb?rlkey=2hedmwi72vggd3ajagqrhlai2&dl=0 -O PacketTracer.deb
+	#wget -c https://www.dropbox.com/scl/fi/5fxfmesjio72xa5cnle3x/CiscoPacketTracer822_amd64_signed.deb?rlkey=2hedmwi72vggd3ajagqrhlai2&dl=0 -O PacketTracer.deb
+	wget -c https://www.dropbox.com/scl/fi/ln2q9a4rrf3mj8e2etl28/CiscoPacketTracer_900_Ubuntu_64bit.deb?rlkey=xxkajatl8wfd3p7i1b8193mw5&st=j3ypnvjx&dl=0 -O PacketTracer.deb
 	sudo dpkg -i PacketTracer.deb
 	rm PacketTracer.deb
 	sudo apt-get install -f -y
@@ -874,7 +875,7 @@ project_libre() {
 	echo "*---project libre---*"
 	echo "====================="
 	echo -e "\n"
-	wget -c https://sourceforge.net/projects/projectlibre/files/ProjectLibre/1.9.3/projectlibre_1.9.3-1.deb -O projectlibre.deb
+	wget -c https://sourceforge.net/projects/projectlibre/files/ProjectLibre/1.9.8/projectlibre_1.9.8_amd64.deb/download -O projectlibre.deb
 	sudo dpkg -i projectlibre.deb
 	sudo rm projectlibre.deb
 	sudo apt-get install -f -y
@@ -902,9 +903,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-community-2024.2.2.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-2025.2.4.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-community-2024.2.2 /opt/pycharm
+	sudo mv pycharm-2025.2.4 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -950,9 +951,9 @@ star_uml() {
 	#echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /opt/staruml/staruml.AppImage
-	wget -c https://staruml.io/api/download/releases-v6/StarUML_6.2.2_amd64.deb
-	sudo dpkg -i StarUML_6.2.2_amd64.deb
-	rm StarUML_6.2.2_amd64.deb
+	wget -c https://files.staruml.io/releases-v7/StarUML_7.0.0_amd64.deb
+	sudo dpkg -i StarUML_7.0.0_amd64.deb
+	rm StarUML_7.0.0_amd64.deb
 	sudo apt-get install -f -y
 }
 #39 sublimetext
@@ -1003,7 +1004,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.1.0/virtualbox-7.1_7.1.0-164728~Ubuntu~noble_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.2.4/virtualbox-7.2_7.2.4-170995~Ubuntu~plucky_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
@@ -1015,7 +1016,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/code_1.93.1-1726079302_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/cb1933bbc38d329b3595673a600fab5c7368f0a7/code_1.106.1-1763289752_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
