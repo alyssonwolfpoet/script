@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 18/11/2025
+#data: 10/03/2026
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 18/11/2025'''
+'Data de última modificação: 10/03/2026'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2025.2.1.7/android-studio-2025.2.1.7-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://edgedl.me.gvt1.com/android/studio/ide-zips/2025.3.2.6/android-studio-panda2-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
@@ -551,7 +551,7 @@ eclipse() {
 	echo "*------Instalação Eclipse-------*"
 	echo "================================="
 	#echo -e "\n"
-	wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2025-09/R/eclipse-java-2025-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2025-12/R/eclipse-java-2025-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	sudo tar -zxvf eclipse.tar.gz -C /opt/
 	sudo rm eclipse.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -653,11 +653,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/ideaIC-2025.2.4.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/idea-2025.3.3.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IC-242.22855.74/bin/idea.sh\nIcon=/opt/idea-IC-242.22855.74/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IU-253.31033.145/bin/idea.sh\nIcon=/opt/idea-IU-253.31033.145/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -739,7 +739,7 @@ netbeans() {
 	echo "*---Instalação netbeans---*"
 	echo "==========================="
 	echo -e "\n"
-	wget -c https://github.com/codelerity/netbeans-packages/releases/download/v28-build1/apache-netbeans_28-1_amd64.deb -O netbeans.deb
+	wget -c https://github.com/codelerity/netbeans-packages/releases/download/v29-build1/apache-netbeans_29-1_amd64.deb -O netbeans.deb
 	sudo dpkg -i netbeans.deb
 	rm netbeans.deb
 	#sudo snap install netbeans --classic
@@ -903,9 +903,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-2025.2.4.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-2025.3.3.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-2025.2.4 /opt/pycharm
+	sudo mv pycharm-2025.3.3 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -1004,7 +1004,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.2.4/virtualbox-7.2_7.2.4-170995~Ubuntu~plucky_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.2.6/virtualbox-7.2_7.2.6-172322~Ubuntu~questing_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
@@ -1016,7 +1016,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/cb1933bbc38d329b3595673a600fab5c7368f0a7/code_1.106.1-1763289752_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/code_1.111.0-1772846623_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
