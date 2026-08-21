@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 10/03/2026
+#data: 21/08/2026
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 10/03/2026'''
+'Data de última modificação: 21/08/2026'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://edgedl.me.gvt1.com/android/studio/ide-zips/2025.3.2.6/android-studio-panda2-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.1.3.7/android-studio-quail3-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
@@ -551,7 +551,7 @@ eclipse() {
 	echo "*------Instalação Eclipse-------*"
 	echo "================================="
 	#echo -e "\n"
-	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2025-12/R/eclipse-java-2025-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2026-06/R/eclipse-java-2026-06-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	sudo tar -zxvf eclipse.tar.gz -C /opt/
 	sudo rm eclipse.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -653,11 +653,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/idea-2025.3.3.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/idea-2026.2.1.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IU-253.31033.145/bin/idea.sh\nIcon=/opt/idea-IU-253.31033.145/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IU-262.9437.185/bin/idea.sh\nIcon=/opt/idea-IU-262.9437.185/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -671,7 +671,7 @@ java() {
 	#sudo apt install openjdk-18-jdk-headless -y
 	#sudo apt install openjdk-21-jdk-headless -y
 	#wget -c https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb -O java.deb
-	wget -c https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb -O java.deb
+	wget -c https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb -O java.deb
 	sudo dpkg -i java.deb
 	rm java.deb
 }
@@ -716,9 +716,9 @@ mysql() {
 	echo "*********************"
 	echo -e "\n"
 	sleep 5
-	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
-	sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
-	rm mysql-apt-config_0.8.36-1_all.deb
+	wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.40-1_all.deb
+	sudo dpkg -i mysql-apt-config_0.8.40-1_all.deb
+	rm mysql-apt-config_0.8.40-1_all.deb
 	sudo apt-get update
 	sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
 	sudo apt update
@@ -739,7 +739,7 @@ netbeans() {
 	echo "*---Instalação netbeans---*"
 	echo "==========================="
 	echo -e "\n"
-	wget -c https://github.com/codelerity/netbeans-packages/releases/download/v29-build1/apache-netbeans_29-1_amd64.deb -O netbeans.deb
+	wget -c https://github.com/codelerity/netbeans-packages/releases/download/v31-build1/apache-netbeans_31-1_amd64.deb -O netbeans.deb
 	sudo dpkg -i netbeans.deb
 	rm netbeans.deb
 	#sudo snap install netbeans --classic
@@ -795,7 +795,9 @@ packettracer() {
 	echo "==============================="
 	echo -e "\n"
 	#wget -c https://www.dropbox.com/scl/fi/5fxfmesjio72xa5cnle3x/CiscoPacketTracer822_amd64_signed.deb?rlkey=2hedmwi72vggd3ajagqrhlai2&dl=0 -O PacketTracer.deb
-	wget -c https://www.dropbox.com/scl/fi/ln2q9a4rrf3mj8e2etl28/CiscoPacketTracer_900_Ubuntu_64bit.deb?rlkey=xxkajatl8wfd3p7i1b8193mw5&st=j3ypnvjx&dl=0 -O PacketTracer.deb
+	#wget -c https://www.dropbox.com/scl/fi/ln2q9a4rrf3mj8e2etl28/CiscoPacketTracer_900_Ubuntu_64bit.deb?rlkey=xxkajatl8wfd3p7i1b8193mw5&st=j3ypnvjx&dl=0 -O PacketTracer.deb
+	#wget -c https://www.dropbox.com/scl/fi/5gg542nkkpvun9ibc3wa4/CiscoPacketTracer_901_Ubuntu_64bit.deb?rlkey=i6pk0hg2ub86jhnoerrahe5hx&st=kyrbjves&dl=0 -O PacketTracer.deb
+	wget -c https://prod-tf-ui.s3.amazonaws.com/s/ff9e491c-49be-4734-803e-a79e6e83dab1/resources/9accb7fd-7560-45c6-b6de-9ab7e9cf07b8/v1/en-US/CiscoPacketTracer_901_Ubuntu_64bit.deb?response-cache-control=no-cache&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260821T210453Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUJZRIEYBDMJNTTWR%2F20260821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=30&X-Amz-Signature=c130709e065cc0099e957d44d7ae47d8f09a78e57f7329441a400ed05247a72f -O PacketTracer.deb
 	sudo dpkg -i PacketTracer.deb
 	rm PacketTracer.deb
 	sudo apt-get install -f -y
@@ -851,7 +853,7 @@ postgresql() {
     echo "==============="
     echo -e "\n"
 
-    sudo apt install postgresql-16-postgis-3 -y
+    sudo apt install postgresql-18 postgresql-18-postgis-3 postgis -y
 
     echo "================"
     echo "*---pgadmin3---*"
@@ -903,9 +905,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-2025.3.3.tar.gz -O pycharm.tar.gz
+	wget -c https://download-cdn.jetbrains.com/python/pycharm-2026.2.1.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-2025.3.3 /opt/pycharm
+	sudo mv pycharm-2026.2.1 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -951,9 +953,9 @@ star_uml() {
 	#echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /opt/staruml/staruml.AppImage
-	wget -c https://files.staruml.io/releases-v7/StarUML_7.0.0_amd64.deb
-	sudo dpkg -i StarUML_7.0.0_amd64.deb
-	rm StarUML_7.0.0_amd64.deb
+	wget -c https://files.staruml.io/releases-v7/StarUML_7.1.0_amd64.deb
+	sudo dpkg -i StarUML_7.1.0_amd64.deb
+	rm StarUML_7.1.0_amd64.deb
 	sudo apt-get install -f -y
 }
 #39 sublimetext
@@ -1004,7 +1006,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.2.6/virtualbox-7.2_7.2.6-172322~Ubuntu~questing_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.2.16/virtualbox-7.2_7.2.16-174877~Ubuntu~resolute_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
@@ -1016,7 +1018,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/code_1.111.0-1772846623_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/110a328ea54b42367b803ec53ee0bf52ef26b419/code_1.134.0-1787078834_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
