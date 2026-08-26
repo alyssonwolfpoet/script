@@ -796,8 +796,8 @@ packettracer() {
 	echo -e "\n"
 	#wget -c https://www.dropbox.com/scl/fi/5fxfmesjio72xa5cnle3x/CiscoPacketTracer822_amd64_signed.deb?rlkey=2hedmwi72vggd3ajagqrhlai2&dl=0 -O PacketTracer.deb
 	#wget -c https://www.dropbox.com/scl/fi/ln2q9a4rrf3mj8e2etl28/CiscoPacketTracer_900_Ubuntu_64bit.deb?rlkey=xxkajatl8wfd3p7i1b8193mw5&st=j3ypnvjx&dl=0 -O PacketTracer.deb
-	#wget -c https://www.dropbox.com/scl/fi/5gg542nkkpvun9ibc3wa4/CiscoPacketTracer_901_Ubuntu_64bit.deb?rlkey=i6pk0hg2ub86jhnoerrahe5hx&st=kyrbjves&dl=0 -O PacketTracer.deb
-	wget -c https://prod-tf-ui.s3.amazonaws.com/s/ff9e491c-49be-4734-803e-a79e6e83dab1/resources/9accb7fd-7560-45c6-b6de-9ab7e9cf07b8/v1/en-US/CiscoPacketTracer_901_Ubuntu_64bit.deb?response-cache-control=no-cache&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260821T210453Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUJZRIEYBDMJNTTWR%2F20260821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=30&X-Amz-Signature=c130709e065cc0099e957d44d7ae47d8f09a78e57f7329441a400ed05247a72f -O PacketTracer.deb
+	wget -c https://www.dropbox.com/scl/fi/5gg542nkkpvun9ibc3wa4/CiscoPacketTracer_901_Ubuntu_64bit.deb?rlkey=i6pk0hg2ub86jhnoerrahe5hx&st=kyrbjves&dl=0 -O PacketTracer.deb
+	#wget -c https://prod-tf-ui.s3.amazonaws.com/s/ff9e491c-49be-4734-803e-a79e6e83dab1/resources/9accb7fd-7560-45c6-b6de-9ab7e9cf07b8/v1/en-US/CiscoPacketTracer_901_Ubuntu_64bit.deb?response-cache-control=no-cache&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260821T210453Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUJZRIEYBDMJNTTWR%2F20260821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=30&X-Amz-Signature=c130709e065cc0099e957d44d7ae47d8f09a78e57f7329441a400ed05247a72f -O PacketTracer.deb
 	sudo dpkg -i PacketTracer.deb
 	rm PacketTracer.deb
 	sudo apt-get install -f -y
