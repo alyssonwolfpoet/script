@@ -498,7 +498,7 @@ androidStudio() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.1.3.7/android-studio-quail3-linux.tar.gz -O android-studio.tar.gz
+	wget -c https://edgedl.me.gvt1.com/android/studio/ide-zips/2026.2.2.9/android-studio-rabbit2-patch1-linux.tar.gz -O android-studio.tar.gz
 	sudo tar -zxvf android-studio.tar.gz -C /opt/
 	rm android-studio.tar.gz
 
@@ -551,7 +551,7 @@ eclipse() {
 	echo "*------Instalação Eclipse-------*"
 	echo "================================="
 	#echo -e "\n"
-	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2026-06/R/eclipse-java-2026-06-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+	wget -c https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2026-09/R/eclipse-java-2026-09-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 	sudo tar -zxvf eclipse.tar.gz -C /opt/
 	sudo rm eclipse.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=eclipse\n Exec=/opt/eclipse/eclipse\n Icon=/opt/eclipse/icon.xpm\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/eclipse.desktop
@@ -573,7 +573,7 @@ evolus_pencil() {
 	echo "*---evolus pencil---*"
 	echo "====================="
 	echo -e "\n"
-	wget -c https://www.dropbox.com/scl/fi/58nv34y3hoo6syibb7b9c/Pencil_3.1.1.ga_amd64.deb?rlkey=u2txa47822b0b3el5yp1nksgq -O pencil.deb
+	wget -c https://pencil.evolus.vn/dl/V4.0.0.ga/Pencil_4.0.0.ga_amd64.deb -O pencil.deb
 	sudo apt-get remove pencil --purge -y
 	sudo dpkg -i pencil.deb
 	sudo rm pencil.deb
@@ -653,11 +653,11 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/idea-2026.2.1.tar.gz -O ideaIC.tar.gz
+	wget -c https://download-cdn.jetbrains.com/idea/idea-2026.3.tar.gz?Expires=1794480797&Signature=VSoZ3p~TumnZianaSzmvHl1BOCMSHL2oFhfNPNrvv-Rj7rhkt~3JN6ZjICvYFD-rmVFg4tGhNZdWGfDVUaAiNowDKZefkBB89MRzJsQ97BOdGWdHSb8Ipjp6uf6c~YX0VtVgBHjaj1EdltT2j9G9oYWsPB3-j-yM5ca1ht6~PIrBqcOgRu5TfXfzdAFz6x6CBVk9dXu4FLoVdPuCv9fk4CXKr7t~R2bs6J7V00DwGhlbS1In6IVY9~CWKphlKyJgApcMTzlT6sUfMuRY-CZCCvhjEqGHxORhDF0rWqtNQmRlNAwyS-Y4uae-najgL~UnDOrrUkIaSBkvdoKbadqJ-A__&Key-Pair-Id=K2PI9GMSMWJY0 -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
-	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IU-262.9437.185/bin/idea.sh\nIcon=/opt/idea-IU-262.9437.185/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
+	echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=/opt/idea-IU-263.7307.200/bin/idea.sh\nIcon=/opt/idea-IU-263.7307.200/bin/idea.png\nType=Application\nTerminal=false\nStartupNotify=true\nCategories=Application" | sudo tee /usr/share/applications/IntelliJIDEA.desktop
 	sudo chmod +x /usr/share/applications/IntelliJIDEA.desktop
 }
 #17 java
@@ -671,7 +671,7 @@ java() {
 	#sudo apt install openjdk-18-jdk-headless -y
 	#sudo apt install openjdk-21-jdk-headless -y
 	#wget -c https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb -O java.deb
-	wget -c https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb -O java.deb
+	wget -c https://download.oracle.com/java/27/latest/jdk-27_linux-x64_bin.deb -O java.deb
 	sudo dpkg -i java.deb
 	rm java.deb
 }
@@ -905,9 +905,9 @@ python() {
 	echo "==================================="
 	#sudo snap install pycharm-community --classic
 	#flatpak install flathub com.jetbrains.PyCharm-Community -y
-	wget -c https://download-cdn.jetbrains.com/python/pycharm-2026.2.1.tar.gz -O pycharm.tar.gz
+	wget -c https://download.jetbrains.com/python/pycharm-2026.3.tar.gz -O pycharm.tar.gz
 	sudo tar -xzvf pycharm.tar.gz
-	sudo mv pycharm-2026.2.1 /opt/pycharm
+	sudo mv pycharm-2026.3 /opt/pycharm
 	sudo rm pycharm.tar.gz
 	echo -e '[Desktop Entry]\n Version=1.0\n Name=pycharm\n Exec=/opt/pycharm/bin/pycharm.sh\n Icon=/opt/pycharm/bin/pycharm.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/pycharm.desktop
 	sudo chmod +x /usr/share/applications/pycharm.desktop
@@ -953,9 +953,9 @@ star_uml() {
 	#echo -e '[Desktop Entry]\n Version=1.0\n Name=staruml\n Exec=/opt/staruml/staruml.AppImage\n Icon=/opt/staruml/staruml.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /usr/share/applications/staruml.desktop
 	#sudo chmod 777 /opt/staruml/staruml.AppImage
-	wget -c https://files.staruml.io/releases-v7/StarUML_7.1.0_amd64.deb
-	sudo dpkg -i StarUML_7.1.0_amd64.deb
-	rm StarUML_7.1.0_amd64.deb
+	wget -c https://files.staruml.io/releases-v8/staruml_8.1.0_amd64.deb
+	sudo dpkg -i staruml_8.1.0_amd64.deb
+	rm staruml_8.1.0_amd64.deb
 	sudo apt-get install -f -y
 }
 #39 sublimetext
@@ -1006,7 +1006,7 @@ virtualbox() {
 	echo "*---Instalação virtualbox---*"
 	echo "============================="
 	echo -e "\n"
-	wget -c https://download.virtualbox.org/virtualbox/7.2.16/virtualbox-7.2_7.2.16-174877~Ubuntu~resolute_amd64.deb -O virtualbox.deb
+	wget -c https://download.virtualbox.org/virtualbox/7.2.22/virtualbox-7.2_7.2.22-175245~Ubuntu~resolute_amd64.deb -O virtualbox.deb
 	sudo dpkg -i virtualbox.deb
 	sudo apt-get -f install -y
 	sudo rm virtualbox.deb
@@ -1018,7 +1018,7 @@ vscode() {
 	echo "========================="
 	echo -e "\n"
 	#https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/110a328ea54b42367b803ec53ee0bf52ef26b419/code_1.134.0-1787078834_amd64.deb -O vscode.deb
+	wget -c https://vscode.download.prss.microsoft.com/dbazure/download/stable/69047191fc427f2f92828279aae1d90d8eeda7ab/code_1.146.0-1794340865_amd64.deb -O vscode.deb
 	sudo dpkg -i vscode.deb
 	sudo apt-get -f install -y
 	sudo rm vscode.deb
