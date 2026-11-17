@@ -7,6 +7,11 @@ echo "=============================="
 sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
+sudo apt dist-upgrade -y
+sudo apt full-upgrade
+#Limpeza de Cache
+sudo apt clean
+sudo apt autoclean
 
 #Multimídia e codecs
 echo "=============================="
