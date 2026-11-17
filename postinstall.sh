@@ -84,7 +84,7 @@ echo "Flatpak e Flathub"
 echo "=============================="
 sudo apt install flatpak -y
 apt-get install gnome-software-plugin-flatpak -y
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
 #Finalizando
