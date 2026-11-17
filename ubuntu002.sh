@@ -1,6 +1,6 @@
 #!/bin/bash
 #autor: Alysson Sousa
-#data: 11/11/2026
+#data: 17/11/2026
 
 #Créditos
 clear
@@ -8,7 +8,7 @@ echo -e "
 ''''''''''''''''''''''''''''''''''''''''''
 'Programa:Script de Programas            '
 'Desenvolvedor:Alysson Sousa            ''
-'Data de última modificação: 11/11/2026'''
+'Data de última modificação: 17/11/2026'''
 ''''''''''''''''''''''''''''''''''''''''''
 "
 sleep 5
@@ -653,7 +653,7 @@ intelliJIDEA() {
 	echo -e "\n"
 	sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 -y
 
-	wget -c https://download-cdn.jetbrains.com/idea/idea-2026.3.tar.gz?Expires=1794480797&Signature=VSoZ3p~TumnZianaSzmvHl1BOCMSHL2oFhfNPNrvv-Rj7rhkt~3JN6ZjICvYFD-rmVFg4tGhNZdWGfDVUaAiNowDKZefkBB89MRzJsQ97BOdGWdHSb8Ipjp6uf6c~YX0VtVgBHjaj1EdltT2j9G9oYWsPB3-j-yM5ca1ht6~PIrBqcOgRu5TfXfzdAFz6x6CBVk9dXu4FLoVdPuCv9fk4CXKr7t~R2bs6J7V00DwGhlbS1In6IVY9~CWKphlKyJgApcMTzlT6sUfMuRY-CZCCvhjEqGHxORhDF0rWqtNQmRlNAwyS-Y4uae-najgL~UnDOrrUkIaSBkvdoKbadqJ-A__&Key-Pair-Id=K2PI9GMSMWJY0 -O ideaIC.tar.gz
+	wget -c https://download.jetbrains.com/idea/idea-2026.3.tar.gz -O ideaIC.tar.gz
 	sudo tar -zxvf ideaIC.tar.gz -C /opt/
 	rm ideaIC.tar.gz
 
