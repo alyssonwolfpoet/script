@@ -786,7 +786,8 @@ octave() {
 	echo "*---octave---*"
 	echo "=============="
 	echo -e "\n"
-	sudo apt install octave -y
+	#sudo apt install octave -y
+	sudo snap install octave
 }
 #29 packettracer
 packettracer() {
