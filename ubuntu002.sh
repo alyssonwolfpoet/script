@@ -633,9 +633,10 @@ grub_customizer() {
 	echo "*---Grub Customizer---*"
 	echo "======================="
 	echo -e "\n"
-	sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
-	sudo apt-get update
-	sudo apt-get install grub-customizer -y
+	#sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+	#sudo apt-get update
+	#sudo apt-get install grub-customizer -y
+	echo"Removido pelo DEV"
 }
 #15 gtkterm
 gtkterm() {
@@ -720,7 +721,10 @@ mysql() {
 	sudo dpkg -i mysql-apt-config_0.8.40-1_all.deb
 	rm mysql-apt-config_0.8.40-1_all.deb
 	sudo apt-get update
-	sudo apt-get install mysql-client mysql-server mysql-workbench-community -y
+	sudo apt-get install mysql-client mysql-server -y
+	wget -c https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench_26.10.0-1_amd64.deb
+	sudo dpkg -i mysql-workbench_26.10.0-1_amd64.deb
+	rm mysql-workbench_26.10.0-1_amd64.deb
 	sudo apt update
 	sudo apt upgrade -y
 }

@@ -35,7 +35,7 @@ sudo apt install unzip p7zip-full unrar -y
 echo "=============================="
 echo "Ferramentas essenciais de terminal"
 echo "=============================="
-sudo apt install git curl wget build-essential tree jq tmux htop btop ncdu neofetch -y
+sudo apt install git curl wget build-essential tree jq tmux htop btop ncdu neofetch Fastfetch -y
 sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libffi-dev liblzma-dev python3-venv xz-utils tk-dev -y
 
 
